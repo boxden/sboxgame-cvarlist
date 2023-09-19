@@ -188,7 +188,7 @@ cl_snd_new_visualize                                                            
 cl_spewserializers                                                               : cmd              :                                  : Spew serializers	
 cl_timeout                                                                       : 30               : a                                : After this many seconds without receiving a packet from the server, the client will disconnect itself	
 cl_update_spatial_entities_before_latchwork                                      : 1                : cl                               : Update spatial partition entities before we do latch work. Overcomes a potential deadlock in IK, but convared so we can test perf implications.	
-cl_updaterate                                                                    : 16               : a, user                          : Number of packets per second of updates you are requesting from the server	
+cl_updaterate                                                                    : 20               : a, user                          : Number of packets per second of updates you are requesting from the server	
 cl_updatevisibility                                                              : cmd              :                                  : Updates visibility bits.	
 cl_viewtarget_clamp                                                              : 1                : cl                               : 	
 cl_voice_filter                                                                  : 0                :                                  : Filter voice by name substring	
@@ -332,7 +332,7 @@ dumpstringtable                                                                 
 dxlevel                                                                          : 90               : machine                          : 	
 echo                                                                             : cmd              :                                  : Echo text to console.	
 echoln                                                                           : cmd              :                                  : Echo the command arguments on the console	
-enable_boneflex                                                                  : 0                : cl, a                            : 	
+enable_boneflex                                                                  : 1                : cl, a                            : 	
 enable_priority_boost                                                            : cmd              :                                  : Disable focus based priority boost	
 engine_max_resource_system_update_time                                           : 5                :                                  : 	
 engine_ostype                                                                    : 0                :                                  : OS type the engine is running on.	
@@ -1113,7 +1113,7 @@ quit                                                                            
 r_3d_skybox                                                                      : 1                :                                  : 	
 r_3d_skybox_depth_prepass                                                        : 1                :                                  : 	
 r_3d_skybox_depth_prepass_cull_threshold                                         : 30               :                                  : 	
-r_albedo_chart                                                                   : 0                : a                                : Enable Albedo/Reflectivity chart	
+r_albedo_chart                                                                   : 1                : a                                : Enable Albedo/Reflectivity chart	
 r_allow_morph_batching_on_base                                                   : 0                :                                  : 	
 r_allow_time_sliced_shadow_map_rendering                                         : 1                :                                  : Allow time-sliced shadow buffer rendering when enabled via gameinfo.gi	
 r_aoproxy_cull_dist                                                              : 12               :                                  : Distance to cull the AO proxy as a factor of size	
@@ -1167,7 +1167,7 @@ r_force_no_present                                                              
 r_frame_sync_enable                                                              : 1                :                                  : 	
 r_freeze_sceneobjects                                                            : 0                : cl                               : 	
 r_freezeparticles                                                                : 0                : cheat                            : Pause particle simulation	
-r_fullscreen_gamma                                                               : -1               : a                                : Screen Gamma (only in fullscreen modes)	
+r_fullscreen_gamma                                                               : 2                : a                                : Screen Gamma (only in fullscreen modes)	
 r_gpu_mem_stats                                                                  : cmd              :                                  : Display GPU memory usage.	
 r_grass_allow_flattening                                                         : 0                :                                  : 	
 r_grass_alpha_test                                                               : 0                :                                  : 	
@@ -1194,7 +1194,7 @@ r_max_lights                                                                    
 r_max_texture_pool_size                                                          : 0                :                                  : Upper limit on texture pool size.	
 r_mixed_shadows                                                                  : 1                : cl                               : Enable dynamic shadows from baked lights	
 r_mixed_shadows_debug                                                            : 0                : cl, cheat                        : Debug r_mixed_shadows	
-r_mixed_shadows_max_lights                                                       : 0                : cl, a                            : 	
+r_mixed_shadows_max_lights                                                       : 8                : cl, a                            : 	
 r_mixed_shadows_relative_distance_threshold                                      : 32               : cl                               : Reject any objects further away than this many of its own lengths	
 r_monitor_bloom                                                                  : 0                :                                  : Allow bloom on scene monitors	
 r_morphing_enabled                                                               : 1                : cheat                            : 	
@@ -1228,7 +1228,7 @@ r_render_world_node_bounds                                                      
 r_renderdoc_capture_frame                                                        : cmd              :                                  : Triggers a RenderDoc capture	
 r_renderdoc_open_captures                                                        : 1                :                                  : 	
 r_rendersun                                                                      : 1                : cheat                            : Render sun lighting	
-r_resolution_scale                                                               : 20               : a                                : Determine the internal resolution to render at	
+r_resolution_scale                                                               : 100              : a                                : Determine the internal resolution to render at	
 r_resolution_scale_method                                                        : 1                : a                                : 0=Billinear, 1=FidelityFX Super Resolution	
 r_shadow_map_culling                                                             : 1                : cheat                            : 	
 r_shadows                                                                        : 1                : cheat                            : 	
@@ -1578,7 +1578,7 @@ snd_vmidi_flush                                                                 
 snd_vmix_show_input_updates                                                      : 0                : cheat                            : If set to 1, show all incoming updates to vmix inputs. 	
 sndplaydelay                                                                     : cmd              :                                  : 	
 sos_debug_emit                                                                   : 0                : sv, rep                          : 	
-sound_device_override                                                            : {0.0.0.00000000}.{4609f6a0-4da3-42ee-8d26-b04ed8b46a04} : machine                          : 	
+sound_device_override                                                            :                  : machine                          : 	
 soundinfo                                                                        : cmd              :                                  : Describe the current sound device.	
 soundlist                                                                        : cmd              :                                  : List all known sounds.	
 soundpatch_captionlength                                                         : 2                : sv, rep                          : How long looping soundpatch captions should display for.	
