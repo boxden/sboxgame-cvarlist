@@ -52,6 +52,8 @@ capturecubemap                                                                  
 cc_norepeat                                                                      : 5                : sv                               : In multiplayer games, don't repeat captions more often than this many seconds.	
 cc_showmissing                                                                   : 0                : sv, rep                          : Show missing closecaption entries.	
 changelevel                                                                      : cmd              :                                  : changelevel <mapname> :Multiplayer change level.	
+chat_add                                                                         : cmd              :                                  : 	
+chat_addinfo                                                                     : cmd              :                                  : 	
 cl_aggregate_particles                                                           : 0                :                                  : 	
 cl_anim_queue_changes                                                            : 1                : cl                               : 	
 cl_auto_cursor_scale                                                             : true             : machine                          : 	
@@ -96,6 +98,8 @@ cl_ent_skeleton_only_ik_joints                                                  
 cl_ent_text_filter                                                               : cmd              :                                  : Set which ent_text filters you want: 	
 cl_ent_text_flags_active                                                         : -1               : cl, a, cheat                     : 	
 cl_ent_text_no_name_really_i_mean_it                                             : 0                : cl, cheat                        : 	
+cl_entityreport                                                                  : cmd              :                                  : Reports all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.	
+cl_entitysummary                                                                 : cmd              :                                  : Summarizes (by class) all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.	
 cl_ents                                                                          : cmd              :                                  : List client entities, sorted by spawn group	
 cl_extrapolate                                                                   : 1                : cl, cheat                        : Enable/disable extrapolation if interpolation history runs out.	
 cl_extrapolate_amount                                                            : 0                : cl, cheat                        : Set how many seconds the client will extrapolate entities for.	
@@ -108,6 +112,7 @@ cl_flex_expression                                                              
 cl_flex_talk                                                                     : 0                : cl                               : 	
 cl_flushentitypacket                                                             : 0                : cheat                            : For debugging. Force the engine to flush an entity packet.	
 cl_fullupdate                                                                    : cmd              :                                  : Force uncompressed update	
+cl_groups                                                                        : cmd              :                                  : Show status of all spawn groups.	
 cl_hitbox_debug                                                                  : 0                : cl                               : 	
 cl_ignorepackets                                                                 : 0                : cheat                            : Force client to ignore packets (for debugging).	
 cl_interp                                                                        : 0                : cl, user                         : Sets the interpolation amount (bounded on low side by server interp ratio settings).	
@@ -284,6 +289,8 @@ dbghist_dump                                                                    
 debug                                                                            : 0                : release                          : 	
 debug_mapio                                                                      : 0                : sv, managed                      : If above 0, enables EntityIO debug/visualization and controls the length of the visualization in seconds	
 debug_overlay_fullposition                                                       : 0                : sv                               : 	
+debug_playercontroller                                                           : 0                : sv, rep, managed                 : 	
+debug_prop_explosion                                                             : 0                : sv, managed                      : 	
 debug_shared_random                                                              : 0                : sv, rep                          : 	
 debug_touchlinks                                                                 : 0                : sv                               : Spew touch link activity	
 debug_visibility_monitor                                                         : 0                : sv, cheat                        : 	
@@ -311,6 +318,7 @@ demo_timescale                                                                  
 demo_togglepause                                                                 : cmd              :                                  : Toggles demo playback.	
 demo_usefastgoto                                                                 : 1                :                                  : Use fast frame skipping when available for demo_goto commands.	
 demolist                                                                         : cmd              :                                  : Print demo sequence list.	
+devcam                                                                           : cmd              :                                  : Enables the devcam. Input to the player will stop and you'll be able to freefly around.	
 developer                                                                        : 1                :                                  : Set developer message level.	
 DevUI_Scale                                                                      : 1                : cl, managed                      : 	
 diffcheck                                                                        : 1                :                                  : Activate diffcheck system.	
@@ -322,6 +330,7 @@ disable_priority_boost                                                          
 disconnect                                                                       : cmd              :                                  : Disconnect from server	
 display_game_events                                                              : 0                : sv, cheat                        : 	
 displaysoundlist                                                                 : 0                : sv                               : 	
+drawtriggers_toggle                                                              : cmd              :                                  : 	
 dsp_db_min                                                                       : 80               : demo                             : 	
 dsp_db_mixdrop                                                                   : 0                : demo                             : 	
 dsp_dist_max                                                                     : 1440             : cheat, demo                      : 	
@@ -343,7 +352,7 @@ dumpstringtable                                                                 
 dxlevel                                                                          : 90               : machine                          : 	
 echo                                                                             : cmd              :                                  : Echo text to console.	
 echoln                                                                           : cmd              :                                  : Echo the command arguments on the console	
-enable_boneflex                                                                  : 0                : cl, a                            : 	
+enable_boneflex                                                                  : 1                : cl, a                            : 	
 enable_priority_boost                                                            : cmd              :                                  : Disable focus based priority boost	
 engine_max_resource_system_update_time                                           : 5                :                                  : 	
 engine_ostype                                                                    : 0                :                                  : OS type the engine is running on.	
@@ -356,14 +365,18 @@ engine_vr_max_ticks_to_simulate                                                 
 ent_actornames                                                                   : cmd              :                                  : Displays the entity name for all entities that have ShouldDisplayInActorNames true in code	
 ent_actornames_font                                                              : 0                : sv, rep, cheat                   : ent_actornames font name	
 ent_actornames_fontsize                                                          : 24               : sv, rep, cheat                   : ent_actornames font size	
+ent_bbox                                                                         : cmd              :                                  : 	
 ent_characterize                                                                 : cmd              :                                  : Spew PVS debug info for entity	
 ent_debug_draw_thinkers                                                          : 0                : sv, rep                          : 	
 ent_debugkeys                                                                    : 0                : sv                               : 	
+ent_fire                                                                         : cmd              :                                  : 	
 ent_joint_axis_size                                                              : 4                : sv                               : 	
 ent_joint_names                                                                  : 1                : sv                               : 	
 ent_joint_only_ik_joints                                                         : 0                : sv                               : 	
 ent_messages_draw                                                                : 0                : sv, rep, cheat                   : Visualizes all entity input/output activity.	
 ent_pivot_size                                                                   : 20               : sv, a, cheat                     : 	
+ent_remove                                                                       : cmd              :                                  : 	
+ent_remove_all                                                                   : cmd              :                                  : 	
 ent_revert_dormancy_change                                                       : 0                : cl                               : 	
 ent_show_contexts                                                                : 0                : sv, cheat                        : Show entity contexts in ent_text display	
 ent_skeleton_only_ik_joints                                                      : 0                : sv                               : 	
@@ -373,12 +386,15 @@ ent_steadystate_delay                                                           
 ent_steadystate_enable                                                           : 1                : sv                               : 	
 ent_steadystate_interval                                                         : 0                : sv                               : Rate at which entities can be trickled to players	
 ent_test_interpolation                                                           : 0                : cl                               : 	
+ent_text                                                                         : cmd              :                                  : 	
 ent_text_filter                                                                  : cmd              :                                  : Set which ent_text filters you want: 	
 ent_text_flags_active                                                            : -1               : sv, a, cheat                     : 	
 ent_text_no_name_really_i_mean_it                                                : 0                : sv, cheat                        : 	
 entity_log_load_unserialize                                                      : 0                :                                  : Output unserialization of entities on map load. 0 - off, 1 - client/server, 2 - server, 3 - client	
 entity_lump_list                                                                 : cmd              :                                  : List all known entity lumps	
 entity_lump_spew                                                                 : cmd              :                                  : Dump the contents of an entity lump	
+entityreport                                                                     : cmd              :                                  : Reports all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.	
+entitysummary                                                                    : cmd              :                                  : Summarizes (by class) all extant entities. Optional 2nd arg is a substring of a classname that the list will be filtered by.	
 ents                                                                             : cmd              :                                  : List server entities, sorted by spawn group	
 exec                                                                             : cmd              :                                  : Execute a cfg file	
 exec_async                                                                       : cmd              :                                  : Execute a cfg file over time	
@@ -418,6 +434,7 @@ gamemode                                                                        
 gamesettings                                                                     : 0                : sv, managed                      : 	
 gameui_activate                                                                  : cmd              :                                  : Shows the game UI	
 gameui_hide                                                                      : cmd              :                                  : Hides the game UI	
+getpos                                                                           : cmd              :                                  : 	
 gfx_calculate_skin_diffusion_profile_dipole                                      : cmd              :                                  : Calculate a skin diffusion profile using scattering constants.	
 gfx_generate_ao_cone_response                                                    : cmd              :                                  : Generates a LUT for AO cone vs. sphere	
 gfx_generate_ao_sphere_response                                                  : cmd              :                                  : Generates a LUT for AO proxy calculations	
@@ -435,10 +452,14 @@ gfx_hemioct_flat_normal_test                                                    
 gfx_load_skin_diffusion_profile                                                  : cmd              :                                  : Load a measured diffusion profile.	
 gfx_load_skin_diffusion_profile_image                                            : cmd              :                                  : Load a custom skin diffusion profile.	
 gfx_load_skin_diffusion_profile_sum_of_gaussians                                 : cmd              :                                  : Load sum-of-gaussians skin diffusion profile.	
+gibs_max                                                                         : 256              : sv, managed                      : How many gibs spawned by this class are allowed to exist at any given time.	
+giveall                                                                          : cmd              :                                  : 	
+glass_reset                                                                      : cmd              :                                  : 	
 global_set                                                                       : cmd              :                                  : global_set <globalname> <state>: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD).	
 gpu_level                                                                        : 3                : cl                               : GPU Level - Default: High	
 gpu_mem_level                                                                    : 2                : cl                               : Memory Level - Default: High	
 groundik_enabled                                                                 : 1                :                                  : 	
+groups                                                                           : cmd              :                                  : Show status of all spawn groups.	
 hammer_bevel_leave_edges                                                         : 0                :                                  : 	
 hammer_disable_render_as_simple_box                                              : 0                :                                  : 	
 hammer_dota_path_falloff                                                         : 1                :                                  : 	
@@ -500,7 +521,7 @@ host_timescale                                                                  
 host_timescale_dec                                                               : cmd              :                                  : Decrement the timescale by one step	
 host_timescale_inc                                                               : cmd              :                                  : Increment the timescale by one step	
 host_writeconfig                                                                 : cmd              :                                  : Saves out the user config values.	
-hostip                                                                           : 0                : release                          : Host game server ip	
+hostip                                                                           : -1062731648.000  : release                          : Host game server ip	
 hostname                                                                         : 0                : release                          : Hostname for server.	
 hostport                                                                         : 27015            : release                          : Host game server port	
 hotload_fast                                                                     : 0                : managed                          : Experimental fast hotloads if only method bodies change	
@@ -624,6 +645,7 @@ key_listboundkeys                                                               
 key_updatelayout                                                                 : cmd              :                                  : Updates game keyboard layout to current windows keyboard setting.	
 kick                                                                             : cmd              :                                  : Kick a player by name.	
 kickid                                                                           : cmd              :                                  : Kick a player by userid or uniqueid, with a message.	
+kill                                                                             : cmd              :                                  : 	
 labelled_debug_helper_arc_segments                                               : 20               :                                  : 	
 labelled_debug_helper_enabled                                                    : 1                :                                  : 	
 labelled_debug_helper_scale                                                      : 1                :                                  : 	
@@ -715,7 +737,7 @@ mat_wateroverlaysize                                                            
 mat_wireframe                                                                    : 0                : cheat                            : 0=Off, 1=Surface Wireframe, 2=Transparent Wireframe	
 mat_yuv                                                                          : 0                : cl, cheat                        : 	
 maxdxlevel                                                                       : 92               : application                      : 	
-maxplayers                                                                       : 8                : sv, rep                          : The maximum players allowed on the server	
+maxplayers                                                                       : 1                : sv, rep                          : The maximum players allowed on the server	
 mem_compact                                                                      : cmd              :                                  : Compacts the heap	
 mem_dump                                                                         : cmd              :                                  : Dump memory stats to text file.	
 mem_incremental_compact                                                          : cmd              :                                  : Incrementally compacts the heap	
@@ -1107,6 +1129,7 @@ net_status                                                                      
 net_usesocketsforloopback                                                        : 0                : a, release                       : Use network sockets layer even for listen server local player's packets (multiplayer only).	
 net_validatemessages                                                             : cmd              :                                  : Activates/deactivates net message validation	
 nextdemo                                                                         : cmd              :                                  : Play next demo in sequence.	
+noclip                                                                           : cmd              :                                  : 	
 npcsolve_attract_draw                                                            : 0                : sv                               : 	
 npcsolve_constraint_nav                                                          : 1                : sv                               : 	
 npcsolve_constraint_npc                                                          : 1                : sv                               : 	
@@ -1186,6 +1209,7 @@ playsound                                                                       
 playvol                                                                          : cmd              :                                  : Play a sound at a specified volume.	
 pop_var_values                                                                   : cmd              :                                  : Restore previously pushed convars and config values	
 population_distribution_debug                                                    : 0                : sv, rep                          : 	
+precipitation_density                                                            : 1                : sv, rep, managed                 : Particle density scale for all precipitation entities.	
 property_editor_use_overlay                                                      : 1                :                                  : 	
 push_var_values                                                                  : cmd              :                                  : Save convars and config values	
 pvs_debugentity                                                                  : -1               : sv, release                      : Verbose spew for this entity when doing IsInPVS computation.	
@@ -1210,8 +1234,9 @@ r_bloom_compute                                                                 
 r_cacheSequenceData                                                              : 1                : sv, rep                          : 	
 r_cubemap_debug_colors                                                           : 0                : cheat                            : 	
 r_cubemap_normalization                                                          : 1                :                                  : 	
-r_cubemap_normalization_max                                                      : 32               :                                  : 	
+r_cubemap_normalization_max                                                      : 2                :                                  : 	
 r_cubemap_normalization_roughness_begin                                          : 0                :                                  : 	
+r_cubemap_takesnapshot                                                           : cmd              :                                  : Take a cube map snapshot at the current camera location	
 r_custom_msaa_resolve                                                            : 1                :                                  : 	
 r_depth_prepass                                                                  : 1                :                                  : 	
 r_depth_prepass_cull_threshold                                                   : 60               :                                  : 	
@@ -1229,6 +1254,7 @@ r_drawdevvisualizers                                                            
 r_drawmodeldecals                                                                : 1                : cl                               : 	
 r_drawparticles                                                                  : 1                : cheat                            : Enable/disable particle rendering	
 r_drawskybox                                                                     : 1                : cheat                            : Render the 2d skybox.	
+r_drawsprites                                                                    : 1                : cl, cheat                        : 	
 r_drawviewmodel                                                                  : 1                : cheat                            : Render view model	
 r_drawworld                                                                      : 1                : cheat                            : Render the world.	
 r_dx11_report_live_objects                                                       : cmd              :                                  : Prints out live D3D11 objects (requires -dx11debug)	
@@ -1250,7 +1276,7 @@ r_force_no_present                                                              
 r_frame_sync_enable                                                              : 1                :                                  : 	
 r_freeze_sceneobjects                                                            : 0                : cl                               : 	
 r_freezeparticles                                                                : 0                : cheat                            : Pause particle simulation	
-r_fullscreen_gamma                                                               : -1               : a                                : Screen Gamma (only in fullscreen modes)	
+r_fullscreen_gamma                                                               : 2                : a                                : Screen Gamma (only in fullscreen modes)	
 r_gpu_mem_stats                                                                  : cmd              :                                  : Display GPU memory usage.	
 r_grass_allow_flattening                                                         : 0                :                                  : 	
 r_grass_alpha_test                                                               : 0                :                                  : 	
@@ -1277,7 +1303,7 @@ r_max_lights                                                                    
 r_max_texture_pool_size                                                          : 0                :                                  : Upper limit on texture pool size.	
 r_mixed_shadows                                                                  : 1                : cl                               : Enable dynamic shadows from baked lights	
 r_mixed_shadows_debug                                                            : 0                : cl, cheat                        : Debug r_mixed_shadows	
-r_mixed_shadows_max_lights                                                       : 0                : cl, a                            : 	
+r_mixed_shadows_max_lights                                                       : 8                : cl, a                            : 	
 r_mixed_shadows_relative_distance_threshold                                      : 32               : cl                               : Reject any objects further away than this many of its own lengths	
 r_monitor_bloom                                                                  : 0                :                                  : Allow bloom on scene monitors	
 r_morphing_enabled                                                               : 1                : cheat                            : 	
@@ -1311,7 +1337,7 @@ r_render_world_node_bounds                                                      
 r_renderdoc_capture_frame                                                        : cmd              :                                  : Triggers a RenderDoc capture	
 r_renderdoc_open_captures                                                        : 1                :                                  : 	
 r_rendersun                                                                      : 1                : cheat                            : Render sun lighting	
-r_resolution_scale                                                               : 20               : a                                : Determine the internal resolution to render at	
+r_resolution_scale                                                               : 100              : a                                : Determine the internal resolution to render at	
 r_resolution_scale_method                                                        : 1                : a                                : 0=Billinear, 1=FidelityFX Super Resolution	
 r_shadow_map_culling                                                             : 1                : cheat                            : 	
 r_shadows                                                                        : 1                : cheat                            : 	
@@ -1404,13 +1430,15 @@ resource_log_allocate_timing                                                    
 resource_repeated_reload                                                         : cmd              :                                  : resource_repeated_reload <count> <resource_name> (<resource name> ...): Load and unload the specified resource(s)	
 resource_reset_allocate_timing                                                   : cmd              :                                  : Reset tracked time spent in Allocate (see resource_log_allocate_timing)	
 resourcecompiler_log_compile_stats                                               : 0                :                                  : 	
+respawn_entities                                                                 : cmd              :                                  : 	
 restart                                                                          : cmd              :                                  : Poor man's restart: reload the current map from disk.	
 rpestats                                                                         : cmd              :                                  : dump rpe	
 rs_submit_twice                                                                  : 0                :                                  : 	
-rtx_force_default_hitgroup                                                       : 0                :                                  : Forces all ray traced geometry to use default hit shaders instead of specialized ones.	
 rubikon_joint_deepdebugging                                                      : 0                :                                  : 	
 run_perftest                                                                     : cmd              :                                  : Execute perftest.cfg	
+sandbox_say                                                                      : cmd              :                                  : 	
 savedgame                                                                        : 0                : sv, managed                      : 	
+say                                                                              : cmd              :                                  : 	
 sbox_feature_inheritlods                                                         : 1                : rep                              : Child models inherit parent LOD number	
 sbox_feature_inheritmorphs                                                       : 1                : sv, rep                          : Child models inherit morphs/flexes of their parent models	
 sc_allow_dynamic_constant_batching                                               : 1                :                                  : 	
@@ -1503,8 +1531,10 @@ sdr                                                                             
 sensitivity                                                                      : 5                : cl, a                            : Mouse sensitivity.	
 server_game_time                                                                 : cmd              :                                  : Gives the game time in seconds (server's curtime)	
 servercfgfile                                                                    : 0                : sv                               : 	
+setang                                                                           : cmd              :                                  : 	
 setinfo                                                                          : cmd              :                                  : Adds a new user info value	
 setpause                                                                         : cmd              :                                  : Set the pause state of the server.	
+setpos                                                                           : cmd              :                                  : 	
 show_tool                                                                        : cmd              :                                  : Show or launch the specified engine tool	
 showconsole                                                                      : cmd              :                                  : Show the console.	
 showparticlecounts                                                               : 0                : cl                               : Display number of particles drawn per frame	
@@ -1530,6 +1560,7 @@ snd_duckerreleasetime                                                           
 snd_duckerthreshold                                                              : 0                : a                                : 	
 snd_ducktovolume                                                                 : 0                : a                                : 	
 snd_envelope_rate                                                                : 0                : cheat                            : 	
+snd_event_alignedbox_debug                                                       : 0                : sv, rep, managed                 : 	
 snd_filter                                                                       : 0                : cheat                            : 	
 snd_front_headphone_position                                                     : cmd              :                                  : Specifies the position (in degrees) of the virtual front left/right headphones.	
 snd_front_stereo_speaker_position                                                : cmd              :                                  : Specifies the position (in degrees) of the virtual front left/right speakers.	
@@ -1583,6 +1614,10 @@ snd_showclassname                                                               
 snd_showstart                                                                    : 0                : cheat                            : 	
 snd_sos_block_global_stack                                                       : 0                : cheat                            : 	
 snd_sos_block_stop_global_stack                                                  : 1                : cheat                            : 	
+snd_sos_cl_soundevent_pause_last                                                 : cmd              :                                  : Test	
+snd_sos_cl_soundevent_start                                                      : cmd              :                                  : Test	
+snd_sos_cl_soundevent_stop_last                                                  : cmd              :                                  : Test	
+snd_sos_cl_soundevent_unpause_last                                               : cmd              :                                  : Test	
 snd_sos_default_update_stack                                                     : 0                :                                  : 	
 snd_sos_flush_operators                                                          : cmd              :                                  : Flush and re-parse the sound operator system	
 snd_sos_get_operator_field_info                                                  : cmd              :                                  : Currently gets info for a single operator field	
@@ -1642,6 +1677,11 @@ snd_sos_start_soundevent_at_pos                                                 
 snd_sos_stop_all_soundevents                                                     : cmd              :                                  : Stops all soundevents currently on the execution list	
 snd_sos_stop_soundevent_guid                                                     : cmd              :                                  : Stops a specified soundevent	
 snd_sos_stop_soundevent_index                                                    : cmd              :                                  : Stops a specified soundevent	
+snd_sos_sv_soundevent_pause_last                                                 : cmd              :                                  : Test	
+snd_sos_sv_soundevent_start                                                      : cmd              :                                  : Test	
+snd_sos_sv_soundevent_stop_last                                                  : cmd              :                                  : Test	
+snd_sos_sv_soundevent_unpause_last                                               : cmd              :                                  : Test	
+snd_sos_sv_test_gender                                                           : cmd              :                                  : Test	
 snd_sos_test_soundmessage                                                        : cmd              :                                  : test	
 snd_sos_use_case_sensitive_soundevents                                           : 0                :                                  : 	
 snd_soundevent_clear_deferred                                                    : cmd              :                                  : Clear the list of deferred soundevents for loading.	
@@ -1663,12 +1703,19 @@ snd_vmidi_flush                                                                 
 snd_vmix_show_input_updates                                                      : 0                : cheat                            : If set to 1, show all incoming updates to vmix inputs. 	
 sndplaydelay                                                                     : cmd              :                                  : 	
 sos_debug_emit                                                                   : 0                : sv, rep                          : 	
-sound_device_override                                                            : {0.0.0.00000000}.{4609f6a0-4da3-42ee-8d26-b04ed8b46a04} : machine                          : 	
+sound_device_override                                                            :                  : machine                          : 	
 soundinfo                                                                        : cmd              :                                  : Describe the current sound device.	
 soundlist                                                                        : cmd              :                                  : List all known sounds.	
 soundpatch_captionlength                                                         : 2                : sv, rep                          : How long looping soundpatch captions should display for.	
 soundsystem_update_async                                                         : 1                :                                  : 	
+spawn                                                                            : cmd              :                                  : 	
+spawn_entity                                                                     : cmd              :                                  : 	
+spawn_group_activate                                                             : cmd              :                                  : Activate specified spawngroup.	
+spawn_group_list                                                                 : cmd              :                                  : List all spawn groups	
+spawn_group_load                                                                 : cmd              :                                  : Load named spawn group.	
+spawn_group_unload                                                               : cmd              :                                  : Unload named spawn group.	
 spawngroup_ignore_timeouts                                                       : 0                :                                  : 	
+spawnpackage                                                                     : cmd              :                                  : 	
 speaker_config                                                                   : -1               : machine                          : 	
 spew_fonts                                                                       : cmd              :                                  : Spew information about font manager fonts	
 splitscreen_mode                                                                 : 0                : machine                          : 	
@@ -1778,16 +1825,23 @@ tcmd                                                                            
 telemetry_message                                                                : cmd              :                                  : Place a message in the telemetry timeline	
 telemetry_toggle_timespan                                                        : cmd              :                                  : Starts/stops a timespan with an ever increasing name.	
 template_debug                                                                   : 0                : sv, cheat                        : 	
+test_admincmd                                                                    : cmd              :                                  : 	
 Test_Checkpoint                                                                  : cmd              :                                  : Indicate to a test script that a checkpoint has been reached	
+test_clientcmd                                                                   : cmd              :                                  : 	
+test_clientvar                                                                   : 0                : cl, managed                      : 	
 test_entity_blocker                                                              : cmd              :                                  : Test command that drops an entity blocker out in front of the player.	
 Test_ExitProcess                                                                 : cmd              :                                  : Test_ExitProcess <exit code> - immediately kill the process.	
 Test_Loop                                                                        : cmd              :                                  : Test_Loop <loop name> - loop back to the specified loop start point unconditionally.	
 Test_LoopCount                                                                   : cmd              :                                  : Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.	
 Test_LoopForNumSeconds                                                           : cmd              :                                  : Test_LoopForNumSeconds <loop name> <time> - loop back to the specified start point for the specified # of seconds.	
 Test_RandomChance                                                                : cmd              :                                  : Test_RandomChance <percent chance, 0-100> <token1> <token2...> - Roll the dice and maybe run the command following the percentage chance.	
+test_replicatedvar                                                               : 0                : sv, rep, managed                 : 	
 test_restoreonnewmodel                                                           : 0                : sv, rep                          : 	
+test_servercmd                                                                   : cmd              :                                  : 	
+test_servervar                                                                   : 0                : sv, managed                      : 	
 Test_StartLoop                                                                   : cmd              :                                  : Test_StartLoop <loop name> - Denote the start of a loop. Really just defines a named point you can jump to.	
 Test_StartScript                                                                 : cmd              :                                  : Start a test script running..	
+test_uservar                                                                     : 0                : cl, user, managed                : 	
 testscript_debug                                                                 : 0                :                                  : Debug test scripts.	
 texturefilteringquality                                                          : 4                : machine                          : 	
 think_limit                                                                      : 10               : sv, rep, release                 : Maximum think time in milliseconds, warning is printed if this is exceeded.	
@@ -1797,6 +1851,7 @@ timedemo_start                                                                  
 timedemoquit                                                                     : cmd              :                                  : Play a demo, report performance info, and then exit	
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 toggleconsole                                                                    : cmd              :                                  : Show/hide the console.	
+tool_current                                                                     : 0                : cl, user, managed                : 	
 toolhud_enable                                                                   : 1                :                                  : 	
 tools_renderscenes                                                               : 1                :                                  : 	
 tr_do_reduce                                                                     : 1                : rep, cheat                       : 	
@@ -1863,6 +1918,7 @@ volume_fog_jitter_offset_random                                                 
 volume_fog_show_volumes                                                          : 0                : cheat                            : 	
 volume_fog_vr_single_dispatch                                                    : 1                :                                  : 	
 volume_fog_width                                                                 : 240              :                                  : 	
+voxel_reset                                                                      : cmd              :                                  : 	
 vphys2_friction_factor                                                           : 1                : cheat                            : Change global friction factor	
 vphys2_restitution_factor                                                        : 1                : cheat                            : Change global restitution factor	
 vphysics_force_apply_magnitude                                                   : 1                :                                  : 	
@@ -1902,4 +1958,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1903 total convars/concommands
+1959 total convars/concommands
