@@ -1203,7 +1203,6 @@ r_aoproxy_cull_dist                                                             
 r_aoproxy_debug                                                                  : 0                :                                  : 	
 r_aoproxy_enable                                                                 : 1                :                                  : 	
 r_aoproxy_min_dist                                                               : 40               :                                  : 	
-r_aoproxy_show                                                                   : 0                : cl, cheat                        : 	
 r_aoproxy_stencil_hidden_pixels                                                  : 0                :                                  : 	
 r_async_compute_fog                                                              : 1                :                                  : 	
 r_bloom_compute                                                                  : 1                :                                  : Use compute shaders for bloom on Vulkan	
@@ -1902,4 +1901,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1903 total convars/concommands
+1902 total convars/concommands
