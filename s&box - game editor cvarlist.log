@@ -47,8 +47,6 @@ blink                                                                           
 blink_duration                                                                   : 0                : cl                               : How many seconds an eye blink will last.	
 bone_decode_cache_enabled                                                        : 0                :                                  : 	
 bot_add                                                                          : cmd              :                                  : Spawn a bot player that mimics another player	
-buildcubemaps                                                                    : cmd              :                                  : Build Cubemaps	
-capturecubemap                                                                   : cmd              :                                  : Capture Cubemap	
 cc_norepeat                                                                      : 5                : sv                               : In multiplayer games, don't repeat captions more often than this many seconds.	
 cc_showmissing                                                                   : 0                : sv, rep                          : Show missing closecaption entries.	
 changelevel                                                                      : cmd              :                                  : changelevel <mapname> :Multiplayer change level.	
@@ -204,8 +202,6 @@ cl_updatevisibility                                                             
 cl_viewtarget_clamp                                                              : 1                : cl                               : 	
 cl_voice_filter                                                                  : 0                :                                  : Filter voice by name substring	
 cl_vprof_scope_entity_gamephys                                                   : 0                : cl                               : 	
-clear                                                                            : cmd              :                                  : Clear console output.	
-clearall                                                                         : cmd              :                                  : Clear console output from all views.	
 clientport                                                                       : 0                : release                          : If non-empty, client binds port to specific address.  Usually you should leave this blank to use a different random system-assigned port for each connection.	
 cloth_approximate_collide                                                        : 1                :                                  : 	
 cloth_batch                                                                      : 32               :                                  : 	
@@ -249,7 +245,6 @@ con_logfile_suffix                                                              
 con_toggle                                                                       : cmd              :                                  : 	
 connect                                                                          : cmd              :                                  : Connect to a remote server.	
 consoleoverlay                                                                   : 0                : cl, managed                      : Enable the console to draw at the top of the screen all the time	
-consoletool                                                                      : cmd              :                                  : Open a VConsole subtool.	
 controller_look_speed_pitch                                                      : 160              : cl, managed                      : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
 controller_look_speed_yaw                                                        : 270              : cl, managed                      : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
 convars_echo_toggle_changes                                                      : 1                :                                  : Echo to the console changes caused by toggling.	
@@ -333,7 +328,6 @@ dsp_vol_2ch                                                                     
 dsp_vol_4ch                                                                      : 0                : demo                             : 	
 dsp_vol_5ch                                                                      : 0                : demo                             : 	
 dsp_volume                                                                       : 0                : a, demo                          : 	
-dti_report_stddev_threshold                                                      : 1                : release                          : For network encoding stats, provide a notes field if field change count is above this many standard deviations for the average field change counts for the serializer.	
 dump_entity_report                                                               : cmd              :                                  : List all entities in the scene	
 dump_globals                                                                     : cmd              :                                  : Dump all global entities/states	
 dump_localization_files                                                          : cmd              :                                  : List all loaded localization files	
@@ -491,7 +485,6 @@ headforce_inner                                                                 
 headforce_outer                                                                  : 16               : sv, rep, cheat                   : 	
 headforce_strength                                                               : 10               : sv, rep, cheat                   : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
-hideconsole                                                                      : cmd              :                                  : Hide the console.	
 host_force_frametime_to_equal_tick_interval                                      : 0                :                                  : 	
 host_framerate                                                                   : 0                : release                          : Set to lock per-frame time elapse.	
 host_limitlocal                                                                  : 0                :                                  : Apply cl_updaterate to loopback connection	
@@ -1400,7 +1393,6 @@ reset_gameconvars                                                               
 resource_leaks                                                                   : cmd              :                                  : resource_leaks <resource_name>: Show resource leaks for the named resource	
 resource_list                                                                    : cmd              :                                  : List loaded resources matching a substring	
 resource_log_allocate_timing                                                     : cmd              :                                  : Log time spent in Allocate for all resource types	
-resource_repeated_reload                                                         : cmd              :                                  : resource_repeated_reload <count> <resource_name> (<resource name> ...): Load and unload the specified resource(s)	
 resource_reset_allocate_timing                                                   : cmd              :                                  : Reset tracked time spent in Allocate (see resource_log_allocate_timing)	
 resourcecompiler_log_compile_stats                                               : 0                :                                  : 	
 restart                                                                          : cmd              :                                  : Poor man's restart: reload the current map from disk.	
@@ -1505,7 +1497,6 @@ servercfgfile                                                                   
 setinfo                                                                          : cmd              :                                  : Adds a new user info value	
 setpause                                                                         : cmd              :                                  : Set the pause state of the server.	
 show_tool                                                                        : cmd              :                                  : Show or launch the specified engine tool	
-showconsole                                                                      : cmd              :                                  : Show the console.	
 showparticlecounts                                                               : 0                : cl                               : Display number of particles drawn per frame	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
 skel_debug                                                                       : 0                : sv, rep                          : 	
@@ -1630,7 +1621,6 @@ snd_sos_show_queuetotrack                                                       
 snd_sos_show_server_xmit                                                         : 0                : sv, cheat                        : 	
 snd_sos_show_soundevent_param_overwrite                                          : 0                : cheat                            : 	
 snd_sos_show_soundevent_start                                                    : 0                : cheat                            : 	
-snd_sos_show_track_list                                                          : 0                :                                  : 	
 snd_sos_show_voice_elapsed_time                                                  : 0                :                                  : 	
 snd_sos_soundevent_deferred_interval_time                                        : 0                :                                  : 	
 snd_sos_soundevent_filter                                                        : 0                : cheat                            : 	
@@ -1795,7 +1785,6 @@ timedemo_end                                                                    
 timedemo_start                                                                   : -1               :                                  : Starts timedemo on given tick.	
 timedemoquit                                                                     : cmd              :                                  : Play a demo, report performance info, and then exit	
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
-toggleconsole                                                                    : cmd              :                                  : Show/hide the console.	
 toolhud_enable                                                                   : 1                :                                  : 	
 tools_renderscenes                                                               : 1                :                                  : 	
 tr_do_reduce                                                                     : 1                : rep, cheat                       : 	
@@ -1812,7 +1801,6 @@ unloadTool                                                                      
 unpause                                                                          : cmd              :                                  : Clear the pause state of the server.	
 url_execute                                                                      : cmd              :                                  : Executes url-based commands, used for incoming commands from url-based launches when the game's already running.	
 users                                                                            : cmd              :                                  : Show user info for players on server.	
-vcon_pipe_dump                                                                   : cmd              :                                  : Dumps the state of all existing VConsole pipes	
 video                                                                            : cmd              :                                  : Make a video, save it in screenshots folder	
 video_bitrate                                                                    : 8                : a                                : Bit rate for video recorder (in Mbps)	
 video_framerate                                                                  : 60               : a                                : Frame rate for video recorder	
@@ -1866,18 +1854,8 @@ vphys2_friction_factor                                                          
 vphys2_restitution_factor                                                        : 1                : cheat                            : Change global restitution factor	
 vphysics_force_apply_magnitude                                                   : 1                :                                  : 	
 vphysics_return_implicit_velocity                                                : 0                :                                  : 	
-vprof_counters                                                                   : 0                :                                  : 	
-vprof_counters_show_minmax                                                       : 0                :                                  : 	
-vprof_dump_counters                                                              : cmd              :                                  : Dump vprof counters to the console	
-vprof_generate_report                                                            : cmd              :                                  : Generate a report to the console.	
-vprof_generate_report_budget                                                     : cmd              :                                  : Generate a report to the console based on budget group.	
-vprof_generate_report_hierarchy                                                  : cmd              :                                  : Generate a report to the console.	
-vprof_off                                                                        : cmd              :                                  : Disable vprof	
-vprof_on                                                                         : cmd              :                                  : Enable vprof	
 vprof_remote_start                                                               : cmd              :                                  : Request a VProf data stream from the remote server (requires authentication)	
 vprof_remote_stop                                                                : cmd              :                                  : Stop an existing remote VProf data request	
-vprof_reset                                                                      : cmd              :                                  : Reset the stats in VProf profiler	
-vprof_reset_peaks                                                                : cmd              :                                  : Reset just the peak time in VProf profiler	
 vprof_scope_entity_gamephys                                                      : 0                : sv                               : 	
 vprof_scope_entity_thinks                                                        : 0                : sv, rep                          : 	
 vprof_think_limit                                                                : 0                : sv                               : 	
@@ -1901,4 +1879,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1902 total convars/concommands
+1880 total convars/concommands	
