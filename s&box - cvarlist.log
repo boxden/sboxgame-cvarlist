@@ -1721,17 +1721,6 @@ violence_ablood                                                                 
 violence_agibs                                                                   : 1                : a                                : Show alien gib entities	
 violence_hblood                                                                  : 1                : a                                : Draw human blood	
 violence_hgibs                                                                   : 1                : a                                : Show human gib entities	
-vis_debug_currentcluster                                                         : cmd              :                                  : Show the current cluster number	
-vis_debug_drawcluster                                                            : cmd              :                                  : Add cluster # to visualization, (-1) to clear	
-vis_debug_dumpvisibleclusters                                                    : cmd              :                                  : Show the list of visible clusters	
-vis_debug_find_los                                                               : cmd              :                                  : Find or clear the vis LOS to here	
-vis_debug_lock                                                                   : cmd              :                                  : Lock vis LOS origin to current	
-vis_debug_record_start                                                           : cmd              :                                  : Record a path to debug vis	
-vis_debug_record_stop                                                            : cmd              :                                  : Record a path to debug vis	
-vis_debug_show                                                                   : cmd              :                                  : Show/hide the vis debug visualization	
-vis_debug_sphere                                                                 : cmd              :                                  : Draw clusters in a sphere of radius around the camera	
-vis_debug_sunclusters                                                            : cmd              :                                  : Showing clusters for sun/csm rendering. Red (full sun csm & lighting), Orange (no viewmodel sun or csm), Green (no sun at all)	
-vis_debug_tracelos                                                               : cmd              :                                  : Trace rays and check vis from the current camera	
 vis_enable                                                                       : 1                :                                  : Toggle static visibility	
 vis_update                                                                       : 1                : cheat                            : 	
 vismon_poll_frequency                                                            : 0                : sv, cheat                        : 	
@@ -1790,4 +1779,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1791 total convars/concommands	
+1780 total convars/concommands
