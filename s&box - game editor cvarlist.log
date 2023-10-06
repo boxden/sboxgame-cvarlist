@@ -44,7 +44,6 @@ bind                                                                            
 binddefaults                                                                     : cmd              :                                  : Bind all keys to their default values.	
 bindtoggle                                                                       : cmd              :                                  : Performs a bind <key> 'increment var <cvar> 0 1 1'.	
 blink                                                                            : cmd              :                                  : Blink specified convar value between two values at the specified duration.	
-blink_duration                                                                   : 0                : cl                               : How many seconds an eye blink will last.	
 bone_decode_cache_enabled                                                        : 0                :                                  : 	
 bot_add                                                                          : cmd              :                                  : Spawn a bot player that mimics another player	
 cc_norepeat                                                                      : 5                : sv                               : In multiplayer games, don't repeat captions more often than this many seconds.	
@@ -66,7 +65,6 @@ cl_clockdbg                                                                     
 cl_clockdrift_max_ticks                                                          : 3                : cheat                            : Maximum number of ticks the clock is allowed to drift before the client snaps its clock to the server's.	
 cl_connectionretrytime_p2p                                                       : 20               : release                          : Number of seconds over which to spread retry attempts for P2P.	
 cl_cursor_scale                                                                  : 1.000000         : machine                          : 	
-cl_debug_flex_shader_constants                                                   : 0                : cl, cheat                        : 	
 cl_debug_overlay_fullposition                                                    : 0                : cl                               : 	
 cl_debugoverlay_toggle                                                           : cmd              :                                  : Toggles visibility of the debug overlay system.	
 cl_demo_view_offset_left                                                         : 0                : cl                               : View offset during demo playback (+/- 1.25 is a good default for human average left/right eye offset)	
@@ -78,9 +76,7 @@ cl_draw_simulating_entities                                                     
 cl_draw_simulating_entities_distance                                             : 0                : cl                               : 	
 cl_drawmaterial                                                                  : 0                : cl, cheat                        : Draw a particular material over the frame	
 cl_dump_anim_list                                                                : cmd              :                                  : 	
-cl_dump_projected_texture_count                                                  : cmd              :                                  : Print out number of active projected textures	
 cl_ejectbrass                                                                    : 1                : cl                               : 	
-cl_enable_eye_occlusion                                                          : 1                : cl                               : 	
 cl_ent_actornames                                                                : cmd              :                                  : Displays the entity name for all entities that have ShouldDisplayInActorNames true in code	
 cl_ent_joint_axis_size                                                           : 4                : cl                               : 	
 cl_ent_joint_names                                                               : 1                : cl                               : 	
@@ -97,13 +93,6 @@ cl_ent_text_no_name_really_i_mean_it                                            
 cl_ents                                                                          : cmd              :                                  : List client entities, sorted by spawn group	
 cl_extrapolate                                                                   : 1                : cl, cheat                        : Enable/disable extrapolation if interpolation history runs out.	
 cl_extrapolate_amount                                                            : 0                : cl, cheat                        : Set how many seconds the client will extrapolate entities for.	
-cl_eye_occlusion_debug                                                           : 0                : cl, cheat                        : 	
-cl_eye_sin_wave                                                                  : 0                : cl                               : 	
-cl_eye_target_override                                                           : -16777216        : cl                               : 	
-cl_eye_yaw_multiplier                                                            : 1                : cl                               : 	
-cl_flex_cycler_think_interval                                                    : 0                : cl                               : 	
-cl_flex_expression                                                               : 0                : cl                               : 	
-cl_flex_talk                                                                     : 0                : cl                               : 	
 cl_flushentitypacket                                                             : 0                : cheat                            : For debugging. Force the engine to flush an entity packet.	
 cl_fullupdate                                                                    : cmd              :                                  : Force uncompressed update	
 cl_hitbox_debug                                                                  : 0                : cl                               : 	
@@ -175,8 +164,6 @@ cl_querycache_stats                                                             
 cl_report_predcopy_overrides                                                     : cmd              :                                  : Report prediction copy overrides	
 cl_report_soundpatch                                                             : cmd              :                                  : reports client-side sound patch count	
 cl_resend                                                                        : 0                : release                          : Delay in seconds before the client will resend the 'connect' attempt	
-cl_retire_low_priority_lights                                                    : 0                : cl                               : Low priority dlights are replaced by high priority ones	
-cl_sceneentity_debug                                                             : 0                : cl                               : Display all thinking scene entities and its data.	
 cl_screenmessage_notifytime                                                      : 8                : cl                               : How long to display screen message text	
 cl_sendtable_cache_filename                                                      : 0                :                                  : Send tables cache file	
 cl_sequence_debug                                                                : -1               : cl                               : 	
@@ -199,7 +186,6 @@ cl_timeout                                                                      
 cl_update_spatial_entities_before_latchwork                                      : 1                : cl                               : Update spatial partition entities before we do latch work. Overcomes a potential deadlock in IK, but convared so we can test perf implications.	
 cl_updaterate                                                                    : 20               : a, user                          : Number of packets per second of updates you are requesting from the server	
 cl_updatevisibility                                                              : cmd              :                                  : Updates visibility bits.	
-cl_viewtarget_clamp                                                              : 1                : cl                               : 	
 cl_voice_filter                                                                  : 0                :                                  : Filter voice by name substring	
 cl_vprof_scope_entity_gamephys                                                   : 0                : cl                               : 	
 clientport                                                                       : 0                : release                          : If non-empty, client binds port to specific address.  Usually you should leave this blank to use a different random system-assigned port for each connection.	
@@ -274,14 +260,11 @@ csm_split_log_scalar                                                            
 csm_viewdir_shadow_bias                                                          : 0                : cheat                            : 	
 cvarlist                                                                         : cmd              :                                  : Show the list of convars/concommands.	
 d3d_max_feature_level                                                            : 11               :                                  : Report the maximum D3D feature level available.	
-dbghist_addline                                                                  : cmd              :                                  : Add a line to the debug history. Format: <category id> <line>	
-dbghist_dump                                                                     : cmd              :                                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Scene Print      3: Alyx Blind      4: Log of damage done to player   5: Player Teleport   6: Blind Zombie Sounds   7: Player Continuous 	
 debug                                                                            : 0                : release                          : 	
 debug_mapio                                                                      : 0                : sv, managed                      : If above 0, enables EntityIO debug/visualization and controls the length of the visualization in seconds	
 debug_overlay_fullposition                                                       : 0                : sv                               : 	
 debug_shared_random                                                              : 0                : sv, rep                          : 	
 debug_touchlinks                                                                 : 0                : sv                               : Spew touch link activity	
-debug_visibility_monitor                                                         : 0                : sv, cheat                        : 	
 debugoverlay_draw_current                                                        : 0                : cheat                            : Tell debugoverlay to not draw any entries that have aged out by the time of rendering. Useful if sim runs more often than rendering.	
 debugoverlay_ignore_source                                                       : 0                : cheat                            : Draw everything normal and ignore the source for rendering	
 debugoverlay_show_text_outline                                                   : 0                : cheat                            : Toggle display of box around text	
@@ -387,12 +370,6 @@ filesystem_report_buffered_io                                                   
 filesystem_unbuffered_io                                                         : 1                :                                  : 	
 find                                                                             : cmd              :                                  : Find concommands with the specified string in their name/help text.	
 findflags                                                                        : cmd              :                                  : Find concommands by flags.	
-flex_cycler_think_interval                                                       : 0                : sv                               : 	
-flex_expression                                                                  : 0                : sv                               : 	
-flex_rules                                                                       : 1                : cl                               : Allow flex animation rules to run.	
-flex_smooth                                                                      : 1                : cl                               : Applies smoothing/decay curve to flex animation controller changes.	
-flex_talk                                                                        : 0                : sv                               : 	
-fog_volume_debug                                                                 : 0                : sv                               : If enabled, prints diagnostic information about the current fog volume	
 fp_trace                                                                         : cmd              :                                  : Toggle field path tracing to file 	
 fps_max                                                                          : 0                : a                                : Frame rate limiter.  0=no limit.  Does not apply to dedicated server.	
 fps_max_inactive                                                                 : 90               : a                                : Frame rate limit when window has no focus	
@@ -429,7 +406,6 @@ gfx_hemioct_flat_normal_test                                                    
 gfx_load_skin_diffusion_profile                                                  : cmd              :                                  : Load a measured diffusion profile.	
 gfx_load_skin_diffusion_profile_image                                            : cmd              :                                  : Load a custom skin diffusion profile.	
 gfx_load_skin_diffusion_profile_sum_of_gaussians                                 : cmd              :                                  : Load sum-of-gaussians skin diffusion profile.	
-global_set                                                                       : cmd              :                                  : global_set <globalname> <state>: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD).	
 gpu_level                                                                        : 3                : cl                               : GPU Level - Default: High	
 gpu_mem_level                                                                    : 2                : cl                               : Memory Level - Default: High	
 groundik_enabled                                                                 : 1                :                                  : 	
@@ -630,7 +606,6 @@ lightquery_debug_indirect_lighting                                              
 lightquery_debug_indirect_lighting_fast                                          : 0                : sv, rep, cheat                   : 0 = standard sampling, 1 = fast sampling, 2 = ultra-fast sampling	
 lightquery_key_light_max_traces_per_frame                                        : 1                : sv, rep                          : 	
 listdemo                                                                         : cmd              :                                  : List demo file contents.	
-listRecentNPCSpeech                                                              : cmd              :                                  : Displays a list of the last 5 lines of speech from NPCs.	
 lobbies                                                                          : cmd              :                                  : 	
 log                                                                              : cmd              :                                  : Enables logging to file, console, and udp < on | off >.	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
@@ -731,7 +706,6 @@ mouse_pitch_inverted                                                            
 mouse_pitchyaw_sensitivity                                                       : 50.000000        : machine                          : 	
 mouse_yaw_inverted                                                               : 0                : cl, managed                      : Whether the mouse's yaw should be inverted or not	
 movie_fixwave                                                                    : cmd              :                                  : Fixup corrupted .wav file if engine crashed during startmovie/endmovie, etc.	
-mp_usehwmvcds                                                                    : 0                : cl                               : Enable the use of the hw morph vcd(s). (-1 = never, 1 = always, 0 = based upon GPU)	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
 nav_add_to_selected_set                                                          : cmd              :                                  : Add current area to the selected set.	
@@ -1130,9 +1104,6 @@ password                                                                        
 path                                                                             : cmd              :                                  : Show the filesystem path.	
 pause                                                                            : cmd              :                                  : Toggle the server pause state.	
 perf_time                                                                        : 500              : managed                          : 	
-phonemedelay                                                                     : 0                : cl                               : Phoneme delay to account for sound system latency.	
-phonemefilter                                                                    : 0                : cl                               : Time duration of box filter to pass over phonemes.	
-phonemesnap                                                                      : 2                : cl                               : Lod at level at which visemes stops always considering two phonemes, regardless of duration.	
 phys2_contact_debug_draw_size                                                    : 2                :                                  : 	
 phys2_debug_broadphase                                                           : 0                :                                  : 	
 phys2_world_bounds                                                               : 0                :                                  : 	
@@ -1474,16 +1445,6 @@ sc_throw_away_all_layers                                                        
 sc_use_clear_subrect                                                             : 0                :                                  : 	
 sc_visualize_batches                                                             : 0                :                                  : color per batch	
 sc_visualize_sceneobjects                                                        : 0                :                                  : 1 = visualize bounds, 2 = visualize sceneobject mesh materials, 3 = required texture size, 4 = bounds group, 5 = LOD	
-scene_clientflex                                                                 : 1                : sv, rep                          : Do client side flex animation.	
-scene_clientplayback                                                             : 1                : sv                               : Play all vcds on the clients.	
-scene_flush                                                                      : cmd              :                                  : Flush all .vcds from the cache and reload from disk.	
-scene_forcecombined                                                              : 0                : sv                               : When playing back, force use of combined .wav files even in english.	
-scene_maxcaptionradius                                                           : 1200             : sv                               : Only show closed captions if recipient is within this many units of speaking actor (0==disabled).	
-scene_print                                                                      : 0                : sv, rep                          : When playing back a scene, print timing and event info to console.	
-scene_showlook                                                                   : 0                : sv, a                            : When playing back, show the directions of look events.	
-scene_showmoveto                                                                 : 0                : sv, a                            : When moving, show the end location.	
-scene_showunlock                                                                 : 0                : sv, a                            : Show when a vcd is playing but normal AI is running.	
-scene_vcdautosave                                                                : 0                : cl                               : Create a savegame before VCD playback	
 screenmessage_notifytime                                                         : 8                : sv                               : How long to display screen message text	
 screenmessage_show                                                               : -1               : cheat                            : Enable display of console messages on screen. 1 = Enabled, 0 = Disabled, -1 = Enabled if vgui is not present	
 screenshot                                                                       : cmd              :                                  : Take a jpeg screenshot: jpeg_screenshot [filename] [quality 1-100].	
@@ -1768,7 +1729,6 @@ telemetry_message                                                               
 telemetry_toggle_timespan                                                        : cmd              :                                  : Starts/stops a timespan with an ever increasing name.	
 template_debug                                                                   : 0                : sv, cheat                        : 	
 Test_Checkpoint                                                                  : cmd              :                                  : Indicate to a test script that a checkpoint has been reached	
-test_entity_blocker                                                              : cmd              :                                  : Test command that drops an entity blocker out in front of the player.	
 Test_ExitProcess                                                                 : cmd              :                                  : Test_ExitProcess <exit code> - immediately kill the process.	
 Test_Loop                                                                        : cmd              :                                  : Test_Loop <loop name> - loop back to the specified loop start point unconditionally.	
 Test_LoopCount                                                                   : cmd              :                                  : Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.	
@@ -1812,8 +1772,6 @@ violence_hblood                                                                 
 violence_hgibs                                                                   : 1                : a                                : Show human gib entities	
 vis_enable                                                                       : 1                :                                  : Toggle static visibility	
 vis_update                                                                       : 1                : cheat                            : 	
-vismon_poll_frequency                                                            : 0                : sv, cheat                        : 	
-vismon_trace_limit                                                               : 12               : sv, cheat                        : 	
 vmem_dump                                                                        : cmd              :                                  : Dump memory stats to log.	
 voice_debugfeedbackfrom                                                          : 0                :                                  : 	
 voice_enable                                                                     : 1                : a                                : 	
@@ -1868,4 +1826,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1869 total convars/concommands
+1827 total convars/concommands
