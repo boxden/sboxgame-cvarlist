@@ -1191,8 +1191,6 @@ r_render_world_node_bounds                                                      
 r_renderdoc_capture_frame                                                        : cmd              :                                  : Triggers a RenderDoc capture	
 r_renderdoc_open_captures                                                        : 1                :                                  : 	
 r_rendersun                                                                      : 1                : cheat                            : Render sun lighting	
-r_resolution_scale                                                               : 100              : a                                : Determine the internal resolution to render at	
-r_resolution_scale_method                                                        : 1                : a                                : 0=Billinear, 1=FidelityFX Super Resolution	
 r_shadow_map_culling                                                             : 1                : cheat                            : 	
 r_shadows                                                                        : 1                : cheat                            : 	
 r_shadows_debug                                                                  : 0                :                                  : 	
@@ -1246,7 +1244,7 @@ r_textures_evict_all                                                            
 r_threaded_particles                                                             : 1                :                                  : 	
 r_threaded_scene_object_update                                                   : 1                : cl                               : 	
 r_tiled_rendering                                                                : 1                : a                                : Enable tiled rendering	
-r_tiled_rendering_depth_cull                                                     : 1                : a                                : Do GPU Depth Culling for Tiled Rendering objects	
+r_tiled_rendering_depth_cull                                                     : 1                :                                  : Do GPU Depth Culling for Tiled Rendering objects	
 r_timestamp_query_multiplier                                                     : 1                :                                  : Set the TIMESTAMP query cycle multiplier, for drivers that lie	
 r_toggleviewportsize                                                             : cmd              :                                  : Toggles viewport size between small + full window.	
 r_translucent                                                                    : 1                : cheat                            : Enable rendering of translucent geometry	
@@ -1737,4 +1735,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1738 total convars/concommands
+1736 total convars/concommands
