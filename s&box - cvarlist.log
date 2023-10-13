@@ -1243,7 +1243,7 @@ r_texturefilteringquality                                                       
 r_textures_evict_all                                                             : cmd              :                                  : Evict all resident texture.	
 r_threaded_particles                                                             : 1                :                                  : 	
 r_threaded_scene_object_update                                                   : 1                : cl                               : 	
-r_tiled_rendering                                                                : 1                : a                                : Enable tiled rendering	
+r_tiled_rendering                                                                : 1                :                                  : Enable tiled rendering	
 r_tiled_rendering_depth_cull                                                     : 1                :                                  : Do GPU Depth Culling for Tiled Rendering objects	
 r_timestamp_query_multiplier                                                     : 1                :                                  : Set the TIMESTAMP query cycle multiplier, for drivers that lie	
 r_toggleviewportsize                                                             : cmd              :                                  : Toggles viewport size between small + full window.	
