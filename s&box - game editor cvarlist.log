@@ -104,11 +104,6 @@ cl_interp_hermite                                                               
 cl_interp_simulationvars                                                         : 1                : cl                               : Interpolate LATCH_SIMULATION_BIT vars if interpolation interval is greater than animation interval	
 cl_interp_threadmodeticks                                                        : 0                : cl                               : Additional interpolation ticks to use when interpolating with threaded engine mode set.	
 cl_interpolate_report                                                            : 0                : cl, a                            : Enable to show interpolation profile timing 	
-cl_jiggle_bone_debug                                                             : 0                : cheat                            : Display physics-based 'jiggle bone' debugging information	
-cl_jiggle_bone_debug_pitch_constraints                                           : 0                : cheat                            : Display physics-based 'jiggle bone' debugging information	
-cl_jiggle_bone_debug_yaw_constraints                                             : 0                : cheat                            : Display physics-based 'jiggle bone' debugging information	
-cl_jiggle_bone_invert                                                            : 0                : cheat                            : 	
-cl_jiggle_bone_sanity                                                            : 1                :                                  : Prevent jiggle bones from pointing directly away from their target in case of numerical instability.	
 cl_lagcomp_errorcheck                                                            : 0                : cl                               : Player index of other player to check for position errors.	
 cl_lagcompensation                                                               : 1                : cl, user                         : Perform server side lag compensation.	
 cl_latch_report                                                                  : 0                : cl, a                            : Enable to skip client-side animation	
@@ -189,42 +184,12 @@ cl_updatevisibility                                                             
 cl_voice_filter                                                                  : 0                :                                  : Filter voice by name substring	
 cl_vprof_scope_entity_gamephys                                                   : 0                : cl                               : 	
 clientport                                                                       : 0                : release                          : If non-empty, client binds port to specific address.  Usually you should leave this blank to use a different random system-assigned port for each connection.	
-cloth_approximate_collide                                                        : 1                :                                  : 	
-cloth_batch                                                                      : 32               :                                  : 	
-cloth_damping_bias                                                               : 0                :                                  : 	
-cloth_damping_multiplier                                                         : 1                :                                  : 	
-cloth_debug                                                                      : 0                :                                  : 	
 cloth_debug_draw                                                                 : 0                : cl                               : 	
-cloth_debug_draw_nodepth_alpha                                                   : 16               :                                  : 	
-cloth_ground_offset                                                              : 0                :                                  : 	
-cloth_ground_plane_thickness                                                     : 3                :                                  : 	
-cloth_guard_threshold                                                            : 1000             :                                  : 	
-cloth_interpolation_strategy                                                     : 0                :                                  : 	
-cloth_iteration_multiplier                                                       : 1                :                                  : 	
 cloth_iv_dump                                                                    : 4                : cl                               : 	
 cloth_iv_store_back                                                              : 0                : sv, rep                          : 	
-cloth_legacy_stretch_force                                                       : 0                :                                  : 	
-cloth_legacy_support                                                             : 1                :                                  : 	
-cloth_max_ticks_per_frame                                                        : 8                :                                  : 	
-cloth_node_debug_axis_length                                                     : 1                :                                  : 	
-cloth_quad_smooth_iterations                                                     : -1               :                                  : 	
-cloth_quad_smooth_rate                                                           : -1               :                                  : 	
-cloth_quasistatic_iters                                                          : 0                :                                  : 	
-cloth_reload_immediately                                                         : 0                :                                  : 	
-cloth_resim_after                                                                : 0                :                                  : 	
-cloth_rigid_update                                                               : 0                :                                  : 	
-cloth_rod_smooth_iterations                                                      : -1               :                                  : 	
-cloth_rod_smooth_rate                                                            : -1               :                                  : 	
 cloth_sim_on_tick                                                                : 1                : cl                               : 	
-cloth_simulate                                                                   : 1                :                                  : 	
-cloth_sleep_threshold                                                            : 30               :                                  : 	
-cloth_step                                                                       : 1                :                                  : 	
-cloth_step_variability                                                           : 0                :                                  : 	
 cloth_update                                                                     : 1                : cl                               : 	
 cloth_update_bones_on_ticks                                                      : 1                : cl                               : 	
-cloth_watch                                                                      : 1                : rep                              : 	
-cloth_wind                                                                       : 0                :                                  : 	
-cloth_wind_pitch                                                                 : 0                :                                  : 	
 cmd                                                                              : cmd              :                                  : Forward command to server.	
 con_enable                                                                       : false            : launch                           : 	
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
@@ -1104,36 +1069,21 @@ password                                                                        
 path                                                                             : cmd              :                                  : Show the filesystem path.	
 pause                                                                            : cmd              :                                  : Toggle the server pause state.	
 perf_time                                                                        : 500              : managed                          : 	
-phys2_contact_debug_draw_size                                                    : 2                :                                  : 	
-phys2_debug_broadphase                                                           : 0                :                                  : 	
-phys2_world_bounds                                                               : 0                :                                  : 	
 phys_active                                                                      : 1                : sv                               : Whether PLAYER physics is actively simulated (ie. noclip)	
-phys_build_bounds                                                                : 0                :                                  : 	
-phys_build_mass                                                                  : 0                :                                  : 	
 phys_continuous_kinematic_update                                                 : 0                : sv, rep                          : 	
-phys_debug_draw                                                                  : cmd              :                                  : Set up debug-draw of physics internal state	
-phys_debug_showdefaultmaterial                                                   : 0                : cheat                            : If enabled, surfaces with default material are highlighted in physics debug geometry.	
-phys_drag_multiplier                                                             : 1                : nf, rep                          : Multiply air drag	
 phys_dynamic_scaling                                                             : 1                : sv, rep, cheat                   : 	
-phys_fast_report_contacts                                                        : 1                :                                  : when 1, fast path for collision reporting is implemented making triggers faster in some cases	
-phys_implicit_integarator                                                        : 1                : nf, rep                          : Use implicit integrator for gyroscopic forces	
-phys_jiggle_bone_enable                                                          : 1                :                                  : 	
 phys_log_updaters                                                                : 0                : sv, rep                          : 	
 phys_log_updaters_exclude                                                        : 0                : sv, rep                          : 	
 phys_log_updaters_include                                                        : 0                : sv, rep                          : 	
-phys_old_contact_draw                                                            : 0                :                                  : 	
-phys_parallel_islands                                                            : 0                : sv, rep                          : Enable/Disable Parallel Island Solving	
-phys_reload_immediately                                                          : 0                :                                  : Set to 1 to reload resources and reconstruct physics of entities on the fly. May unexpectedly change behavior or crash the game, because game code is generally unaware of underlying resource reloads and may hold references to physics that may become invalid during resource reload. It is inherently harder for physics to deal with resource reloads because of persistent nature of objects being simulated (textures can be easily reloaded on the fly; if an entity holds a handle to a ragdoll body part, it may expect that handle to stay valid while the ragdoll exists)	
 phys_show_stats                                                                  : 0                : sv, rep                          : 	
 phys_sleep                                                                       : cmd              :                                  : Put all physics in all the worlds to sleep	
 phys_specialized_linear_sweep                                                    : 1                : sv, rep, cheat                   : 	
-phys_step_threaded                                                               : true             : application                      : 	
-phys_validate                                                                    : 0                :                                  : 	
 phys_visualize_awake_dynamic_only                                                : 0                : sv, rep                          : 	
 phys_visualize_awake_unattached_only                                             : 0                : sv, rep                          : 	
 phys_visualize_traces                                                            : 0                : sv, rep, cheat                   : 	
 phys_wakeup                                                                      : cmd              :                                  : Wake all physics objects in the Main physics up	
 physics_add_test                                                                 : cmd              :                                  : add test object	
+physics_debug_draw                                                               : 0                :                                  : 	
 physics_highlight_active                                                         : cmd              :                                  : Turns on the absbox for all active physics objects.   0 : un-highlight. 	
 physics_remove_test                                                              : cmd              :                                  : remove test object	
 physics_report_active                                                            : cmd              :                                  : Lists all active physics objects   -more : extra info 	
@@ -1309,7 +1259,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 1536             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4957             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -1369,7 +1319,6 @@ restart                                                                         
 rpestats                                                                         : cmd              :                                  : dump rpe	
 rs_submit_twice                                                                  : 0                :                                  : 	
 rtx_force_default_hitgroup                                                       : 0                :                                  : Forces all ray traced geometry to use default hit shaders instead of specialized ones.	
-rubikon_joint_deepdebugging                                                      : 0                :                                  : 	
 run_perftest                                                                     : cmd              :                                  : Execute perftest.cfg	
 savedgame                                                                        : 0                : sv, managed                      : 	
 sbox_feature_inheritlods                                                         : 1                : rep                              : Child models inherit parent LOD number	
@@ -1796,10 +1745,6 @@ volume_fog_jitter_offset_random                                                 
 volume_fog_show_volumes                                                          : 0                : cheat                            : 	
 volume_fog_vr_single_dispatch                                                    : 1                :                                  : 	
 volume_fog_width                                                                 : 240              :                                  : 	
-vphys2_friction_factor                                                           : 1                : cheat                            : Change global friction factor	
-vphys2_restitution_factor                                                        : 1                : cheat                            : Change global restitution factor	
-vphysics_force_apply_magnitude                                                   : 1                :                                  : 	
-vphysics_return_implicit_velocity                                                : 0                :                                  : 	
 vprof_remote_start                                                               : cmd              :                                  : Request a VProf data stream from the remote server (requires authentication)	
 vprof_remote_stop                                                                : cmd              :                                  : Stop an existing remote VProf data request	
 vprof_scope_entity_gamephys                                                      : 0                : sv                               : 	
@@ -1825,4 +1770,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1826 total convars/concommands
+1771 total convars/concommands
