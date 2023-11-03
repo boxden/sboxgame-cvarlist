@@ -1159,7 +1159,6 @@ r_skip_precache_validation_check                                                
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
-r_stereo_mode_crossed                                                            : 0                :                                  : Draw in stereo using left and right eyes	
 r_stereo_multiview_instancing                                                    : 1                : cheat                            : Use multiview instancing for stereo rendering.	
 r_strip_invisible_during_sceneobject_update                                      : 0                : cl                               : 	
 r_suppress_redundant_state_changes                                               : 1                :                                  : 	
@@ -1172,7 +1171,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4000             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4052             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -1657,14 +1656,12 @@ vprof_remote_stop                                                               
 vprof_scope_entity_gamephys                                                      : 0                : sv                               : 	
 vprof_scope_entity_thinks                                                        : 0                : sv, rep                          : 	
 vprof_think_limit                                                                : 0                : sv                               : 	
-vr_camera_decay_roll_halflife                                                    : 0                :                                  : 	
-vr_camera_decay_yaw_pitch_halflife                                               : 0                :                                  : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
 vr_foveated_rendering                                                            : 1                :                                  : Render at lower resolution in the periphery of the view, requires multiview instancing.	
 vr_foveated_rendering_debug                                                      : 0                :                                  : 	
+vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
 vr_screenshake_scale                                                             : 1                : cl                               : 	
-vr_spectator_remove_roll_halflife                                                : 0                :                                  : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
 vr_stencil_debug                                                                 : 0                :                                  : 0=Off, 1=DebugWireframe, 2=DebugSolidBlink	
@@ -1677,4 +1674,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1678 total convars/concommands
+1675 total convars/concommands
