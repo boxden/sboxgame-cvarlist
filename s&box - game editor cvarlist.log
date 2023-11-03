@@ -1246,7 +1246,6 @@ r_skip_precache_validation_check                                                
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
-r_stereo_mode_crossed                                                            : 0                :                                  : Draw in stereo using left and right eyes	
 r_stereo_multiview_instancing                                                    : 1                : cheat                            : Use multiview instancing for stereo rendering.	
 r_strip_invisible_during_sceneobject_update                                      : 0                : cl                               : 	
 r_suppress_redundant_state_changes                                               : 1                :                                  : 	
@@ -1750,18 +1749,20 @@ vprof_remote_stop                                                               
 vprof_scope_entity_gamephys                                                      : 0                : sv                               : 	
 vprof_scope_entity_thinks                                                        : 0                : sv, rep                          : 	
 vprof_think_limit                                                                : 0                : sv                               : 	
-vr_camera_decay_roll_halflife                                                    : 0                :                                  : 	
-vr_camera_decay_yaw_pitch_halflife                                               : 0                :                                  : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
+vr_force_interleaved_projection                                                  : 0                : managed                          : 	
 vr_foveated_rendering                                                            : 1                :                                  : Render at lower resolution in the periphery of the view, requires multiview instancing.	
 vr_foveated_rendering_debug                                                      : 0                :                                  : 	
+vr_gpu_flush_timer                                                               : 2                : managed                          : 	
+vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
+vr_predict                                                                       : 0                : managed                          : 	
 vr_screenshake_scale                                                             : 1                : cl                               : 	
-vr_spectator_remove_roll_halflife                                                : 0                :                                  : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
 vr_stencil_debug                                                                 : 0                :                                  : 0=Off, 1=DebugWireframe, 2=DebugSolidBlink	
 vr_use_fullsort_for_opaque                                                       : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
+vr_use_predicted_hmd_tracking                                                    : 0                : managed                          : 	
 vtune                                                                            : cmd              :                                  : Controls VTune's sampling.	
 world_dump_loaded_worlds                                                         : cmd              :                                  : Dump all of the worlds that we know about	
 world_layer_list                                                                 : cmd              :                                  : List all world layers	
@@ -1770,4 +1771,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1771 total convars/concommands
+1772 total convars/concommands	
