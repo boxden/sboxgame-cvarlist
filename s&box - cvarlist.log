@@ -184,6 +184,7 @@ con_enable                                                                      
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
 con_toggle                                                                       : cmd              :                                  : 	
 connect                                                                          : cmd              :                                  : Connect to a remote server.	
+connect2                                                                         : cmd              :                                  : 	
 consoleoverlay                                                                   : 0                : cl, managed                      : Enable the console to draw at the top of the screen all the time	
 controller_look_speed_pitch                                                      : 160              : cl, managed                      : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
 controller_look_speed_yaw                                                        : 270              : cl, managed                      : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
@@ -252,6 +253,7 @@ diffcheck_spew_diff_only                                                        
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
 disconnect                                                                       : cmd              :                                  : Disconnect from server	
+disconnect2                                                                      : cmd              :                                  : 	
 display_game_events                                                              : 0                : sv, cheat                        : 	
 displaysoundlist                                                                 : 0                : sv                               : 	
 dsp_db_min                                                                       : 80               : demo                             : 	
@@ -353,6 +355,7 @@ headforce_inner                                                                 
 headforce_outer                                                                  : 16               : sv, rep, cheat                   : 	
 headforce_strength                                                               : 10               : sv, rep, cheat                   : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
+host                                                                             : cmd              :                                  : 	
 host_force_frametime_to_equal_tick_interval                                      : 0                :                                  : 	
 host_framerate                                                                   : 0                : release                          : Set to lock per-frame time elapse.	
 host_limitlocal                                                                  : 0                :                                  : Apply cl_updaterate to loopback connection	
@@ -364,6 +367,8 @@ host_writeconfig                                                                
 hostip                                                                           : 0                : release                          : Host game server ip	
 hostname                                                                         : 0                : release                          : Hostname for server.	
 hostport                                                                         : 27015            : release                          : Host game server port	
+hotload_fast                                                                     : 0                : cl, managed                      : Experimental fast hotloads if only method bodies change	
+hotload_log                                                                      : 0                : cl, managed                      : Hotload log level (0: none, 1: simple, 2: full)	
 ic                                                                               : cmd              :                                  : interp entity count 	
 ik_abs_origin_height_spring_strength_default                                     : 500              : sv, rep                          : 	
 ik_constraints_enabled                                                           : 1                :                                  : 	
@@ -434,6 +439,8 @@ input_button_code_is_scan_code                                                  
 input_downimpulsevalue                                                           : 0.700000         : application                      : 	
 input_filter_relative_analog_inputs                                              : false            : machine                          : 	
 input_upimpulsevalue                                                             : 0.300000         : application                      : 	
+interopsystem.dump                                                               : cmd              :                                  : 	
+interopsystem.status                                                             : cmd              :                                  : 	
 ip                                                                               : 0                : release                          : Overrides IP for multihomed hosts	
 iv_debugbone                                                                     : 0                : release                          : Debug bone name for interpolation spew of CAnimationState.	
 iv_parallel_latch                                                                : 1                : cl                               : 	
@@ -977,12 +984,16 @@ npcsolve_separation_draw                                                        
 npcsolve_separation_jitter                                                       : 0                : sv                               : 	
 npcsolve_separation_r2                                                           : 0                : sv                               : 	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
+package_install                                                                  : cmd              :                                  : 	
+package_list                                                                     : cmd              :                                  : 	
+package_unmount_tag                                                              : cmd              :                                  : 	
 particle_profile                                                                 : cmd              :                                  : Profile particle	
 particle_profile_spike                                                           : cmd              :                                  : Profile particle spike	
 particles_multiplier                                                             : 1                : cheat                            : Multiply # of rendered particles by this for perf testing	
 password                                                                         : 0                : a, norecord, server_cant_query   : Current server access password	
 path                                                                             : cmd              :                                  : Show the filesystem path.	
 pause                                                                            : cmd              :                                  : Toggle the server pause state.	
+perf_time                                                                        : 500              : cl, managed                      : 	
 phys_active                                                                      : 1                : sv                               : Whether PLAYER physics is actively simulated (ie. noclip)	
 phys_continuous_kinematic_update                                                 : 0                : sv, rep                          : 	
 phys_dynamic_scaling                                                             : 1                : sv, rep, cheat                   : 	
@@ -1171,7 +1182,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4052             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4104             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -1217,6 +1228,7 @@ rcon_address                                                                    
 rcon_password                                                                    : 0                : norecord, release, server_cant_query : remote console password.	
 recast_mark_overhang                                                             : 1                : rep, cheat                       : Enable/disable overhang detection	
 recast_partitioning                                                              : 0                : rep, cheat                       : 0 = watershed, 1 = monotone, 2 = layers	
+reconnect                                                                        : cmd              :                                  : 	
 record                                                                           : cmd              :                                  : Record a demo.	
 report_cliententitysim                                                           : 0                : cl, cheat                        : List all clientside simulations and time - will report and turn itself off.	
 report_clientthinklist                                                           : 0                : cl, cheat                        : List all clientside entities thinking and time - will report and turn itself off.	
@@ -1485,6 +1497,7 @@ stats                                                                           
 stats_display                                                                    : 0                :                                  : Displays perf statistics information	
 stats_print                                                                      : cmd              :                                  : Prints out perf statistics to the console, clears perf history	
 status                                                                           : cmd              :                                  : Print connection status	
+status2                                                                          : cmd              :                                  : 	
 status_json                                                                      : cmd              :                                  : Print status in JSON format	
 steaminput_glyph_forceresize                                                     : 0                : cl, managed                      : If Steam has the wrong size glyphs, resize them	
 steaminput_glyph_forcetype                                                       : 0                : cl, managed                      : Forces controller glyphs to render as a different controller type	
@@ -1657,15 +1670,19 @@ vprof_scope_entity_gamephys                                                     
 vprof_scope_entity_thinks                                                        : 0                : sv, rep                          : 	
 vprof_think_limit                                                                : 0                : sv                               : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
+vr_force_interleaved_projection                                                  : 0                : cl, managed                      : 	
 vr_foveated_rendering                                                            : 1                :                                  : Render at lower resolution in the periphery of the view, requires multiview instancing.	
 vr_foveated_rendering_debug                                                      : 0                :                                  : 	
+vr_gpu_flush_timer                                                               : 2                : cl, managed                      : 	
 vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
+vr_predict                                                                       : 0                : cl, managed                      : 	
 vr_screenshake_scale                                                             : 1                : cl                               : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
 vr_stencil_debug                                                                 : 0                :                                  : 0=Off, 1=DebugWireframe, 2=DebugSolidBlink	
 vr_use_fullsort_for_opaque                                                       : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
+vr_use_predicted_hmd_tracking                                                    : 0                : cl, managed                      : 	
 vtune                                                                            : cmd              :                                  : Controls VTune's sampling.	
 world_dump_loaded_worlds                                                         : cmd              :                                  : Dump all of the worlds that we know about	
 world_layer_list                                                                 : cmd              :                                  : List all world layers	
@@ -1674,4 +1691,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1675 total convars/concommands
+1692 total convars/concommands	
