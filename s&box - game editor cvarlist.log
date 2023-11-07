@@ -195,6 +195,7 @@ con_enable                                                                      
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
 con_toggle                                                                       : cmd              :                                  : 	
 connect                                                                          : cmd              :                                  : Connect to a remote server.	
+connect2                                                                         : cmd              :                                  : 	
 consoleoverlay                                                                   : 0                : cl, managed                      : Enable the console to draw at the top of the screen all the time	
 controller_look_speed_pitch                                                      : 160              : cl, managed                      : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
 controller_look_speed_yaw                                                        : 270              : cl, managed                      : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
@@ -263,6 +264,7 @@ diffcheck_spew_diff_only                                                        
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
 disconnect                                                                       : cmd              :                                  : Disconnect from server	
+disconnect2                                                                      : cmd              :                                  : 	
 display_game_events                                                              : 0                : sv, cheat                        : 	
 displaysoundlist                                                                 : 0                : sv                               : 	
 dsp_db_min                                                                       : 80               : demo                             : 	
@@ -426,6 +428,7 @@ headforce_inner                                                                 
 headforce_outer                                                                  : 16               : sv, rep, cheat                   : 	
 headforce_strength                                                               : 10               : sv, rep, cheat                   : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
+host                                                                             : cmd              :                                  : 	
 host_force_frametime_to_equal_tick_interval                                      : 0                :                                  : 	
 host_framerate                                                                   : 0                : release                          : Set to lock per-frame time elapse.	
 host_limitlocal                                                                  : 0                :                                  : Apply cl_updaterate to loopback connection	
@@ -437,8 +440,8 @@ host_writeconfig                                                                
 hostip                                                                           : 0                : release                          : Host game server ip	
 hostname                                                                         : 0                : release                          : Hostname for server.	
 hostport                                                                         : 27015            : release                          : Host game server port	
-hotload_fast                                                                     : 0                : managed                          : Experimental fast hotloads if only method bodies change	
-hotload_log                                                                      : 0                : managed                          : Hotload log level (0: none, 1: simple, 2: full)	
+hotload_fast                                                                     : 0                : cl, managed                      : Experimental fast hotloads if only method bodies change	
+hotload_log                                                                      : 0                : cl, managed                      : Hotload log level (0: none, 1: simple, 2: full)	
 hullivr_edge_merge_tan                                                           : 0                :                                  : Should we try to straighten two faces connected to this edge? (tangent)	
 hullivr_faceisland_merge_disp                                                    : 0                :                                  : Should we straighten face island if the displacement is this much? (inches)	
 hullivr_faceisland_merge_tan                                                     : 0                :                                  : Should we try to straighten an island of faces deviating from their average normal (tangent)?	
@@ -1068,7 +1071,7 @@ particles_multiplier                                                            
 password                                                                         : 0                : a, norecord, server_cant_query   : Current server access password	
 path                                                                             : cmd              :                                  : Show the filesystem path.	
 pause                                                                            : cmd              :                                  : Toggle the server pause state.	
-perf_time                                                                        : 500              : managed                          : 	
+perf_time                                                                        : 500              : cl, managed                      : 	
 phys_active                                                                      : 1                : sv                               : Whether PLAYER physics is actively simulated (ie. noclip)	
 phys_continuous_kinematic_update                                                 : 0                : sv, rep                          : 	
 phys_dynamic_scaling                                                             : 1                : sv, rep, cheat                   : 	
@@ -1304,6 +1307,7 @@ rcon_address                                                                    
 rcon_password                                                                    : 0                : norecord, release, server_cant_query : remote console password.	
 recast_mark_overhang                                                             : 1                : rep, cheat                       : Enable/disable overhang detection	
 recast_partitioning                                                              : 0                : rep, cheat                       : 0 = watershed, 1 = monotone, 2 = layers	
+reconnect                                                                        : cmd              :                                  : 	
 record                                                                           : cmd              :                                  : Record a demo.	
 report_cliententitysim                                                           : 0                : cl, cheat                        : List all clientside simulations and time - will report and turn itself off.	
 report_clientthinklist                                                           : 0                : cl, cheat                        : List all clientside entities thinking and time - will report and turn itself off.	
@@ -1574,6 +1578,7 @@ stats                                                                           
 stats_display                                                                    : 0                :                                  : Displays perf statistics information	
 stats_print                                                                      : cmd              :                                  : Prints out perf statistics to the console, clears perf history	
 status                                                                           : cmd              :                                  : Print connection status	
+status2                                                                          : cmd              :                                  : 	
 status_json                                                                      : cmd              :                                  : Print status in JSON format	
 steaminput_glyph_forceresize                                                     : 0                : cl, managed                      : If Steam has the wrong size glyphs, resize them	
 steaminput_glyph_forcetype                                                       : 0                : cl, managed                      : Forces controller glyphs to render as a different controller type	
@@ -1750,19 +1755,19 @@ vprof_scope_entity_gamephys                                                     
 vprof_scope_entity_thinks                                                        : 0                : sv, rep                          : 	
 vprof_think_limit                                                                : 0                : sv                               : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
-vr_force_interleaved_projection                                                  : 0                : managed                          : 	
+vr_force_interleaved_projection                                                  : 0                : cl, managed                      : 	
 vr_foveated_rendering                                                            : 1                :                                  : Render at lower resolution in the periphery of the view, requires multiview instancing.	
 vr_foveated_rendering_debug                                                      : 0                :                                  : 	
-vr_gpu_flush_timer                                                               : 2                : managed                          : 	
+vr_gpu_flush_timer                                                               : 2                : cl, managed                      : 	
 vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
-vr_predict                                                                       : 0                : managed                          : 	
+vr_predict                                                                       : 0                : cl, managed                      : 	
 vr_screenshake_scale                                                             : 1                : cl                               : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
 vr_stencil_debug                                                                 : 0                :                                  : 0=Off, 1=DebugWireframe, 2=DebugSolidBlink	
 vr_use_fullsort_for_opaque                                                       : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
-vr_use_predicted_hmd_tracking                                                    : 0                : managed                          : 	
+vr_use_predicted_hmd_tracking                                                    : 0                : cl, managed                      : 	
 vtune                                                                            : cmd              :                                  : Controls VTune's sampling.	
 world_dump_loaded_worlds                                                         : cmd              :                                  : Dump all of the worlds that we know about	
 world_layer_list                                                                 : cmd              :                                  : List all world layers	
@@ -1771,4 +1776,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1772 total convars/concommands	
+1777 total convars/concommands
