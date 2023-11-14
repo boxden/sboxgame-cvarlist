@@ -1132,7 +1132,6 @@ r_custom_msaa_resolve                                                           
 r_depth_prepass                                                                  : 1                :                                  : 	
 r_depth_prepass_cull_threshold                                                   : 60               :                                  : 	
 r_directional_lightmaps                                                          : 1                :                                  : 	
-r_directlighting                                                                 : 1                : cheat                            : Set to use direct lighting	
 r_dither_scale                                                                   : 1                :                                  : 	
 r_dopixelvisibility                                                              : 1                : cheat                            : 	
 r_draw3dskybox                                                                   : 1                : cl                               : 	
@@ -1176,7 +1175,6 @@ r_grass_max_brightness_change                                                   
 r_grass_quality                                                                  : 2                :                                  : 0 = Off, 1 = Low, 2 = Med, 3 = high, 4 = ultra	
 r_grass_start_fade                                                               : 2000             :                                  : 	
 r_grass_vertex_lighting                                                          : 0                :                                  : 	
-r_indirectlighting                                                               : 1                : cheat                            : Set to use indirect lighting	
 r_jiggle_bones                                                                   : 1                : cl                               : 	
 r_kick_dependent_views_early                                                     : 0                :                                  : Kicks off creation of dependent views early in the frame	
 r_light_probe_volume_debug_colors                                                : 0                : cheat                            : 	
@@ -1249,14 +1247,12 @@ r_skip_precache_validation_check                                                
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
-r_stereo_multiview_instancing                                                    : 1                : cheat                            : Use multiview instancing for stereo rendering.	
 r_strip_invisible_during_sceneobject_update                                      : 0                : cl                               : 	
 r_suppress_redundant_state_changes                                               : 1                :                                  : 	
 r_texture_budget_dynamic                                                         : 1                :                                  : Dynamically adjust texture streaming budget based on GPU memory usage.	
 r_texture_budget_threshold                                                       : 0                :                                  : Reduce texture memory pool size when this percentage of the budget is full.	
 r_texture_budget_update_period                                                   : 0                :                                  : Time (in seconds) between updating texture memory budget.	
 r_texture_eager_eviction                                                         : 0                :                                  : 	
-r_texture_hookup_uses_threadpool                                                 : 1                :                                  : Async Texture hookup uses its own threadpool instead of the global pool.	
 r_texture_lod_scale                                                              : 1                : cheat                            : Scale factor for requested texture size (texture streaming)	
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
@@ -1756,8 +1752,6 @@ vprof_scope_entity_thinks                                                       
 vprof_think_limit                                                                : 0                : sv                               : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
 vr_force_interleaved_projection                                                  : 0                : cl, managed                      : 	
-vr_foveated_rendering                                                            : 1                :                                  : Render at lower resolution in the periphery of the view, requires multiview instancing.	
-vr_foveated_rendering_debug                                                      : 0                :                                  : 	
 vr_gpu_flush_timer                                                               : 2                : cl, managed                      : 	
 vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
@@ -1765,7 +1759,6 @@ vr_predict                                                                      
 vr_screenshake_scale                                                             : 1                : cl                               : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
-vr_stencil_debug                                                                 : 0                :                                  : 0=Off, 1=DebugWireframe, 2=DebugSolidBlink	
 vr_use_fullsort_for_opaque                                                       : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
 vr_use_predicted_hmd_tracking                                                    : 0                : cl, managed                      : 	
 vtune                                                                            : cmd              :                                  : Controls VTune's sampling.	
@@ -1776,4 +1769,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1777 total convars/concommands
+1770 total convars/concommands
