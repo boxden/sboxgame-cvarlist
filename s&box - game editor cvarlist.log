@@ -524,6 +524,7 @@ iv_debugbone                                                                    
 iv_parallel_latch                                                                : 1                : cl                               : 	
 iv_parallel_restore                                                              : 0                : cl                               : 	
 iv_wrapped_parallel_latch                                                        : 1                : cl                               : 	
+joinlobby                                                                        : cmd              :                                  : 	
 joy_accel_filter                                                                 : 0.200000         : application                      : 	
 joy_accelmax                                                                     : 1.000000         : application                      : 	
 joy_accelscale                                                                   : 0.600000         : application                      : 	
@@ -1769,4 +1770,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1770 total convars/concommands
+1771 total convars/concommands
