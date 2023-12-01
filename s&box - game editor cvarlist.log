@@ -1751,6 +1751,7 @@ vprof_remote_stop                                                               
 vprof_scope_entity_gamephys                                                      : 0                : sv                               : 	
 vprof_scope_entity_thinks                                                        : 0                : sv, rep                          : 	
 vprof_think_limit                                                                : 0                : sv                               : 	
+vr_depth_submit                                                                  : 0                : cl, managed                      : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
 vr_force_interleaved_projection                                                  : 0                : cl, managed                      : 	
 vr_gpu_flush_timer                                                               : 2                : cl, managed                      : 	
@@ -1770,4 +1771,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1771 total convars/concommands
+1772 total convars/concommands
