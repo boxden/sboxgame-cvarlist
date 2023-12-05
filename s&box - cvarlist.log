@@ -1051,6 +1051,7 @@ r_cubemap_normalization                                                         
 r_cubemap_normalization_max                                                      : 32               :                                  : 	
 r_cubemap_normalization_roughness_begin                                          : 0                :                                  : 	
 r_custom_msaa_resolve                                                            : 1                :                                  : 	
+r_depth_debug                                                                    : 0                :                                  : Debug view of the depth buffer	
 r_depth_prepass                                                                  : 1                :                                  : 	
 r_depth_prepass_cull_threshold                                                   : 60               :                                  : 	
 r_directional_lightmaps                                                          : 1                :                                  : 	
@@ -1070,7 +1071,7 @@ r_drawviewmodel                                                                 
 r_drawworld                                                                      : 1                : cheat                            : Render the world.	
 r_dx11_report_live_objects                                                       : cmd              :                                  : Prints out live D3D11 objects (requires -dx11debug)	
 r_dx11_software_cmd_lists                                                        : 1                :                                  : Enable Software Command lists for DX11 (Avoid using deferred contexts)	
-r_dynamic_reflections                                                            : 0                : a                                : Allow dynamic reflections	
+r_dynamic_reflections                                                            : 1                : a                                : Allow dynamic reflections	
 r_dynamic_reflections_debug                                                      : 0                :                                  : 	
 r_dynamic_reflections_denoise                                                    : 1                :                                  : 	
 r_dynamic_reflections_draw_everything                                            : 0                :                                  : Ignore object gathering filters when setting up dynamic reflections pass and draw all objects capable of dynamic reflections. Requires material reload.	
@@ -1179,7 +1180,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4034             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4037             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -1686,4 +1687,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1687 total convars/concommands
+1688 total convars/concommands
