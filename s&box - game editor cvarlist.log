@@ -1130,6 +1130,7 @@ r_cubemap_normalization                                                         
 r_cubemap_normalization_max                                                      : 32               :                                  : 	
 r_cubemap_normalization_roughness_begin                                          : 0                :                                  : 	
 r_custom_msaa_resolve                                                            : 1                :                                  : 	
+r_depth_debug                                                                    : 0                :                                  : Debug view of the depth buffer	
 r_depth_prepass                                                                  : 1                :                                  : 	
 r_depth_prepass_cull_threshold                                                   : 60               :                                  : 	
 r_directional_lightmaps                                                          : 1                :                                  : 	
@@ -1149,7 +1150,7 @@ r_drawviewmodel                                                                 
 r_drawworld                                                                      : 1                : cheat                            : Render the world.	
 r_dx11_report_live_objects                                                       : cmd              :                                  : Prints out live D3D11 objects (requires -dx11debug)	
 r_dx11_software_cmd_lists                                                        : 1                :                                  : Enable Software Command lists for DX11 (Avoid using deferred contexts)	
-r_dynamic_reflections                                                            : 0                : a                                : Allow dynamic reflections	
+r_dynamic_reflections                                                            : 1                : a                                : Allow dynamic reflections	
 r_dynamic_reflections_debug                                                      : 0                :                                  : 	
 r_dynamic_reflections_denoise                                                    : 1                :                                  : 	
 r_dynamic_reflections_draw_everything                                            : 0                :                                  : Ignore object gathering filters when setting up dynamic reflections pass and draw all objects capable of dynamic reflections. Requires material reload.	
@@ -1771,4 +1772,4 @@ writekeybindings                                                                
 xc_crouch_debounce                                                               : 0                : sv                               : 	
 zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1772 total convars/concommands
+1773 total convars/concommands
