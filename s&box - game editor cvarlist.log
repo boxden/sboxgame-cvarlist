@@ -2,13 +2,7 @@
 <unconnected>                                                                    : 0                :                                  : 	
 _record                                                                          : cmd              :                                  : Record a demo incrementally.	
 alias                                                                            : cmd              :                                  : Alias a command.	
-anim_disable                                                                     : 0                : sv, rep                          : 	
 anim_resource_validate_on_load                                                   : 1                : release                          : Validates the animation group channel list against the animations on load for every animation	
-animevents_dump                                                                  : cmd              :                                  : List all the currently registered anim events. 	
-animgraph_debug                                                                  : 0                : sv, rep, cheat                   : Debug animation graph	
-animgraph_debug_entindex                                                         : 0                : sv, rep, cheat                   : The entity to specifically debug	
-animgraph_debug_tags                                                             : 0                : sv, rep                          : 	
-animgraph_enable_parallel_update                                                 : 1                : sv, rep                          : 	
 animgraph_footlock_calculate_tilt                                                : 1                : rep                              : 	
 animgraph_footlock_debug_foot_index                                              : -1               : rep                              : 	
 animgraph_footlock_debug_type                                                    : 2                : rep                              : 	
@@ -24,7 +18,6 @@ animgraph_footlock_use_twobone_solve                                            
 animgraph_ik_debug                                                               : 0                :                                  : 	
 animgraph_ik_locks_enabled                                                       : 1                :                                  : 	
 animgraph_slowdownonslopes_enabled                                               : 1                : rep                              : 	
-animgraph_trace_ignore_prop_physics                                              : 1                : sv, rep                          : 	
 assetsystem_check_compile_state                                                  : cmd              :                                  : Perform a detailed check of an asset's compile state	
 assetsystem_count                                                                : cmd              :                                  : Find the number of assets registered with the asset system	
 assetsystem_debug_substring                                                      : 0                :                                  : Spew info for assets that match the specified substring	
@@ -45,15 +38,10 @@ binddefaults                                                                    
 bindtoggle                                                                       : cmd              :                                  : Performs a bind <key> 'increment var <cvar> 0 1 1'.	
 blink                                                                            : cmd              :                                  : Blink specified convar value between two values at the specified duration.	
 bone_decode_cache_enabled                                                        : 0                :                                  : 	
-bot_add                                                                          : cmd              :                                  : Spawn a bot player that mimics another player	
-cc_norepeat                                                                      : 5                : sv                               : In multiplayer games, don't repeat captions more often than this many seconds.	
-cc_showmissing                                                                   : 0                : sv, rep                          : Show missing closecaption entries.	
 changelevel                                                                      : cmd              :                                  : changelevel <mapname> :Multiplayer change level.	
 cl_aggregate_particles                                                           : 0                :                                  : 	
-cl_anim_queue_changes                                                            : 1                : cl                               : 	
 cl_auto_cursor_scale                                                             : true             : machine                          : 	
 cl_cache_sendtable                                                               : 1                :                                  : Cache sendtables	
-cl_change_callback_limit                                                         : 0                : cl, release                      : change callback msec warning limit	
 cl_clock_correction                                                              : 1                : cheat                            : Enable/disable clock correction on the client.	
 cl_clock_correction_adjustment_max_amount                                        : 200              : cheat                            : Sets the maximum number of milliseconds per second it is allowed to correct the client clock. It will only correct this amount if the difference between the client and server clock is equal to or larger than cl_clock_correction_adjustment_max_offset.	
 cl_clock_correction_adjustment_max_offset                                        : 90               : cheat                            : As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds), it moves towards applying cl_clock_correction_adjustment_max_amount of adjustment. That way, the response is small when the offset is small.	
@@ -65,55 +53,13 @@ cl_clockdbg                                                                     
 cl_clockdrift_max_ticks                                                          : 3                : cheat                            : Maximum number of ticks the clock is allowed to drift before the client snaps its clock to the server's.	
 cl_connectionretrytime_p2p                                                       : 20               : release                          : Number of seconds over which to spread retry attempts for P2P.	
 cl_cursor_scale                                                                  : 1.000000         : machine                          : 	
-cl_debug_overlay_fullposition                                                    : 0                : cl                               : 	
-cl_debugoverlay_toggle                                                           : cmd              :                                  : Toggles visibility of the debug overlay system.	
-cl_demo_view_offset_left                                                         : 0                : cl                               : View offset during demo playback (+/- 1.25 is a good default for human average left/right eye offset)	
-cl_demoviewoverride                                                              : 0                : cl                               : Override view during demo playback	
 cl_disconnect_soundevent                                                         : 0                :                                  : This soundevent is called to stop the desired soundevents when the game is disconnected.	
-cl_display_game_events                                                           : 0                : cl, cheat                        : 	
-cl_dormant_spew                                                                  : 0                : cl                               : Spew state on when client entities become dormant or active.	
-cl_draw_simulating_entities                                                      : 0                : cl                               : 	
-cl_draw_simulating_entities_distance                                             : 0                : cl                               : 	
-cl_drawmaterial                                                                  : 0                : cl, cheat                        : Draw a particular material over the frame	
-cl_dump_anim_list                                                                : cmd              :                                  : 	
-cl_ejectbrass                                                                    : 1                : cl                               : 	
-cl_ent_actornames                                                                : cmd              :                                  : Displays the entity name for all entities that have ShouldDisplayInActorNames true in code	
-cl_ent_joint_axis_size                                                           : 4                : cl                               : 	
-cl_ent_joint_names                                                               : 1                : cl                               : 	
-cl_ent_joint_only_ik_joints                                                      : 0                : cl                               : 	
-cl_ent_pivot_size                                                                : 20               : cl, a, cheat                     : 	
-cl_ent_show_cloth                                                                : 1                : cl, cheat                        : Show cloth debug info in ent_text display	
-cl_ent_show_contexts                                                             : 0                : cl, cheat                        : Show entity contexts in ent_text display	
-cl_ent_showonlyattachment                                                        : 0                : cl, cheat                        : 	
-cl_ent_showonlyhitbox                                                            : -1               : cl, cheat                        : 	
-cl_ent_skeleton_only_ik_joints                                                   : 0                : cl                               : 	
-cl_ent_text_filter                                                               : cmd              :                                  : Set which ent_text filters you want: 	
-cl_ent_text_flags_active                                                         : -1               : cl, a, cheat                     : 	
-cl_ent_text_no_name_really_i_mean_it                                             : 0                : cl, cheat                        : 	
-cl_ents                                                                          : cmd              :                                  : List client entities, sorted by spawn group	
-cl_extrapolate                                                                   : 1                : cl, cheat                        : Enable/disable extrapolation if interpolation history runs out.	
-cl_extrapolate_amount                                                            : 0                : cl, cheat                        : Set how many seconds the client will extrapolate entities for.	
 cl_flushentitypacket                                                             : 0                : cheat                            : For debugging. Force the engine to flush an entity packet.	
 cl_fullupdate                                                                    : cmd              :                                  : Force uncompressed update	
-cl_hitbox_debug                                                                  : 0                : cl                               : 	
 cl_ignorepackets                                                                 : 0                : cheat                            : Force client to ignore packets (for debugging).	
-cl_interp                                                                        : 0                : cl, user                         : Sets the interpolation amount (bounded on low side by server interp ratio settings).	
-cl_interp_all                                                                    : 0                : cl                               : Disable interpolation list optimizations.	
-cl_interp_animationvars                                                          : 1                : cl                               : Interpolate LATCH_ANIMATION_BIT vars if interpolation interval is greater than simulation interval	
-cl_interp_hermite                                                                : 1                : cl, cheat                        : Set to zero do disable hermite interpolation.	
-cl_interp_simulationvars                                                         : 1                : cl                               : Interpolate LATCH_SIMULATION_BIT vars if interpolation interval is greater than animation interval	
-cl_interp_threadmodeticks                                                        : 0                : cl                               : Additional interpolation ticks to use when interpolating with threaded engine mode set.	
-cl_interpolate_report                                                            : 0                : cl, a                            : Enable to show interpolation profile timing 	
-cl_lagcomp_errorcheck                                                            : 0                : cl                               : Player index of other player to check for position errors.	
-cl_lagcompensation                                                               : 1                : cl, user                         : Perform server side lag compensation.	
-cl_latch_report                                                                  : 0                : cl, a                            : Enable to skip client-side animation	
-cl_lightquery_debug                                                              : 0                : cl, cheat                        : 	
 cl_list_projects                                                                 : cmd              :                                  : 	
 cl_log_tick                                                                      : 0                :                                  : Log when a tick is recieved 	
 cl_log_tick_skips                                                                : 0                :                                  : Log when the tick delta >= this	
-cl_net_showeventlisteners                                                        : 0                : cl                               : Show listening addition/removals	
-cl_net_showevents                                                                : 0                : cl                               : Dump game events to console (1=client only, 2=all).	
-cl_overdraw_test                                                                 : 0                : cl, numeric, cheat               : 	
 cl_parallel_readpacketentities                                                   : 1                :                                  : Set to 1 to use threading snapshot reading (if game supports and server is sending bitcounts).	
 cl_parallel_readpacketentities_threshold                                         : 8                :                                  : Use parallel processing of snapshot reading if above this many entries.	
 cl_parallel_readpacketentities_type                                              : -1               :                                  :   -1 = use default (parallel controller split)  0 = single threaded combined (i.e., ReadFieldList and Decode combined into one call)  1 = single threaded split (first pass ReadFieldList, second pass Decode)  2 = worker thread for decode (main thread does ReadFieldList, worker thread does Decode)  3 = parallel combined (threadpool does read/decode on work items in parallel)  4 = parallel split  5 = parallel controller combined (like parallel, but uses a parallelcontroller so each thread in pool can share a single SerializedEntity  6 = parallel controller split 	
@@ -127,69 +73,17 @@ cl_particle_sim_fallback_base_multiplier                                        
 cl_particle_sim_fallback_threshold_ms                                            : 6                :                                  : Amount of simulation time that can elapse before new systems start falling back to cheaper versions	
 cl_particle_simulate                                                             : 1                : cheat                            : Enables/Disables Particle Simulation	
 cl_particles_debug_showparticles                                                 : 0                : cheat                            : 	
-cl_particles_dump_effects                                                        : cmd              :                                  : 	
 cl_particles_dumplist                                                            : cmd              :                                  : Dump all new particles, optional name substring.	
-cl_pclass                                                                        : 0                : cl, cheat                        : Dump entity by prediction classname.	
-cl_pdump                                                                         : -1               : cl, cheat                        : Dump info about this entity to screen.	
-cl_phys_animated_hierarchy                                                       : 1                : cl                               : 	
-cl_phys_block_dist                                                               : 1                : cl                               : 	
-cl_phys_block_fraction                                                           : 0                : cl                               : 	
-cl_phys_debug_callback_entities                                                  : 0                : cl, cheat                        : Print all entities that get touch callbacks. Each entity is printed only once.	
-cl_phys_enabled                                                                  : 1                : cl, cheat                        : Enable all physics simulation	
-cl_phys_networked_start_sleep                                                    : 0                : cl                               : 	
-cl_phys_sleep                                                                    : cmd              :                                  : Put all physics in all the worlds to sleep	
-cl_phys_sleep_enable                                                             : 1                : cl, cheat                        : Enable sleeping for dynamic physics bodies.	
-cl_phys_stop_at_collision                                                        : 0                : cl, cheat                        : 	
-cl_phys_visualize_awake                                                          : 0                : cl                               : 	
-cl_phys_wakeup                                                                   : cmd              :                                  : Wake all physics objects in the Main physics up	
-cl_physics_add_test                                                              : cmd              :                                  : add test object	
-cl_physics_highlight_active                                                      : cmd              :                                  : Turns on the absbox for all active physics objects.   0 : un-highlight. 	
-cl_physics_remove_test                                                           : cmd              :                                  : remove test object	
-cl_physics_report_active                                                         : cmd              :                                  : Lists all active physics objects   -more : extra info 	
 cl_playback_screenshots                                                          : 0                :                                  : Allows the client to playback screenshot and jpeg commands in demos.	
-cl_pred_error_verbose                                                            : 0                : cl                               : Show more field info when spewing prediction errors.	
-cl_pred_optimize                                                                 : 2                : cl                               : Optimize for not copying data if didn't receive a network update (1), and also for not repredicting if there were no errors (2).	
-cl_pred_track                                                                    : cmd              :                                  : <entindex> <fieldname>:  Track changes to entity index entindex, for field fieldname.	
-cl_pred_track_off                                                                : cmd              :                                  : clear field track changes.	
-cl_predict                                                                       : 1                : cl, user, cheat                  : Perform client side prediction.	
-cl_predictioncopy_describe                                                       : cmd              :                                  : Describe datamap_t for entindex	
-cl_predictioncopy_print                                                          : cmd              :                                  : Print simple description of prediction copy fields for entindex	
-cl_predictioncopy_runs                                                           : 1                : cl                               : 	
-cl_querycache_stats                                                              : cmd              :                                  : Display status of the query cache (client only)	
-cl_report_predcopy_overrides                                                     : cmd              :                                  : Report prediction copy overrides	
-cl_report_soundpatch                                                             : cmd              :                                  : reports client-side sound patch count	
 cl_resend                                                                        : 0                : release                          : Delay in seconds before the client will resend the 'connect' attempt	
-cl_screenmessage_notifytime                                                      : 8                : cl                               : How long to display screen message text	
 cl_sendtable_cache_filename                                                      : 0                :                                  : Send tables cache file	
-cl_sequence_debug                                                                : -1               : cl                               : 	
-cl_sequence_debug2                                                               : -1               : cl                               : 	
-cl_sequence_debug_verbose                                                        : 1                : cl                               : 	
-cl_sequence_model_substring                                                      : 0                : cl                               : 	
-cl_show_bounds_errors                                                            : 0                : cl                               : 	
-cl_ShowBoneSetupEnts                                                             : 0                : cl                               : Show which entities are having their bones setup each frame.	
 cl_showdemooverlay                                                               : 0                :                                  : How often to flash demo recording/playback overlay (0 - disable overlay, -1 - show always)	
-cl_showents                                                                      : cmd              :                                  : Dump entity list to console.	
-cl_showerror                                                                     : 0                : cl, a                            : Show prediction errors, 2 for above plus detailed field deltas, -entindex for specific entity.	
-cl_simulate_dormant_entities                                                     : 1                : cl                               : 	
 cl_skel_constraints_enable                                                       : 1                : rep, cheat                       : 	
-cl_skeleton_instance_smear_boneflags                                             : 0                : cl, cheat                        : Smear boneflags across the model.  Costs computation, but tests to make sure your bone flags are consistent.	
-cl_smooth                                                                        : 1                : cl                               : Smooth view/eye origin after prediction errors	
-cl_smoothtime                                                                    : 0                : cl                               : Smooth client's view after prediction error over this many seconds	
-cl_snd_new_visualize                                                             : 0                : cl, cheat                        : Displays soundevent name played at it's 3d position	
 cl_spewserializers                                                               : cmd              :                                  : Spew serializers	
 cl_timeout                                                                       : 30               : a                                : After this many seconds without receiving a packet from the server, the client will disconnect itself	
-cl_update_spatial_entities_before_latchwork                                      : 1                : cl                               : Update spatial partition entities before we do latch work. Overcomes a potential deadlock in IK, but convared so we can test perf implications.	
 cl_updaterate                                                                    : 20               : a, user                          : Number of packets per second of updates you are requesting from the server	
-cl_updatevisibility                                                              : cmd              :                                  : Updates visibility bits.	
 cl_voice_filter                                                                  : 0                :                                  : Filter voice by name substring	
-cl_vprof_scope_entity_gamephys                                                   : 0                : cl                               : 	
 clientport                                                                       : 0                : release                          : If non-empty, client binds port to specific address.  Usually you should leave this blank to use a different random system-assigned port for each connection.	
-cloth_debug_draw                                                                 : 0                : cl                               : 	
-cloth_iv_dump                                                                    : 4                : cl                               : 	
-cloth_iv_store_back                                                              : 0                : sv, rep                          : 	
-cloth_sim_on_tick                                                                : 1                : cl                               : 	
-cloth_update                                                                     : 1                : cl                               : 	
-cloth_update_bones_on_ticks                                                      : 1                : cl                               : 	
 cmd                                                                              : cmd              :                                  : Forward command to server.	
 con_enable                                                                       : false            : launch                           : 	
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
@@ -200,8 +94,6 @@ consoleoverlay                                                                  
 controller_look_speed_pitch                                                      : 160              : cl, managed                      : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
 controller_look_speed_yaw                                                        : 270              : cl, managed                      : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
 convars_echo_toggle_changes                                                      : 1                :                                  : Echo to the console changes caused by toggling.	
-convert_steamid                                                                  : cmd              :                                  : Convert SteamID into multiple formats	
-cpu_level                                                                        : 2                : cl                               : CPU Level - Default: High	
 crash                                                                            : cmd              :                                  : Crash the client. Optional parameter -- type of crash:  0: read from NULL  1: write to NULL  2: force an Assert	
 crash_error                                                                      : cmd              :                                  : Cause the engine to crash by spewing an error (Debug!!)	
 crash_job                                                                        : cmd              :                                  : Cause the engine to crash in a job thread (Debug!!)	
@@ -228,14 +120,9 @@ cvarlist                                                                        
 d3d_max_feature_level                                                            : 11               :                                  : Report the maximum D3D feature level available.	
 debug                                                                            : 0                : release                          : 	
 debug_mapio                                                                      : 0                : sv, managed                      : If above 0, enables EntityIO debug/visualization and controls the length of the visualization in seconds	
-debug_overlay_fullposition                                                       : 0                : sv                               : 	
-debug_shared_random                                                              : 0                : sv, rep                          : 	
-debug_touchlinks                                                                 : 0                : sv                               : Spew touch link activity	
 debugoverlay_draw_current                                                        : 0                : cheat                            : Tell debugoverlay to not draw any entries that have aged out by the time of rendering. Useful if sim runs more often than rendering.	
 debugoverlay_ignore_source                                                       : 0                : cheat                            : Draw everything normal and ignore the source for rendering	
 debugoverlay_show_text_outline                                                   : 0                : cheat                            : Toggle display of box around text	
-debugoverlay_toggle                                                              : cmd              :                                  : Toggles visibility of the debug overlay system.	
-default_fov                                                                      : 60               : cl, a                            : 	
 demo_fastforwardfinalspeed                                                       : 20               :                                  : Go this fast when starting to hold FF button.	
 demo_fastforwardramptime                                                         : 5                :                                  : How many seconds it takes to get to full FF speed.	
 demo_fastforwardstartspeed                                                       : 2                :                                  : Go this fast when starting to hold FF button.	
@@ -257,16 +144,10 @@ demo_usefastgoto                                                                
 demolist                                                                         : cmd              :                                  : Print demo sequence list.	
 developer                                                                        : 1                :                                  : Set developer message level.	
 DevUI_Scale                                                                      : 1                : cl, managed                      : 	
-diffcheck                                                                        : 1                :                                  : Activate diffcheck system.	
-diffcheck_spew                                                                   : 1                :                                  : Actually show diffcheck results.	
-diffcheck_spew_diff_filter                                                       : 0                :                                  : Show diff with matching filter substring only.	
-diffcheck_spew_diff_only                                                         : 0                :                                  : Show diff only.	
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
 disconnect                                                                       : cmd              :                                  : Disconnect from server	
 disconnect2                                                                      : cmd              :                                  : 	
-display_game_events                                                              : 0                : sv, cheat                        : 	
-displaysoundlist                                                                 : 0                : sv                               : 	
 dsp_db_min                                                                       : 80               : demo                             : 	
 dsp_db_mixdrop                                                                   : 0                : demo                             : 	
 dsp_dist_max                                                                     : 1440             : cheat, demo                      : 	
@@ -278,16 +159,12 @@ dsp_vol_2ch                                                                     
 dsp_vol_4ch                                                                      : 0                : demo                             : 	
 dsp_vol_5ch                                                                      : 0                : demo                             : 	
 dsp_volume                                                                       : 0                : a, demo                          : 	
-dump_entity_report                                                               : cmd              :                                  : List all entities in the scene	
-dump_globals                                                                     : cmd              :                                  : Dump all global entities/states	
 dump_localization_files                                                          : cmd              :                                  : List all loaded localization files	
-dump_secondary_scene_worlds                                                      : cmd              :                                  : Lists secondary scene worlds and ref counts	
 dumpparticlelist                                                                 : cmd              :                                  : Print out information on existing particle systems	
 dumpstringtable                                                                  : cmd              :                                  : Usage:  dumpstringtable tablename <sv | cl> <verbose>      Print string tables to console, verbose to dump data.	
 dxlevel                                                                          : 90               : machine                          : 	
 echo                                                                             : cmd              :                                  : Echo text to console.	
 echoln                                                                           : cmd              :                                  : Echo the command arguments on the console	
-enable_boneflex                                                                  : 1                : cl, a                            : 	
 enable_priority_boost                                                            : cmd              :                                  : Disable focus based priority boost	
 engine_max_resource_system_update_time                                           : 5                :                                  : 	
 engine_ostype                                                                    : 0                :                                  : OS type the engine is running on.	
@@ -297,33 +174,9 @@ engine_show_frame_multiple_ticks                                                
 engine_show_frame_pacing                                                         : 0                :                                  : 	
 engine_show_frame_ticks                                                          : 0                :                                  : 	
 engine_vr_max_ticks_to_simulate                                                  : 3                :                                  : Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time.	
-ent_actornames                                                                   : cmd              :                                  : Displays the entity name for all entities that have ShouldDisplayInActorNames true in code	
-ent_actornames_font                                                              : 0                : sv, rep, cheat                   : ent_actornames font name	
-ent_actornames_fontsize                                                          : 24               : sv, rep, cheat                   : ent_actornames font size	
-ent_characterize                                                                 : cmd              :                                  : Spew PVS debug info for entity	
-ent_debug_draw_thinkers                                                          : 0                : sv, rep                          : 	
-ent_debugkeys                                                                    : 0                : sv                               : 	
-ent_joint_axis_size                                                              : 4                : sv                               : 	
-ent_joint_names                                                                  : 1                : sv                               : 	
-ent_joint_only_ik_joints                                                         : 0                : sv                               : 	
-ent_messages_draw                                                                : 0                : sv, rep, cheat                   : Visualizes all entity input/output activity.	
-ent_pivot_size                                                                   : 20               : sv, a, cheat                     : 	
-ent_revert_dormancy_change                                                       : 0                : cl                               : 	
-ent_show_contexts                                                                : 0                : sv, cheat                        : Show entity contexts in ent_text display	
-ent_skeleton_only_ik_joints                                                      : 0                : sv                               : 	
-ent_steadystate_batchsize                                                        : 20               : sv                               : Max number of entities to transmit to player	
-ent_steadystate_cooldown                                                         : 5                : sv                               : Time in seconds after player state changes before steady state changes can occur.	
-ent_steadystate_delay                                                            : 5                : sv                               : Time in seconds without network state changes until an entity is considered for trickle updates	
-ent_steadystate_enable                                                           : 1                : sv                               : 	
-ent_steadystate_interval                                                         : 0                : sv                               : Rate at which entities can be trickled to players	
-ent_test_interpolation                                                           : 0                : cl                               : 	
-ent_text_filter                                                                  : cmd              :                                  : Set which ent_text filters you want: 	
-ent_text_flags_active                                                            : -1               : sv, a, cheat                     : 	
-ent_text_no_name_really_i_mean_it                                                : 0                : sv, cheat                        : 	
 entity_log_load_unserialize                                                      : 0                :                                  : Output unserialization of entities on map load. 0 - off, 1 - client/server, 2 - server, 3 - client	
 entity_lump_list                                                                 : cmd              :                                  : List all known entity lumps	
 entity_lump_spew                                                                 : cmd              :                                  : Dump the contents of an entity lump	
-ents                                                                             : cmd              :                                  : List server entities, sorted by spawn group	
 exec                                                                             : cmd              :                                  : Execute a cfg file	
 exec_async                                                                       : cmd              :                                  : Execute a cfg file over time	
 execifexists                                                                     : cmd              :                                  : Execute a cfg file if file exists	
@@ -349,11 +202,9 @@ fs_report_async_io                                                              
 fs_report_long_reads                                                             : 0                :                                  : 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold	
 fs_report_sync_opens                                                             : 0                :                                  : 0:Off, 1:Always, 2:Not during load	
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
-g_debug_angularsensor                                                            : 0                : sv, cheat                        : 	
 gameevents_showeventlisteners                                                    : 0                :                                  : Show listening addition/removals	
 gameevents_showevents                                                            : 0                :                                  : Dump game events to console. (1 = Show Signaling, 2 = Show Posting also).	
 gamemode                                                                         : 0                : sv, rep, managed                 : 	
-gamesettings                                                                     : 0                : sv, managed                      : 	
 gameui_activate                                                                  : cmd              :                                  : Shows the game UI	
 gameui_hide                                                                      : cmd              :                                  : Hides the game UI	
 gfx_calculate_skin_diffusion_profile_dipole                                      : cmd              :                                  : Calculate a skin diffusion profile using scattering constants.	
@@ -373,8 +224,6 @@ gfx_hemioct_flat_normal_test                                                    
 gfx_load_skin_diffusion_profile                                                  : cmd              :                                  : Load a measured diffusion profile.	
 gfx_load_skin_diffusion_profile_image                                            : cmd              :                                  : Load a custom skin diffusion profile.	
 gfx_load_skin_diffusion_profile_sum_of_gaussians                                 : cmd              :                                  : Load sum-of-gaussians skin diffusion profile.	
-gpu_level                                                                        : 3                : cl                               : GPU Level - Default: High	
-gpu_mem_level                                                                    : 2                : cl                               : Memory Level - Default: High	
 groundik_enabled                                                                 : 1                :                                  : 	
 hammer_bevel_leave_edges                                                         : 0                :                                  : 	
 hammer_disable_render_as_simple_box                                              : 0                :                                  : 	
@@ -421,12 +270,6 @@ hammer_spawn_area_outline_alpha                                                 
 hammer_tile_border_size                                                          : 16               :                                  : 	
 hammer_world_trace_multisample                                                   : 1                :                                  : 	
 hammer_world_trace_pack_rays                                                     : 0                :                                  : 	
-handforce_inner                                                                  : 1                : sv, rep, cheat                   : 	
-handforce_outer                                                                  : 8                : sv, rep, cheat                   : 	
-handforce_scale                                                                  : 1                : sv, rep, cheat                   : 	
-headforce_inner                                                                  : 8                : sv, rep, cheat                   : 	
-headforce_outer                                                                  : 16               : sv, rep, cheat                   : 	
-headforce_strength                                                               : 10               : sv, rep, cheat                   : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
 host                                                                             : cmd              :                                  : 	
 host_force_frametime_to_equal_tick_interval                                      : 0                :                                  : 	
@@ -446,8 +289,6 @@ hullivr_edge_merge_tan                                                          
 hullivr_faceisland_merge_disp                                                    : 0                :                                  : Should we straighten face island if the displacement is this much? (inches)	
 hullivr_faceisland_merge_tan                                                     : 0                :                                  : Should we try to straighten an island of faces deviating from their average normal (tangent)?	
 hullivr_version                                                                  : 3                :                                  : 	
-ic                                                                               : cmd              :                                  : interp entity count 	
-ik_abs_origin_height_spring_strength_default                                     : 500              : sv, rep                          : 	
 ik_constraints_enabled                                                           : 1                :                                  : 	
 ik_debug                                                                         : 0                :                                  : 	
 ik_debug_all_chains_post_solve                                                   : 0                :                                  : 	
@@ -521,9 +362,6 @@ interopsystem.dump                                                              
 interopsystem.status                                                             : cmd              :                                  : 	
 ip                                                                               : 0                : release                          : Overrides IP for multihomed hosts	
 iv_debugbone                                                                     : 0                : release                          : Debug bone name for interpolation spew of CAnimationState.	
-iv_parallel_latch                                                                : 1                : cl                               : 	
-iv_parallel_restore                                                              : 0                : cl                               : 	
-iv_wrapped_parallel_latch                                                        : 1                : cl                               : 	
 joinlobby                                                                        : cmd              :                                  : 	
 joy_accel_filter                                                                 : 0.200000         : application                      : 	
 joy_accelmax                                                                     : 1.000000         : application                      : 	
@@ -570,10 +408,6 @@ labelled_debug_helper_show_text                                                 
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
 Language                                                                         : 0                : cl, managed                      : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
-lightquery_debug_direct_lighting                                                 : 1                : sv, rep, cheat                   : 	
-lightquery_debug_indirect_lighting                                               : 1                : sv, rep, cheat                   : 	
-lightquery_debug_indirect_lighting_fast                                          : 0                : sv, rep, cheat                   : 0 = standard sampling, 1 = fast sampling, 2 = ultra-fast sampling	
-lightquery_key_light_max_traces_per_frame                                        : 1                : sv, rep                          : 	
 listdemo                                                                         : cmd              :                                  : List demo file contents.	
 lobbies                                                                          : cmd              :                                  : 	
 log                                                                              : cmd              :                                  : Enables logging to file, console, and udp < on | off >.	
@@ -587,25 +421,11 @@ lrucache_flush                                                                  
 lrucache_reset_stats                                                             : cmd              :                                  : Resets stats for the specified CUtlLRUCaches (or all if none specified)	
 lrucache_set_size                                                                : cmd              :                                  : Sets the specified cache to the specified size	
 lrucache_stats                                                                   : cmd              :                                  : Spews information about all CUtlLRUCaches	
-lservercfgfile                                                                   : 0                : sv                               : 	
-m_forward                                                                        : 1                : cl, a                            : Mouse forward factor.	
-m_pitch                                                                          : 0                : cl, a                            : Mouse pitch factor.	
-m_side                                                                           : 0                : cl, a                            : Mouse side factor.	
-m_yaw                                                                            : 0                : cl, a                            : Mouse yaw factor.	
 map                                                                              : cmd              :                                  : map <mapname> :Load a new map.	
 maps                                                                             : cmd              :                                  : Displays list of maps.	
-markup_group_ent_bbox                                                            : cmd              :                                  : markup_group_ent_bbox <markup_group name> -> toggle ent_bbox for all members of the named markup group	
-markup_group_ent_text                                                            : cmd              :                                  : markup_group_ent_text <markup_group name> -> toggle ent_text for all members of the named markup group	
-markup_group_spew                                                                : cmd              :                                  : Spew all current markup groups and their members	
-markup_volume_ref_cone_angle                                                     : 135              : sv                               : 	
-mat_camerarendertargetoverlaysize                                                : 128              : cl, cheat                        : 	
 mat_disable_normal_mapping                                                       : 0                : cheat                            : 	
-mat_drawTexture                                                                  : 0                : cl                               : Enable debug view texture	
-mat_drawTextureScale                                                             : 1                : cl                               : Debug view texture scale	
-mat_framebuffercopyoverlaysize                                                   : 128              : cl                               : 	
 mat_free_shaders                                                                 : cmd              :                                  : Free all unreferenced shaders	
 mat_fullbright                                                                   : 0                : cheat                            : 	
-mat_hsv                                                                          : 0                : cl, cheat                        : 	
 mat_lpv_luxels                                                                   : 0                : cheat                            : 	
 mat_luxels                                                                       : 0                : cheat                            : 	
 mat_overdraw                                                                     : 0                : cheat                            : Visualize overdraw	
@@ -629,10 +449,6 @@ mat_shading_complexity                                                          
 mat_shading_complexity_color                                                     : 1                : cheat                            : 	
 mat_shading_complexity_max_instruction_count                                     : 1024             : cheat                            : 	
 mat_shading_complexity_max_register_count                                        : 128              : cheat                            : 	
-mat_showcamerarendertarget                                                       : 0                : cl, cheat                        : 	
-mat_showframebuffertexture                                                       : 0                : cl, cheat                        : 	
-mat_showwatertextures                                                            : 0                : cl, cheat                        : 	
-mat_stub                                                                         : 0                : cl, cheat                        : 	
 mat_tonemap_bloom_scale                                                          : -1               : cheat                            : 	
 mat_tonemap_bloom_start_value                                                    : -1               : cheat                            : 	
 mat_tonemap_debug                                                                : 0                :                                  : 	
@@ -648,16 +464,12 @@ mat_tonemap_force_rate                                                          
 mat_tonemap_force_scale                                                          : 0                : cheat                            : 	
 mat_tonemap_force_use_alpha                                                      : -1               : cheat                            : 	
 mat_tonemap_uncap_exposure                                                       : 0                : cheat                            : 	
-mat_wateroverlaysize                                                             : 128              : cl                               : 	
 mat_wireframe                                                                    : 0                : cheat                            : 0=Off, 1=Surface Wireframe, 2=Transparent Wireframe	
-mat_yuv                                                                          : 0                : cl, cheat                        : 	
 maxdxlevel                                                                       : 92               : application                      : 	
-maxplayers                                                                       : 8                : sv, rep                          : The maximum players allowed on the server	
 mem_compact                                                                      : cmd              :                                  : Compacts the heap	
 mem_dump                                                                         : cmd              :                                  : Dump memory stats to text file.	
 mem_incremental_compact                                                          : cmd              :                                  : Incrementally compacts the heap	
 mem_incremental_compact_rate                                                     : 0                : cheat                            : Rate at which to attempt internal heap compaction	
-mem_level                                                                        : 2                : cl                               : Memory Level - Default: High	
 mem_test                                                                         : cmd              :                                  : 	
 mem_test_each_frame                                                              : 0                :                                  : Run heap check at end of every frame 	
 mem_test_every_n_seconds                                                         : 0                :                                  : Run heap check at a specified interval 	
@@ -677,82 +489,8 @@ mouse_yaw_inverted                                                              
 movie_fixwave                                                                    : cmd              :                                  : Fixup corrupted .wav file if engine crashed during startmovie/endmovie, etc.	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
-nav_add_to_selected_set                                                          : cmd              :                                  : Add current area to the selected set.	
-nav_add_to_selected_set_by_id                                                    : cmd              :                                  : Add specified area id to the selected set.	
-nav_analyze                                                                      : cmd              :                                  : Re-analyze the current Navigation Mesh and save it to disk.	
-nav_area_max_size                                                                : 15               : sv, cheat                        : Max area size created in nav generation	
-nav_area_res                                                                     : 25               : sv, cheat                        : Standard nav area minimum size	
-nav_avoid                                                                        : cmd              :                                  : Toggles the 'avoid this area when possible' flag used by the AI system.	
-nav_avoid_obstacles                                                              : 1                : sv, cheat                        : 	
-nav_begin_area                                                                   : cmd              :                                  : Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and issue a 'nav_end_area' command.	
-nav_begin_deselecting                                                            : cmd              :                                  : Start continuously removing from the selected set.	
-nav_begin_drag_deselecting                                                       : cmd              :                                  : Start dragging a selection area.	
-nav_begin_drag_selecting                                                         : cmd              :                                  : Start dragging a selection area.	
-nav_begin_selecting                                                              : cmd              :                                  : Start continuously adding to the selected set.	
-nav_begin_shift_xy                                                               : cmd              :                                  : Begin shifting the Selected Set.	
-nav_bfs_debug                                                                    : 0                : sv, cheat                        : 	
 nav_blockers_can_affect_flow                                                     : 1                : cheat                            : Set this convar to 0 if you want the 'affectsFlow' property of func_nav_blockers to be ignored	
-nav_build_ladder                                                                 : cmd              :                                  : Attempts to build a nav ladder on the climbable surface under the cursor.	
-nav_chop_selected                                                                : cmd              :                                  : Chops all selected areas into their component 1x1 areas	
-nav_clear_attribute                                                              : cmd              :                                  : Remove given nav attribute from all areas in the selected set.	
-nav_clear_attributes                                                             : cmd              :                                  : Clear all nav attributes of selected area.	
-nav_clear_selected_set                                                           : cmd              :                                  : Clear the selected set.	
-nav_clear_walkable_marks                                                         : cmd              :                                  : Erase any previously placed walkable positions.	
-nav_connect                                                                      : cmd              :                                  : To connect two Areas, mark the first Area, highlight the second Area, then invoke the connect command. Note that this creates a ONE-WAY connection from the first to the second Area. To make a two-way connection, also connect the second area to the first.	
-nav_coplanar_slope_limit                                                         : 0                : sv, cheat                        : 	
 nav_corner_adjust_adjacent                                                       : 18               : cheat                            : radius used to raise/lower corners in nearby areas when raising/lowering corners.	
-nav_corner_lower                                                                 : cmd              :                                  : Lower the selected corner of the currently marked Area.	
-nav_corner_place_on_ground                                                       : cmd              :                                  : Places the selected corner of the currently marked Area on the ground.	
-nav_corner_raise                                                                 : cmd              :                                  : Raise the selected corner of the currently marked Area.	
-nav_corner_select                                                                : cmd              :                                  : Select a corner of the currently marked Area. Use multiple times to access all four corners.	
-nav_create_area_at_feet                                                          : 0                : sv, cheat                        : Anchor nav_begin_area Z to editing player's feet	
-nav_create_place_on_ground                                                       : 0                : sv, cheat                        : If true, nav areas will be placed flush with the ground when created by hand.	
-nav_crouch                                                                       : cmd              :                                  : Toggles the 'must crouch in this area' flag used by the AI system.	
-nav_curve_alt                                                                    : 0                : sv, cheat                        : 	
-nav_curve_iter                                                                   : 0                : sv, cheat                        : 	
-nav_curve_lock                                                                   : -1               : sv, cheat                        : 	
-nav_curve_max_step                                                               : 10               : sv, cheat                        : 	
-nav_curve_set                                                                    : -1               : sv, cheat                        : 	
-nav_curve_step                                                                   : 0                : sv, cheat                        : 	
-nav_debug_blocked                                                                : 0                : sv, cheat                        : 	
-nav_delete                                                                       : cmd              :                                  : Deletes the currently highlighted Area.	
-nav_delete_all_hull                                                              : cmd              :                                  : Deletes all areas with given hull category.	
-nav_delete_marked                                                                : cmd              :                                  : Deletes the currently marked Area (if any).	
-nav_disconnect                                                                   : cmd              :                                  : To disconnect two Areas, mark an Area, highlight a second Area, then invoke the disconnect command. This will remove all connections between the two Areas.	
-nav_displacement_test                                                            : 10000            : sv, cheat                        : Checks for nodes embedded in displacements (useful for in-development maps)	
-nav_drag_selection_volume_zmax_offset                                            : 32               : sv, rep                          : The offset of the nav drag volume top from center	
-nav_drag_selection_volume_zmin_offset                                            : 32               : sv, rep                          : The offset of the nav drag volume bottom from center	
-nav_draw_area_bgcolor                                                            : 503316480        : sv, cheat                        : RGBA color to draw as the background color for nav areas while editing.	
-nav_draw_area_filled                                                             : 0                : sv, cheat                        : 	
-nav_draw_area_ground                                                             : 0                : sv, cheat                        : 	
-nav_draw_area_vert_order                                                         : 0                : sv, cheat                        : 	
-nav_draw_area_ztest                                                              : 0                : sv, cheat                        : 	
-nav_draw_blocked                                                                 : 1                : sv, cheat                        : 	
-nav_draw_blocked_connections                                                     : 0                : sv, cheat                        : 	
-nav_draw_connected_area_radius                                                   : 1000             : sv, cheat                        : 	
-nav_draw_connections                                                             : 0                : sv, cheat                        : 	
-nav_draw_externally_allocated                                                    : 0                : sv, cheat                        : 	
-nav_draw_hull_support                                                            : 0                : sv, cheat                        : 	
-nav_draw_indices                                                                 : 0                : sv, cheat                        : 	
-nav_draw_inset_margin                                                            : 0                : sv, cheat                        : 	
-nav_draw_jump_links                                                              : 0                : sv, cheat                        : 	
-nav_draw_limit                                                                   : 300              : sv, cheat                        : The maximum number of areas to draw in edit mode	
-nav_draw_mesh                                                                    : 1                : sv, cheat                        : 	
-nav_draw_mesh_grid                                                               : 0                : sv, cheat                        : Draw the meshe's spatial grid structure around the edit cursor position.	
-nav_draw_mesh_offset                                                             : 1                : sv, cheat                        : Vertical offset for drawing the mesh (useful for flat planes where the mesh is often a fixed offset from the physical ground	
-nav_draw_should_be_destroyed                                                     : 0                : sv, cheat                        : 	
-nav_draw_show_light_intensity                                                    : 0                : sv, cheat                        : 	
-nav_draw_split_by_obstacle_mgr                                                   : 0                : sv, cheat                        : 	
-nav_draw_vert_hotspots                                                           : 0                : sv, cheat                        : 	
-nav_edit                                                                         : 0                : sv, cheat                        : Set to one to interactively edit the Navigation Mesh. Set to zero to leave edit mode.	
-nav_edit_validate                                                                : 0                : sv, cheat                        : Validate navmesh structures.	
-nav_end_area                                                                     : cmd              :                                  : Defines the second corner of a new Area or Ladder and creates it.	
-nav_end_deselecting                                                              : cmd              :                                  : Stop continuously removing from the selected set.	
-nav_end_drag_deselecting                                                         : cmd              :                                  : Stop dragging a selection area.	
-nav_end_drag_selecting                                                           : cmd              :                                  : Stop dragging a selection area.	
-nav_end_selecting                                                                : cmd              :                                  : Stop continuously adding to the selected set.	
-nav_end_shift_xy                                                                 : cmd              :                                  : Finish shifting the Selected Set.	
-nav_flood_select                                                                 : cmd              :                                  : Selects the current Area and all Areas connected to it, recursively. To clear a selection, use this command again.	
 nav_gen_add_jumps                                                                : 1                : rep, cheat                       : 	
 nav_gen_agent_radius_buffer                                                      : 0                : rep, cheat                       : Buffer to add to agent radius before passing to nav gen	
 nav_gen_clip_polys_to_clearance                                                  : 1                : rep, cheat                       : 	
@@ -788,230 +526,15 @@ nav_gen_tr_max_acceptable_cost_2                                                
 nav_gen_tri_reduce_all                                                           : 0                : rep, cheat                       : 	
 nav_gen_true                                                                     : 1                : rep, cheat                       : Always true	
 nav_gen_vertical_limit                                                           : 88               : rep, cheat                       : 	
-nav_generate                                                                     : cmd              :                                  : Generate a Navigation Mesh for the current map and save it to disk.	
-nav_generate_compute_lighting                                                    : 0                : sv, cheat                        : If true, compute lighting for this area.  Otherwise, just set to 1/2.	
-nav_generate_fencetops                                                           : 1                : sv, cheat                        : Autogenerate nav areas on fence and obstacle tops	
-nav_generate_fixup_jump_areas                                                    : 1                : sv, cheat                        : Convert obsolete jump areas into 2-way connections	
-nav_generate_incremental                                                         : cmd              :                                  : Generate a Navigation Mesh for the current map and save it to disk.	
-nav_generate_incremental_range                                                   : 2000             : sv, cheat                        : 	
-nav_generate_incremental_tolerance                                               : 0                : sv, cheat                        : Z tolerance for adding new nav areas.	
-nav_generate_no_restart                                                          : 0                : sv                               : 	
-nav_generate_remove_jump_areas                                                   : 1                : sv                               : 	
-nav_genrt_debug                                                                  : 0                : sv, cheat                        : 	
-nav_genrt_no_splice                                                              : 0                : sv, cheat                        : 	
-nav_genrt_no_split                                                               : 0                : sv, cheat                        : 	
-nav_genrt_step                                                                   : -1               : sv, cheat                        : 	
-nav_jump                                                                         : cmd              :                                  : Toggles the 'traverse this area by jumping' flag used by the AI system.	
-nav_ladder_flip                                                                  : cmd              :                                  : Flips the selected ladder's direction.	
-nav_load                                                                         : cmd              :                                  : Loads the Navigation Mesh for the current map.	
-nav_load_aaquad                                                                  : cmd              :                                  : Loads the Navigation Mesh for the current map.	
-nav_load_polyclip                                                                : cmd              :                                  : Loads the Navigation Mesh for the current map.	
-nav_load_recast                                                                  : cmd              :                                  : Loads the Navigation Mesh for the current map.	
-nav_lower_drag_volume_max                                                        : cmd              :                                  : Lower the top of the drag select volume.	
-nav_lower_drag_volume_min                                                        : cmd              :                                  : Lower the bottom of the drag select volume.	
-nav_mark                                                                         : cmd              :                                  : Marks the Area or Ladder under the cursor for manipulation by subsequent editing commands.	
-nav_mark_attribute                                                               : cmd              :                                  : Set nav attribute for all areas in the selected set.	
-nav_mark_walkable                                                                : cmd              :                                  : Mark the current location as a walkable position. These positions are used as seed locations when sampling the map to generate a Navigation Mesh.	
-nav_max_auto_area_size                                                           : 16384            : sv, cheat                        : Max size in x/y of any auto-generated nav area	
-nav_max_view_distance                                                            : 0                : sv, cheat                        : Maximum range for precomputed nav mesh visibility (0 = default 1500 units)	
 nav_max_vis_delta_list_length                                                    : 64               : cheat                            : 	
-nav_merge                                                                        : cmd              :                                  : To merge two Areas into one, mark the first Area, highlight the second by pointing your cursor at it, and invoke the merge command.	
-nav_merge_mesh                                                                   : cmd              :                                  : Merges a saved selected set into the current mesh.	
-nav_no_jump                                                                      : cmd              :                                  : Toggles the 'dont jump in this area' flag used by the AI system.	
-nav_obstacle_genrt                                                               : 0                : sv, cheat                        : 	
-nav_obstacle_keep_inside_poly                                                    : 1                : sv, cheat                        : 	
-nav_obstacle_stats                                                               : 0                : sv, cheat                        : 	
-nav_obstacle_validate                                                            : 0                : sv, cheat                        : 	
-nav_obstruction_draw                                                             : 0                : sv, cheat                        : 	
-nav_obstruction_draw_change                                                      : 0                : sv, cheat                        : 	
-nav_obstruction_draw_dist                                                        : -1               : sv, cheat                        : 	
-nav_obstruction_draw_fail_block                                                  : 0                : sv, cheat                        : 	
-nav_path_debug                                                                   : 0                : sv, cheat                        : 	
-nav_path_debug_compute_with_open_goal                                            : 0                : sv, cheat                        : 	
-nav_path_debug_jump_segments                                                     : 0                : sv, cheat                        : 	
-nav_path_draw_areas                                                              : 0                : sv, cheat                        : 	
-nav_path_draw_arrow                                                              : 1                : sv, cheat                        : 	
-nav_path_draw_climb_segments                                                     : 1                : sv, cheat                        : 	
-nav_path_draw_connected_areas                                                    : 0                : sv, cheat                        : 	
-nav_path_draw_ground_segments                                                    : 1                : sv, cheat                        : 	
-nav_path_draw_jump_segments                                                      : 1                : sv, cheat                        : 	
-nav_path_draw_ladder_segments                                                    : 1                : sv, cheat                        : 	
-nav_path_draw_tick                                                               : 0                : sv, cheat                        : 	
-nav_path_fixup_climb_up_segments                                                 : 0                : sv, cheat                        : 	
-nav_path_fixup_gap_segments                                                      : 0                : sv, cheat                        : 	
-nav_path_jump_process_debug                                                      : 0                : sv, cheat                        : 	
-nav_path_optimize_enable                                                         : 1                : sv, cheat                        : 	
-nav_path_optimize_portal_positions                                               : 1                : sv, cheat                        : 	
-nav_path_optimizer_debug                                                         : 0                : sv, cheat                        : 	
-nav_path_record_draw_last_fail                                                   : 0                : sv, cheat                        : 	
-nav_path_record_enable                                                           : 1                : sv, cheat                        : 	
-nav_pathfind_debug_draw                                                          : 0                : sv, cheat                        : 	
-nav_pathfind_debug_draw_costs                                                    : 0                : sv, cheat                        : 	
-nav_pathfind_debug_draw_errors                                                   : 0                : sv, cheat                        : 	
-nav_pathfind_debug_draw_total_costs                                              : 0                : sv, cheat                        : 	
-nav_pathfind_debug_log                                                           : 0                : sv, cheat                        : 	
-nav_pathfind_inadmissable_heuristic_factor                                       : 1                : sv, cheat                        : 	
-nav_potentially_visible_dot_tolerance                                            : 0                : sv, cheat                        : 	
-nav_precise                                                                      : cmd              :                                  : Toggles the 'dont avoid obstacles' flag used by the AI system.	
-nav_quicksave                                                                    : 1                : sv, cheat                        : Set to one to skip the time consuming phases of the analysis.  Useful for data collection and testing.	
-nav_raise_drag_volume_max                                                        : cmd              :                                  : Raise the top of the drag select volume.	
-nav_raise_drag_volume_min                                                        : cmd              :                                  : Raise the bottom of the drag select volume.	
-nav_recall_selected_set                                                          : cmd              :                                  : Re-selects the stored selected set.	
-nav_remove_from_selected_set                                                     : cmd              :                                  : Remove current area from the selected set.	
-nav_save                                                                         : cmd              :                                  : Saves the current Navigation Mesh to disk.	
 nav_save_history                                                                 : 10               :                                  : Keep this many backup copies of nav files.	
-nav_save_selected                                                                : cmd              :                                  : Writes the selected set to disk for merging into another mesh via nav_merge_mesh.	
-nav_search_lattice_initial_scale                                                 : 3                : sv                               : 	
-nav_search_lattice_progressive_scale                                             : 1                : sv                               : 	
-nav_select_allow_blocked                                                         : 1                : sv, cheat                        : When selecting an area under nav_edit, allow area marked as blocked.	
-nav_select_arc                                                                   : 0                : sv, cheat                        : Set to change selection trace to be an arc instead of a line.  Value 1 should give a reasonable arc.	
-nav_select_blocked_areas                                                         : cmd              :                                  : Adds all blocked areas to the selected set	
-nav_select_half_space                                                            : cmd              :                                  : Selects any areas that intersect the given half-space.	
-nav_select_hull                                                                  : 0                : sv, cheat                        : Restrict area selection to areas that can support a hull of the given category	
-nav_select_obstructed_areas                                                      : cmd              :                                  : Adds all obstructed areas to the selected set	
-nav_select_radius                                                                : cmd              :                                  : Adds all areas in a radius to the selection set	
-nav_select_stairs                                                                : cmd              :                                  : Adds all stairway areas to the selected set	
-nav_select_with_attribute                                                        : cmd              :                                  : Selects areas with the given attribute.	
-nav_set_place_mode                                                               : cmd              :                                  : Sets the editor into or out of Place mode. Place mode allows labelling of Area with Place names.	
-nav_shift                                                                        : cmd              :                                  : Shifts the selected areas by the specified amount	
-nav_show_area_connections                                                        : 0                : sv, cheat                        : Show connections to selected area when true	
-nav_show_area_info                                                               : -1               : sv, cheat                        : Duration in seconds to show nav area ID and attributes while editing. (-1 = never hide)	
-nav_show_area_info_font                                                          : 0                : sv, cheat                        : 	
-nav_show_area_info_font_size                                                     : -1               : sv, cheat                        : 	
-nav_show_area_info_font_voffset                                                  : -11              : sv, cheat                        : 	
-nav_show_compass                                                                 : 0                : sv, cheat                        : 	
-nav_show_connectionblockers                                                      : 0                : sv, cheat                        : Debug: Show connection blocker models.	
-nav_show_edit_pos                                                                : 1                : sv, cheat                        : 	
-nav_show_node_grid                                                               : 0                : sv, cheat                        : 	
-nav_show_node_id                                                                 : 0                : sv, cheat                        : 	
-nav_show_nodes                                                                   : 0                : sv, cheat                        : 	
 nav_show_player_counts                                                           : 0                : cheat                            : Show current player counts in each area.	
 nav_show_potentially_visible                                                     : 0                : cheat                            : Show areas that are potentially visible from the current nav area	
-nav_simplify_selected                                                            : cmd              :                                  : Chops all selected areas into their component 1x1 areas and re-merges them together into larger areas	
-nav_slope_limit                                                                  : 0                : sv, cheat                        : The ground unit normal's Z component must be greater than this for nav areas to be generated.	
-nav_slope_tolerance                                                              : 0                : sv, cheat                        : The ground unit normal's Z component must be this close to the nav area's Z component to be generated.	
-nav_smooth_calc_z                                                                : 1                : sv, cheat                        : 	
-nav_smooth_constrain_results                                                     : 1                : sv, cheat                        : 	
-nav_smooth_constrain_results_relax                                               : 0                : sv, cheat                        : 	
-nav_smooth_constrain_spring                                                      : 2                : sv, cheat                        : 	
-nav_smooth_constrain_spring_relax                                                : 0                : sv, cheat                        : 	
-nav_smooth_draw_accel                                                            : 0                : sv, cheat                        : 	
-nav_smooth_draw_boundary                                                         : 0                : sv, cheat                        : 	
-nav_smooth_draw_calc                                                             : 0                : sv, cheat                        : 	
-nav_smooth_draw_constraint_spline                                                : 0                : sv, cheat                        : 	
-nav_smooth_draw_constraint_spring                                                : 0                : sv, cheat                        : 	
-nav_smooth_draw_speed                                                            : 0                : sv, cheat                        : 	
-nav_smooth_enable                                                                : 1                : sv, cheat                        : 	
-nav_smooth_relax                                                                 : 1                : sv, cheat                        : 	
-nav_smooth_relax_use_timesteps                                                   : 0                : sv, cheat                        : 	
-nav_smooth_separating_dist_override                                              : 0                : sv, cheat                        : 	
-nav_smooth_spring_const_override                                                 : -1               : sv, cheat                        : 	
-nav_smooth_spring_factor_deriv                                                   : 0                : sv, cheat                        : 	
-nav_smooth_spring_factor_dist                                                    : 0                : sv, cheat                        : 	
-nav_smooth_spring_factor_speed                                                   : 0                : sv, cheat                        : 	
-nav_smooth_spring_forward_dist_base                                              : 50               : sv, cheat                        : 	
-nav_smooth_spring_forward_dist_time_limit                                        : 1                : sv, cheat                        : 	
-nav_smooth_spring_max_dist                                                       : 36               : sv, cheat                        : 	
-nav_smooth_spring_tension_max_override                                           : -1               : sv, cheat                        : 	
-nav_smooth_spring_timestep_factor_accel                                          : 100              : sv                               : 	
-nav_smooth_spring_timestep_factor_speed                                          : 100              : sv                               : 	
-nav_smooth_spring_timestep_max                                                   : 1                : sv                               : 	
-nav_smooth_spring_timestep_min                                                   : 0                : sv                               : 	
-nav_smooth_use_opt                                                               : 1                : sv, cheat                        : 	
-nav_snap_to_grid                                                                 : 0                : sv, cheat                        : Snap to the nav generation grid when creating new nav areas	
-nav_solid_props                                                                  : 0                : sv, cheat                        : Make props solid to nav generation/editing	
-nav_splice                                                                       : cmd              :                                  : To splice, mark an area, highlight a second area, then invoke the splice command to create a new, connected area between them.	
-nav_split                                                                        : cmd              :                                  : To split an Area into two, align the split line using your cursor and invoke the split command.	
-nav_split_aa                                                                     : cmd              :                                  : To split an area into two, align the split line using your cursor and invoke the split command.	
 nav_split_place_on_ground                                                        : 0                : cheat                            : If true, nav areas will be placed flush with the ground when split.	
-nav_split_show_aa                                                                : 0                : sv, cheat                        : Show the axis-aligned split line.	
-nav_split_show_free                                                              : 0                : sv, cheat                        : Show the free split line.	
-nav_store_selected_set                                                           : cmd              :                                  : Stores the current selected set for later retrieval.	
-nav_strip                                                                        : cmd              :                                  : Strips all Hiding Spots, Approach Points, and Encounter Spots from the current Area.	
-nav_subdivide                                                                    : cmd              :                                  : Subdivides all selected areas.	
-nav_switch                                                                       : cmd              :                                  : Switches to navmesh for the specified spawngroup	
-nav_test_bfs_lattice_dist_0                                                      : -1               : sv, cheat                        : 	
-nav_test_bfs_lattice_dist_1                                                      : -1               : sv, cheat                        : 	
-nav_test_bfs_lattice_dist_2                                                      : -1               : sv, cheat                        : 	
-nav_test_bfs_lattice_mark                                                        : 2                : sv, cheat                        : 	
-nav_test_bfs_lattice_spacing_0                                                   : 24               : sv, cheat                        : 	
-nav_test_bfs_lattice_spacing_1                                                   : 48               : sv, cheat                        : 	
-nav_test_bfs_lattice_spacing_2                                                   : 96               : sv, cheat                        : 	
-nav_test_bfs_simple                                                              : 0                : sv, cheat                        : 	
-nav_test_boundary_zone_circle                                                    : 0                : sv, cheat                        : 	
-nav_test_boundary_zone_force                                                     : 0                : sv, cheat                        : 	
-nav_test_boundary_zone_grid_dim                                                  : 90               : sv, cheat                        : 	
-nav_test_boundary_zone_path                                                      : 0                : sv, cheat                        : 	
-nav_test_boundary_zone_rays                                                      : 100              : sv, cheat                        : 	
-nav_test_boundary_zone_rays_margin                                               : -1               : sv, cheat                        : 	
-nav_test_boundary_zone_rays_random                                               : 0                : sv, cheat                        : 	
-nav_test_curve_opt                                                               : 0                : sv, cheat                        : 	
-nav_test_detour                                                                  : 0                : sv, cheat                        : 	
-nav_test_find_nearest                                                            : 0                : sv, cheat                        : Calculate the nearest point on the navmesh to the trace point.  Uses selection from nav_select_hull.	
-nav_test_find_nearest_clear                                                      : 0                : sv, cheat                        : Calculate the nearest point on the navmesh to the trace point.  Uses selection from nav_select_hull.	
-nav_test_find_random_connected                                                   : 0                : sv, cheat                        : Demonstrates finding random points that are connected in the nav mesh to the start point.	
-nav_test_find_random_connected_dist_max                                          : 1000             : sv, cheat                        : 	
-nav_test_find_random_connected_dist_min                                          : 100              : sv, cheat                        : 	
-nav_test_find_z                                                                  : 0                : sv, cheat                        : 	
-nav_test_force_npc_repath                                                        : 0                : sv, cheat                        : 	
-nav_test_genrt                                                                   : 0                : sv, cheat                        : 	
-nav_test_genrt_place                                                             : 0                : sv, cheat                        : 	
-nav_test_level_hull                                                              : cmd              :                                  : Find entities that intrude into the nav mesh.  List those entities in console output, and display bounding boxes around them for a while.	
-nav_test_level_hull_move                                                         : cmd              :                                  : 	
-nav_test_multi_connection                                                        : 0                : sv, cheat                        : 	
-nav_test_node                                                                    : 0                : sv, cheat                        : 	
-nav_test_node_crouch                                                             : 0                : sv, cheat                        : 	
-nav_test_node_crouch_dir                                                         : 4                : sv, cheat                        : 	
-nav_test_npc_area                                                                : 0                : sv, cheat                        : 	
-nav_test_npc_collision                                                           : 0                : sv, cheat                        : 	
-nav_test_npc_collision_show_geometry                                             : 0                : sv, cheat                        : 	
-nav_test_path                                                                    : 0                : sv, cheat                        : Calculate and draw a path from player/camera position to the test position.	
-nav_test_path_drop_down_penalty_base                                             : 1000             : sv, cheat                        : 	
-nav_test_path_drop_down_penalty_scalar                                           : 4                : sv, cheat                        : 	
-nav_test_path_expansion_search                                                   : 0                : sv, cheat                        : Extend nav_tes_path by doing an expansion search on that path.  Convar value defines dist.	
-nav_test_path_lock_goal                                                          : 0                : sv, cheat                        : Lock the pathfinding goal to the current intersection point.	
-nav_test_path_lock_start                                                         : 0                : sv, cheat                        : Lock the pathfinding start to the current intersection point.	
-nav_test_path_max_climb_up                                                       : -1               : sv, cheat                        : 	
-nav_test_path_max_detour                                                         : -1               : sv, cheat                        : 	
-nav_test_path_max_drop_down                                                      : -1               : sv, cheat                        : 	
-nav_test_path_move                                                               : 0                : sv, cheat                        : 	
-nav_test_path_opt                                                                : 1                : sv, cheat                        : Enable path optimization for nav_edit_path paths.	
-nav_test_path_opt_transitions                                                    : 0                : sv, cheat                        : 	
-nav_test_path_return                                                             : 0                : sv, cheat                        : Calculate a return path from cursor position to the path calculated by nav_test_path.	
-nav_test_pos_name                                                                : 0                : sv                               : 	
-nav_test_pos_place                                                               : -1               : sv                               : 	
-nav_test_rays                                                                    : 0                : sv, cheat                        : 	
-nav_test_search_lattice                                                          : 0                : sv, cheat                        : Demonstrates searching hexagonal lattice over nav mesh.	
-nav_test_smooth                                                                  : 0                : sv, cheat                        : 	
-nav_test_smooth_extern_push                                                      : 0                : sv, cheat                        : 	
-nav_test_smooth_in_speed                                                         : 120              : sv, cheat                        : 	
-nav_test_smooth_in_yaw                                                           : 0                : sv, cheat                        : 	
-nav_test_smooth_path_speed                                                       : -1               : sv, cheat                        : 	
-nav_test_smooth_separating_dist                                                  : -1               : sv, cheat                        : 	
-nav_test_smooth_spring_const                                                     : -1               : sv, cheat                        : 	
-nav_test_smooth_spring_tension_max                                               : -1               : sv, cheat                        : 	
-nav_test_spline                                                                  : 0                : sv, cheat                        : 	
-nav_test_split_obstacle                                                          : 0                : sv, cheat                        : 	
-nav_test_split_obstacle_dirty                                                    : 0                : sv, cheat                        : 	
-nav_test_split_obstacle_leave                                                    : 0                : sv, cheat                        : 	
-nav_test_split_obstacle_update_pos                                               : 1                : sv, cheat                        : 	
-nav_test_test_ray_to_mesh                                                        : cmd              :                                  : Test CNavMesh::TestRayToMesh().  Args: nNumrays, flRayLength, flRadialOffset	
-nav_toggle_deselecting                                                           : cmd              :                                  : Start or stop continuously removing from the selected set.	
-nav_toggle_in_selected_set                                                       : cmd              :                                  : Remove current area from the selected set.	
-nav_toggle_place_mode                                                            : cmd              :                                  : Toggle the editor into and out of Place mode. Place mode allows labelling of Area with Place names.	
-nav_toggle_selected_set                                                          : cmd              :                                  : Toggles all areas into/out of the selected set.	
-nav_toggle_selecting                                                             : cmd              :                                  : Start or stop continuously adding to the selected set.	
-nav_unmark                                                                       : cmd              :                                  : Clears the marked Area or Ladder.	
-nav_use_place                                                                    : cmd              :                                  : If used without arguments, all available Places will be listed. If a Place argument is given, the current Place is set.	
 nav_validate                                                                     : 0                : cheat                            : Level of validation for nav system.  Higher will be slower.	
-nav_volume_debug                                                                 : 0                : sv, cheat                        : Draw or print debug information about nav volume queries.	
-nav_warp_to_mark                                                                 : cmd              :                                  : Warps the player to the marked area.	
-nav_world_center                                                                 : cmd              :                                  : Centers the nav mesh in the world	
-navnetsolve_draw_tri                                                             : -1               : sv                               : 	
 net_channels                                                                     : cmd              :                                  : Shows net channel info	
 net_compressvoice                                                                : 0                :                                  : Attempt to compress out of band voice payloads (360 only).	
 net_connections_stats                                                            : cmd              :                                  : Print detailed network statistics for each network connection	
-net_debug_to_file                                                                : 0                : sv                               : 	
 net_detailed_canpacket_log                                                       : 0                :                                  : 	
 net_fakelag                                                                      : 0                : cheat, release                   : 	
 net_listallmessages                                                              : cmd              :                                  : List all registered net messages	
@@ -1027,8 +550,6 @@ net_restrict_showmsg_socket                                                     
 net_serializedentitymemory                                                       : cmd              :                                  : Spew CSerializedEntity memory	
 net_serializedentitymetadatainfo                                                 : cmd              :                                  : Spew CSerializedEntity metadata information	
 net_showdrop                                                                     : 0                :                                  : Show dropped packets in console	
-net_showeventlisteners                                                           : 0                : sv                               : Show listening addition/removals	
-net_showevents                                                                   : 0                : sv                               : Dump game events to console (1=client only, 2=all).	
 net_showfragments                                                                : 0                :                                  : Show netchannel fragments	
 net_showmsg                                                                      : 0                :                                  : Show incoming message: <0|1|2|name> where 1 == all and 2 == all except net_NOP	
 net_showoob                                                                      : 0                :                                  : Show connectionless UDP traffic.	
@@ -1036,32 +557,12 @@ net_showpeaks                                                                   
 net_showreliable                                                                 : 0                :                                  : Like net_showmsg, but only spew reliable messages	
 net_showudp                                                                      : 0                : release                          : Dump UDP packets summary to console	
 net_showudp_remoteonly                                                           : 1                : release                          : Dump non-loopback udp only	
-net_showusercmd                                                                  : 0                : cl                               : Show user command encoding	
 net_spewcounts                                                                   : cmd              :                                  : Spew serializer counts 	
 net_stats_json                                                                   : cmd              :                                  : Output server networking statistics in json format	
 net_status                                                                       : cmd              :                                  : Shows current network status	
 net_usesocketsforloopback                                                        : 0                : a, release                       : Use network sockets layer even for listen server local player's packets (multiplayer only).	
 net_validatemessages                                                             : cmd              :                                  : Activates/deactivates net message validation	
 nextdemo                                                                         : cmd              :                                  : Play next demo in sequence.	
-npcsolve_attract_draw                                                            : 0                : sv                               : 	
-npcsolve_constraint_nav                                                          : 1                : sv                               : 	
-npcsolve_constraint_npc                                                          : 1                : sv                               : 	
-npcsolve_drag_linear                                                             : 0                : sv                               : 	
-npcsolve_forward                                                                 : 1                : sv                               : 	
-npcsolve_forward_const                                                           : 30000            : sv                               : 	
-npcsolve_forward_dist                                                            : 200              : sv                               : 	
-npcsolve_forward_margin                                                          : 5                : sv                               : 	
-npcsolve_path_close_const                                                        : 0                : sv                               : 	
-npcsolve_path_close_max_tension                                                  : 100              : sv                               : 	
-npcsolve_path_lookahead_const                                                    : 4                : sv                               : 	
-npcsolve_path_lookahead_dist                                                     : 100              : sv                               : 	
-npcsolve_path_vel_const                                                          : 0                : sv                               : 	
-npcsolve_separation                                                              : 1                : sv                               : 	
-npcsolve_separation_const                                                        : 10000            : sv                               : 	
-npcsolve_separation_dist                                                         : 5                : sv                               : 	
-npcsolve_separation_draw                                                         : 0                : sv                               : 	
-npcsolve_separation_jitter                                                       : 0                : sv                               : 	
-npcsolve_separation_r2                                                           : 0                : sv                               : 	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
 package_install                                                                  : cmd              :                                  : 	
 package_list                                                                     : cmd              :                                  : 	
@@ -1073,24 +574,7 @@ password                                                                        
 path                                                                             : cmd              :                                  : Show the filesystem path.	
 pause                                                                            : cmd              :                                  : Toggle the server pause state.	
 perf_time                                                                        : 500              : cl, managed                      : 	
-phys_active                                                                      : 1                : sv                               : Whether PLAYER physics is actively simulated (ie. noclip)	
-phys_continuous_kinematic_update                                                 : 0                : sv, rep                          : 	
-phys_dynamic_scaling                                                             : 1                : sv, rep, cheat                   : 	
-phys_log_updaters                                                                : 0                : sv, rep                          : 	
-phys_log_updaters_exclude                                                        : 0                : sv, rep                          : 	
-phys_log_updaters_include                                                        : 0                : sv, rep                          : 	
-phys_show_stats                                                                  : 0                : sv, rep                          : 	
-phys_sleep                                                                       : cmd              :                                  : Put all physics in all the worlds to sleep	
-phys_specialized_linear_sweep                                                    : 1                : sv, rep, cheat                   : 	
-phys_visualize_awake_dynamic_only                                                : 0                : sv, rep                          : 	
-phys_visualize_awake_unattached_only                                             : 0                : sv, rep                          : 	
-phys_visualize_traces                                                            : 0                : sv, rep, cheat                   : 	
-phys_wakeup                                                                      : cmd              :                                  : Wake all physics objects in the Main physics up	
-physics_add_test                                                                 : cmd              :                                  : add test object	
 physics_debug_draw                                                               : 0                :                                  : 	
-physics_highlight_active                                                         : cmd              :                                  : Turns on the absbox for all active physics objects.   0 : un-highlight. 	
-physics_remove_test                                                              : cmd              :                                  : remove test object	
-physics_report_active                                                            : cmd              :                                  : Lists all active physics objects   -more : extra info 	
 pitchyaw_customaccel                                                             : false            : per-user                         : 	
 pitchyaw_customaccel_exponent                                                    : 1.000000         : per-user                         : 	
 pitchyaw_customaccel_max                                                         : 0.000000         : per-user                         : 	
@@ -1103,13 +587,8 @@ player_input_motor_jerk                                                         
 playsound                                                                        : cmd              :                                  : playsound <soundname>	
 playvol                                                                          : cmd              :                                  : Play a sound at a specified volume.	
 pop_var_values                                                                   : cmd              :                                  : Restore previously pushed convars and config values	
-population_distribution_debug                                                    : 0                : sv, rep                          : 	
 property_editor_use_overlay                                                      : 1                :                                  : 	
 push_var_values                                                                  : cmd              :                                  : Save convars and config values	
-pvs_debugentity                                                                  : -1               : sv, release                      : Verbose spew for this entity when doing IsInPVS computation.	
-pvs_flowtype                                                                     : 0                : sv, release                      : Flow through spawn groups for vis (0 == default, 1 == always visible, 2 == never visible.	
-pwatchent                                                                        : -1               : cl, cheat                        : Entity to watch for prediction system changes.	
-pwatchvar                                                                        : 0                : cl, cheat                        : Entity variable to watch in prediction system for changes.	
 quit                                                                             : cmd              :                                  : Quit the game	
 r_3d_skybox                                                                      : 1                :                                  : 	
 r_3d_skybox_depth_prepass                                                        : 1                :                                  : 	
@@ -1124,26 +603,21 @@ r_aoproxy_min_dist                                                              
 r_aoproxy_stencil_hidden_pixels                                                  : 0                :                                  : 	
 r_async_compute_fog                                                              : 1                :                                  : 	
 r_bloom_compute                                                                  : 1                :                                  : Use compute shaders for bloom on Vulkan	
-r_cacheSequenceData                                                              : 1                : sv, rep                          : 	
 r_cubemap_debug_colors                                                           : 0                : cheat                            : 	
 r_cubemap_normalization                                                          : 1                :                                  : 	
 r_cubemap_normalization_max                                                      : 32               :                                  : 	
 r_cubemap_normalization_roughness_begin                                          : 0                :                                  : 	
 r_custom_msaa_resolve                                                            : 1                :                                  : 	
 r_depth_debug                                                                    : 0                :                                  : Debug view of the depth buffer	
-r_depth_prepass                                                                  : 1                :                                  : 	
 r_depth_prepass_cull_threshold                                                   : 60               :                                  : 	
 r_directional_lightmaps                                                          : 1                :                                  : 	
 r_dither_scale                                                                   : 1                :                                  : 	
 r_dopixelvisibility                                                              : 1                : cheat                            : 	
-r_draw3dskybox                                                                   : 1                : cl                               : 	
 r_draw_animatables                                                               : 1                : cheat                            : 	
 r_draw_first_tri_only                                                            : 0                : cheat                            : 	
 r_draw_instances                                                                 : 1                : cheat                            : 	
 r_draw_particle_children_with_parents                                            : -1               : cheat                            : Draw particle children with parents (-1=use gameinfo, 0=no, 1=yes)	
 r_drawdecals                                                                     : 1                : cheat                            : Set to render decals	
-r_drawdevvisualizers                                                             : 0                : cl, cheat                        : Render dev visualizers	
-r_drawmodeldecals                                                                : 1                : cl                               : 	
 r_drawparticles                                                                  : 1                : cheat                            : Enable/disable particle rendering	
 r_drawskybox                                                                     : 1                : cheat                            : Render the 2d skybox.	
 r_drawviewmodel                                                                  : 1                : cheat                            : Render view model	
@@ -1165,7 +639,6 @@ r_experimental_lag_limiter                                                      
 r_fallback_texture_lod_scale                                                     : 2                : cheat                            : Scale factor for requested texture size (texture streaming) - used for geo that doesn't have a precomputed UV density measure	
 r_force_no_present                                                               : 0                : cheat                            : Force the render device to not present frames.	
 r_frame_sync_enable                                                              : 1                :                                  : 	
-r_freeze_sceneobjects                                                            : 0                : cl                               : 	
 r_freezeparticles                                                                : 0                : cheat                            : Pause particle simulation	
 r_fullscreen_gamma                                                               : 2                : a                                : Screen Gamma (only in fullscreen modes)	
 r_gpu_mem_stats                                                                  : cmd              :                                  : Display GPU memory usage.	
@@ -1177,7 +650,6 @@ r_grass_max_brightness_change                                                   
 r_grass_quality                                                                  : 2                :                                  : 0 = Off, 1 = Low, 2 = Med, 3 = high, 4 = ultra	
 r_grass_start_fade                                                               : 2000             :                                  : 	
 r_grass_vertex_lighting                                                          : 0                :                                  : 	
-r_jiggle_bones                                                                   : 1                : cl                               : 	
 r_kick_dependent_views_early                                                     : 0                :                                  : Kicks off creation of dependent views early in the frame	
 r_light_probe_volume_debug_colors                                                : 0                : cheat                            : 	
 r_light_probe_volume_debug_grid                                                  : 0                : cheat                            : 	
@@ -1191,10 +663,6 @@ r_light_sensitivity_mode                                                        
 r_lightBinnerFarPlane                                                            : 4096             : cheat                            : 	
 r_max_lights                                                                     : -1               :                                  : 	
 r_max_texture_pool_size                                                          : 0                :                                  : Upper limit on texture pool size.	
-r_mixed_shadows                                                                  : 1                : cl                               : Enable dynamic shadows from baked lights	
-r_mixed_shadows_debug                                                            : 0                : cl, cheat                        : Debug r_mixed_shadows	
-r_mixed_shadows_max_lights                                                       : 8                : cl, a                            : 	
-r_mixed_shadows_relative_distance_threshold                                      : 32               : cl                               : Reject any objects further away than this many of its own lengths	
 r_monitor_bloom                                                                  : 0                :                                  : Allow bloom on scene monitors	
 r_morphing_enabled                                                               : 1                : cheat                            : 	
 r_particle_debug_force_simulation                                                : 0                :                                  : -1 for all asleep, 1 for all awake	
@@ -1249,7 +717,6 @@ r_skip_precache_validation_check                                                
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
-r_strip_invisible_during_sceneobject_update                                      : 0                : cl                               : 	
 r_suppress_redundant_state_changes                                               : 1                :                                  : 	
 r_texture_budget_dynamic                                                         : 1                :                                  : Dynamically adjust texture streaming budget based on GPU memory usage.	
 r_texture_budget_threshold                                                       : 0                :                                  : Reduce texture memory pool size when this percentage of the budget is full.	
@@ -1276,7 +743,6 @@ r_texturefilteringquality                                                       
 r_textures_evict_all                                                             : cmd              :                                  : Evict all resident texture.	
 r_textures_list_all                                                              : cmd              :                                  : List all resident texture.	
 r_threaded_particles                                                             : 1                :                                  : 	
-r_threaded_scene_object_update                                                   : 1                : cl                               : 	
 r_tiled_rendering                                                                : 1                :                                  : Enable tiled rendering	
 r_tiled_rendering_depth_cull                                                     : 1                :                                  : Do GPU Depth Culling for Tiled Rendering objects	
 r_timestamp_query_multiplier                                                     : 1                :                                  : Set the TIMESTAMP query cycle multiplier, for drivers that lie	
@@ -1300,16 +766,12 @@ r_world_wind_smooth_time                                                        
 r_world_wind_strength                                                            : 40               :                                  : 	
 r_worldlod                                                                       : 1                : cheat                            : Set to enable world LOD	
 rate                                                                             : 320000           : a, user                          : Min bytes/sec the host can receive data	
-ray_bench                                                                        : cmd              :                                  : Load the rays and run the benchmark	
 rcon_address                                                                     : 0                : norecord, server_cant_query      : Address of remote server if sending unconnected rcon commands (format x.x.x.x:p) 	
 rcon_password                                                                    : 0                : norecord, release, server_cant_query : remote console password.	
 recast_mark_overhang                                                             : 1                : rep, cheat                       : Enable/disable overhang detection	
 recast_partitioning                                                              : 0                : rep, cheat                       : 0 = watershed, 1 = monotone, 2 = layers	
 reconnect                                                                        : cmd              :                                  : 	
 record                                                                           : cmd              :                                  : Record a demo.	
-report_cliententitysim                                                           : 0                : cl, cheat                        : List all clientside simulations and time - will report and turn itself off.	
-report_clientthinklist                                                           : 0                : cl, cheat                        : List all clientside entities thinking and time - will report and turn itself off.	
-report_soundpatch                                                                : cmd              :                                  : reports sound patch count	
 reset_gameconvars                                                                : cmd              :                                  : Reset game convars to default values	
 resource_leaks                                                                   : cmd              :                                  : resource_leaks <resource_name>: Show resource leaks for the named resource	
 resource_list                                                                    : cmd              :                                  : List loaded resources matching a substring	
@@ -1321,9 +783,7 @@ rpestats                                                                        
 rs_submit_twice                                                                  : 0                :                                  : 	
 rtx_force_default_hitgroup                                                       : 0                :                                  : Forces all ray traced geometry to use default hit shaders instead of specialized ones.	
 run_perftest                                                                     : cmd              :                                  : Execute perftest.cfg	
-savedgame                                                                        : 0                : sv, managed                      : 	
 sbox_feature_inheritlods                                                         : 1                : rep                              : Child models inherit parent LOD number	
-sbox_feature_inheritmorphs                                                       : 1                : sv, rep                          : Child models inherit morphs/flexes of their parent models	
 sc_allow_dynamic_constant_batching                                               : 1                :                                  : 	
 sc_allow_precomputed_vismembers                                                  : 1                :                                  : 	
 sc_allow_secondary_contexts                                                      : 1                :                                  : 	
@@ -1394,23 +854,16 @@ sc_throw_away_all_layers                                                        
 sc_use_clear_subrect                                                             : 0                :                                  : 	
 sc_visualize_batches                                                             : 0                :                                  : color per batch	
 sc_visualize_sceneobjects                                                        : 0                :                                  : 1 = visualize bounds, 2 = visualize sceneobject mesh materials, 3 = required texture size, 4 = bounds group, 5 = LOD	
-screenmessage_notifytime                                                         : 8                : sv                               : How long to display screen message text	
 screenmessage_show                                                               : -1               : cheat                            : Enable display of console messages on screen. 1 = Enabled, 0 = Disabled, -1 = Enabled if vgui is not present	
 screenshot                                                                       : cmd              :                                  : Take a jpeg screenshot: jpeg_screenshot [filename] [quality 1-100].	
 screenshot_png                                                                   : cmd              :                                  : Take a .png screenshot: png_screenshot [filename]	
 screenshot_prefix                                                                : 0                :                                  : Set the screenshot auto naming prefix.	
 screenshot_tga                                                                   : cmd              :                                  : Take a screenshot: screenshot [filename]	
 sdr                                                                              : cmd              :                                  : SteamDatagram Network Configuration	
-sensitivity                                                                      : 5                : cl, a                            : Mouse sensitivity.	
-server_game_time                                                                 : cmd              :                                  : Gives the game time in seconds (server's curtime)	
-servercfgfile                                                                    : 0                : sv                               : 	
 setinfo                                                                          : cmd              :                                  : Adds a new user info value	
 setpause                                                                         : cmd              :                                  : Set the pause state of the server.	
 show_tool                                                                        : cmd              :                                  : Show or launch the specified engine tool	
-showparticlecounts                                                               : 0                : cl                               : Display number of particles drawn per frame	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
-skel_debug                                                                       : 0                : sv, rep                          : 	
-skeleton_instance_smear_boneflags                                                : 0                : sv, cheat                        : Smear boneflags across the model.  Costs computation, but tests to make sure your bone flags are consistent.	
 snd_arrangement_start                                                            : cmd              :                                  : Starts the specified arrangement.	
 snd_async_flush                                                                  : cmd              :                                  : Flush all unlocked async audio data	
 snd_async_showmem                                                                : cmd              :                                  : Show async memory stats	
@@ -1450,11 +903,8 @@ snd_mixer_master_dsp                                                            
 snd_mixer_master_level                                                           : 1                : cheat                            : 	
 snd_mute                                                                         : 0                : a                                : 	
 snd_mute_losefocus                                                               : 1                : a                                : 	
-snd_new_visualize                                                                : 0                : sv, cheat                        : Displays soundevent name played at it's 3d position	
 snd_occlusion_debug                                                              : 0                : cheat                            : 	
 snd_op_test_convar                                                               : 720              : cheat                            : 	
-snd_opvar_set_point_debug                                                        : 0                : sv, rep, cheat                   : 	
-snd_opvar_set_point_update_interval                                              : 0                : sv, rep                          : 	
 snd_print_activetracks                                                           : cmd              :                                  : List all active tracks	
 snd_print_arrangements                                                           : cmd              :                                  : List all available sequence arrangments	
 snd_print_current_mixer_mixgroup                                                 : cmd              :                                  : Get data related to mix group matching string	
@@ -1506,7 +956,6 @@ snd_sos_resolve_execute_operator                                                
 snd_sos_set_operator_field                                                       : cmd              :                                  : Currently sets a single float operator field	
 snd_sos_set_operator_field_by_guid                                               : cmd              :                                  : Currently sets a single float operator field	
 snd_sos_show_block_debug                                                         : 0                : cheat                            : Spew data about the list of block entries.	
-snd_sos_show_client_xmit                                                         : 0                : cl, cheat                        : 	
 snd_sos_show_entry_match_free                                                    : 0                :                                  : 	
 snd_sos_show_groups_debug                                                        : 0                : cheat                            : Spew data about the list of block entries.	
 snd_sos_show_groups_match_free                                                   : 0                :                                  : 	
@@ -1528,7 +977,6 @@ snd_sos_show_opvar_updates                                                      
 snd_sos_show_opvar_updates_filter                                                : 0                : cheat                            : 	
 snd_sos_show_parameter_overwrite_warnings                                        : 0                :                                  : 	
 snd_sos_show_queuetotrack                                                        : 0                : cheat                            : 	
-snd_sos_show_server_xmit                                                         : 0                : sv, cheat                        : 	
 snd_sos_show_soundevent_param_overwrite                                          : 0                : cheat                            : 	
 snd_sos_show_soundevent_start                                                    : 0                : cheat                            : 	
 snd_sos_show_voice_elapsed_time                                                  : 0                :                                  : 	
@@ -1552,7 +1000,6 @@ snd_soundmixer_list_mixers                                                      
 snd_soundmixer_set_trigger_factor                                                : cmd              :                                  : Set named mix layer / mix group, trigger amount.	
 snd_soundmixer_setmixlayer_amount                                                : cmd              :                                  : Set named mix layer mix amount.	
 snd_soundmixer_version                                                           : 2                :                                  : 	
-snd_spew_particle_sound_names                                                    : 0                : cl, cheat                        : Display the names of sounds events fired from PlaySoundFromParticleEffectName.	
 snd_stereo_speaker_pan_exponent                                                  : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
 snd_stereo_speaker_pan_radial_weight                                             : cmd              :                                  : Apply cos(angle) * weight before pan law	
 snd_surround_speaker_pan_exponent                                                : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
@@ -1561,11 +1008,9 @@ snd_toolvolume                                                                  
 snd_vmidi_flush                                                                  : cmd              :                                  : Purge and reload all vmidi data and files.	
 snd_vmix_show_input_updates                                                      : 0                : cheat                            : If set to 1, show all incoming updates to vmix inputs. 	
 sndplaydelay                                                                     : cmd              :                                  : 	
-sos_debug_emit                                                                   : 0                : sv, rep                          : 	
 sound_device_override                                                            :                  : machine                          : 	
 soundinfo                                                                        : cmd              :                                  : Describe the current sound device.	
 soundlist                                                                        : cmd              :                                  : List all known sounds.	
-soundpatch_captionlength                                                         : 2                : sv, rep                          : How long looping soundpatch captions should display for.	
 soundsystem_update_async                                                         : 1                :                                  : 	
 spawngroup_ignore_timeouts                                                       : 0                :                                  : 	
 speaker_config                                                                   : -1               : machine                          : 	
@@ -1586,24 +1031,17 @@ stopsound                                                                       
 sv_allow_wait_command                                                            : 1                : rep, release                     : Allow or disallow the wait command on clients connected to this server.	
 sv_alternateticks                                                                : 0                : sp, release                      : If set, server only simulates entities on even numbered ticks. 	
 sv_always_full_flush                                                             : 0                : cheat                            : 	
-sv_anim_queue_changes                                                            : 1                : sv                               : 	
 sv_cheats                                                                        : 0                : nf, rep, release                 : Allow cheats on server	
 sv_client_predict                                                                : -1               : rep                              : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients set cl_predict to anything     0 = force cl_predict to 0     1 = force cl_predict to 1	
-sv_clockcorrection_msecs                                                         : 60               : sv                               : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount	
 sv_cluster                                                                       : 0                : release                          : Data center cluster this server lives in.	
 sv_disable_reliable_delta_retransmit                                             : 1                :                                  : Assume that a reliable entity delta will be ack'ed and send future deltas relative to the last reliable delta.	
 sv_enable_delta_packing                                                          : 1                :                                  : When enabled, this allows for entity packing to use the property changes for building up the data. This is many times faster, but can be disabled for error checking.	
-sv_ent_showonlyattachment                                                        : 0                : sv, cheat                        : 	
-sv_ent_showonlyhitbox                                                            : -1               : sv, cheat                        : 	
 sv_extra_client_connect_time                                                     : 15               :                                  : Seconds after client connect during which extra frames are buffered to prevent non-delta'd update	
 sv_forcepreload                                                                  : 0                : a                                : Force server side preloading.	
 sv_fullupdate                                                                    : cmd              :                                  : Force a full update for all clients.	
 sv_hibernate_postgame_delay                                                      : 5                :                                  : # of seconds to wait after final client leaves before hibernating.	
 sv_hibernate_when_empty                                                          : 1                :                                  : Puts the server into extremely low CPU usage mode when no clients connected	
-sv_hitbox_debug                                                                  : 0                : sv                               : 	
-sv_lagcompensationforcerestore                                                   : 1                : sv, cheat                        : Don't test validity of a lag comp restore, just do it.	
 sv_lan                                                                           : 0                : release                          : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )	
-sv_lightquery_debug                                                              : 0                : sv, cheat                        : 	
 sv_log_onefile                                                                   : 0                : a                                : Log server information to only one file.	
 sv_logblocks                                                                     : 0                :                                  : If true when log when a query is blocked (can cause very large log files)	
 sv_logecho                                                                       : 1                : a                                : Echo log information to the console.	
@@ -1628,68 +1066,40 @@ sv_parallel_packentities                                                        
 sv_password                                                                      : 0                : prot, nf, norecord, release      : Server password for entry into multiplayer games	
 sv_pausable                                                                      : 0                : release                          : Is the server pausable.	
 sv_pause_on_console_open                                                         : 0                : a                                : 1 = Pause the game when pressing ~ to open the console. CTRL+~ opens the console without pause.	
-sv_phys_animated_hierarchy                                                       : 1                : sv                               : 	
-sv_phys_debug_callback_entities                                                  : 0                : sv, cheat                        : Print all entities that get touch callbacks. Each entity is printed only once.	
-sv_phys_enabled                                                                  : 1                : sv, cheat                        : Enable all physics simulation	
-sv_phys_sleep_enable                                                             : 1                : sv, cheat                        : Enable sleeping for dynamic physics bodies.	
-sv_phys_stop_at_collision                                                        : 0                : sv, cheat                        : 	
-sv_phys_visualize_awake                                                          : 0                : sv                               : 	
-sv_player_search_range                                                           : 64               : sv, rep                          : 	
-sv_pvs_entity                                                                    : -1               : sv                               : If set, only allows this ent index to network (other than players and things that force sending).	
 sv_pvs_max_distance                                                              : 0                : rep, release                     : if set, adds a maximum range to PVS/PAS checks	
-sv_pvs_max_distance_check_only                                                   : 0                : sv, release                      : If set, only use the sv_pvs_max_distance check for working out which entities to transmit, and ignore PVS.	
-sv_pvs_random                                                                    : 0                : sv                               : If set, objects blink in/out of pvs randomly.	
-sv_querycache_stats                                                              : cmd              :                                  : Display status of the query cache (client only)	
 sv_rcon_banpenalty                                                               : 0                :                                  : Number of minutes to ban users who fail rcon authentication	
 sv_rcon_log                                                                      : 1                :                                  : Enable/disable rcon logging.	
 sv_rcon_maxfailures                                                              : 10               :                                  : Max number of times a user can fail rcon authentication before being banned	
 sv_rcon_minfailures                                                              : 5                :                                  : Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned	
 sv_rcon_minfailuretime                                                           : 30               :                                  : Number of seconds to track failed rcon authentications	
-sv_remapper_loopsoundfix                                                         : 0                : sv, rep                          : 	
-sv_remapper_range_multiplier                                                     : 1                : sv, rep                          : 	
 sv_reservation_grace                                                             : 5                :                                  : Time in seconds given for a lobby reservation.	
 sv_reservation_timeout                                                           : 120              : release                          : Time in seconds before lobby reservation expires.	
 sv_reserve_slots_for_reconnecting_players                                        : 0                :                                  : Reserve slots for reconnecting human players.	
 sv_reserve_slots_for_reconnecting_players_kick_prior                             : 1                :                                  : Kick a previously connected player with the same steamID if a replacement comes along	
-sv_script_profile                                                                : 0                : sv                               : 	
-sv_sequence_debug                                                                : -1               : sv                               : 	
-sv_sequence_debug2                                                               : -1               : sv                               : 	
-sv_sequence_debug_verbose                                                        : 1                : sv                               : 	
-sv_sequence_model_substring                                                      : 0                : sv                               : 	
-sv_showlagcompensation                                                           : 0                : sv, cheat                        : If > 0, show lag compensated hitboxes whenever a player is lag compensated. Value is for how long.	
 sv_showtags                                                                      : cmd              :                                  : Describe current gametags.	
 sv_shutdown                                                                      : cmd              :                                  : Sets the server to shutdown when all games have completed	
 sv_shutdown_immediately_on_request                                               : 0                :                                  : The server will always shutdown on receiving the shutdown request, even if not hibernating	
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
 sv_snapshot_unlimited                                                            : 0                : rep, release                     : For debugging, don't throw away old snapshots so that if you break in debugger (on remote client or server) it won't require an uncompressed update to resume.  You may run out of memory of course...	
-sv_soundemitter_trace                                                            : -1               : sv, rep                          : Show all EmitSound calls including their symbolic name and the actual wave file they resolved to. (-1 = for nobody, 0 = for everybody, n = for one entity) 	
 sv_stats                                                                         : 1                :                                  : Collect CPU usage stats	
-sv_sync_anims_spawn                                                              : 0                : sv, cheat                        : 	
 sv_tags                                                                          : 0                : nf, release                      : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.	
 sv_timeout                                                                       : 20               :                                  : After this many seconds without a message from fully connected client, the client is dropped	
 sv_unlockedchapters                                                              : 1                : a                                : Highest unlocked game chapter.	
 sv_usenetworkvars                                                                : 1                :                                  : Use networkvar system.	
-sv_usercmd_queue_spew_threshold                                                  : 30               : sv, release                      : Spew warning if command queue has grown above this many backlogged commands.	
 sv_visiblemaxplayers                                                             : -1               : release                          : Overrides the max players reported to prospective clients	
 sv_voicecodec                                                                    : 0                :                                  : Specifies which voice codec DLL to use in a game. Set to the name of the DLL without the extension.	
-sv_watchtransmit                                                                 : -2               : sv, release                      : Watch NetworkStateChanged info for this entity index.	
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
 tcmd                                                                             : cmd              :                                  : Send a command to tools system	
-telemetry_message                                                                : cmd              :                                  : Place a message in the telemetry timeline	
-telemetry_toggle_timespan                                                        : cmd              :                                  : Starts/stops a timespan with an ever increasing name.	
-template_debug                                                                   : 0                : sv, cheat                        : 	
 Test_Checkpoint                                                                  : cmd              :                                  : Indicate to a test script that a checkpoint has been reached	
 Test_ExitProcess                                                                 : cmd              :                                  : Test_ExitProcess <exit code> - immediately kill the process.	
 Test_Loop                                                                        : cmd              :                                  : Test_Loop <loop name> - loop back to the specified loop start point unconditionally.	
 Test_LoopCount                                                                   : cmd              :                                  : Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.	
 Test_LoopForNumSeconds                                                           : cmd              :                                  : Test_LoopForNumSeconds <loop name> <time> - loop back to the specified start point for the specified # of seconds.	
 Test_RandomChance                                                                : cmd              :                                  : Test_RandomChance <percent chance, 0-100> <token1> <token2...> - Roll the dice and maybe run the command following the percentage chance.	
-test_restoreonnewmodel                                                           : 0                : sv, rep                          : 	
 Test_StartLoop                                                                   : cmd              :                                  : Test_StartLoop <loop name> - Denote the start of a loop. Really just defines a named point you can jump to.	
 Test_StartScript                                                                 : cmd              :                                  : Start a test script running..	
 testscript_debug                                                                 : 0                :                                  : Debug test scripts.	
 texturefilteringquality                                                          : 4                : machine                          : 	
-think_limit                                                                      : 10               : sv, rep, release                 : Maximum think time in milliseconds, warning is printed if this is exceeded.	
 timedemo                                                                         : cmd              :                                  : Play a demo and report performance info.	
 timedemo_end                                                                     : -1               :                                  : Ends timedemo on given tick.	
 timedemo_start                                                                   : -1               :                                  : Starts timedemo on given tick.	
@@ -1709,13 +1119,11 @@ unbind                                                                          
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
 unloadTool                                                                       : cmd              :                                  : unload the specified tool	
 unpause                                                                          : cmd              :                                  : Clear the pause state of the server.	
-url_execute                                                                      : cmd              :                                  : Executes url-based commands, used for incoming commands from url-based launches when the game's already running.	
 users                                                                            : cmd              :                                  : Show user info for players on server.	
 video                                                                            : cmd              :                                  : Make a video, save it in screenshots folder	
 video_bitrate                                                                    : 8                : a                                : Bit rate for video recorder (in Mbps)	
 video_framerate                                                                  : 60               : a                                : Frame rate for video recorder	
 video_scale                                                                      : 100              : a                                : Scale percentage for video recorder	
-viewmodel_fov                                                                    : 54               : cl, cheat                        : 	
 violence_ablood                                                                  : 1                : a                                : Draw alien blood	
 violence_agibs                                                                   : 1                : a                                : Show alien gib entities	
 violence_hblood                                                                  : 1                : a                                : Draw human blood	
@@ -1733,7 +1141,7 @@ voice_stall_ms                                                                  
 voice_xsend_debug                                                                : 0                :                                  : 	
 voip_volume                                                                      : 1                : a                                : Voip volume	
 volume                                                                           : 1                : a                                : Sound volume	
-volume_fog_clipmap_update                                                        : 0                : cheat                            : 	
+volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
 volume_fog_clipmaps_enabled                                                      : 1                : cheat                            : 	
 volume_fog_depth                                                                 : 64               :                                  : 	
 volume_fog_disable                                                               : 0                : cheat                            : 	
@@ -1749,9 +1157,6 @@ volume_fog_vr_single_dispatch                                                   
 volume_fog_width                                                                 : 240              :                                  : 	
 vprof_remote_start                                                               : cmd              :                                  : Request a VProf data stream from the remote server (requires authentication)	
 vprof_remote_stop                                                                : cmd              :                                  : Stop an existing remote VProf data request	
-vprof_scope_entity_gamephys                                                      : 0                : sv                               : 	
-vprof_scope_entity_thinks                                                        : 0                : sv, rep                          : 	
-vprof_think_limit                                                                : 0                : sv                               : 	
 vr_depth_submit                                                                  : 0                : cl, managed                      : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
 vr_force_interleaved_projection                                                  : 0                : cl, managed                      : 	
@@ -1759,7 +1164,6 @@ vr_gpu_flush_timer                                                              
 vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
 vr_predict                                                                       : 0                : cl, managed                      : 	
-vr_screenshake_scale                                                             : 1                : cl                               : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
 vr_use_fullsort_for_opaque                                                       : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
@@ -1769,7 +1173,5 @@ world_dump_loaded_worlds                                                        
 world_layer_list                                                                 : cmd              :                                  : List all world layers	
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
-xc_crouch_debounce                                                               : 0                : sv                               : 	
-zoom_sensitivity_ratio                                                           : 1                : cl                               : Additional mouse sensitivity scale factor applied when FOV is zoomed in.	
 --------------
-1773 total convars/concommands
+1175 total convars/concommands
