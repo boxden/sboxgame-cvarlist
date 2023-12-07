@@ -119,7 +119,6 @@ csm_viewdir_shadow_bias                                                         
 cvarlist                                                                         : cmd              :                                  : Show the list of convars/concommands.	
 d3d_max_feature_level                                                            : 11               :                                  : Report the maximum D3D feature level available.	
 debug                                                                            : 0                : release                          : 	
-debug_mapio                                                                      : 0                : sv, managed                      : If above 0, enables EntityIO debug/visualization and controls the length of the visualization in seconds	
 debugoverlay_draw_current                                                        : 0                : cheat                            : Tell debugoverlay to not draw any entries that have aged out by the time of rendering. Useful if sim runs more often than rendering.	
 debugoverlay_ignore_source                                                       : 0                : cheat                            : Draw everything normal and ignore the source for rendering	
 debugoverlay_show_text_outline                                                   : 0                : cheat                            : Toggle display of box around text	
@@ -181,7 +180,6 @@ exec                                                                            
 exec_async                                                                       : cmd              :                                  : Execute a cfg file over time	
 execifexists                                                                     : cmd              :                                  : Execute a cfg file if file exists	
 execute_command_every_frame                                                      : 0                : cheat                            : 	
-extensions                                                                       : 0                : sv, managed                      : 	
 filesystem_buffer_size                                                           : 0                :                                  : Size of per file buffers. 0 for none	
 filesystem_fake_latency                                                          : 0                :                                  : 	
 filesystem_max_stdio_read                                                        : 16               :                                  : 	
@@ -204,7 +202,6 @@ fs_report_sync_opens                                                            
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
 gameevents_showeventlisteners                                                    : 0                :                                  : Show listening addition/removals	
 gameevents_showevents                                                            : 0                :                                  : Dump game events to console. (1 = Show Signaling, 2 = Show Posting also).	
-gamemode                                                                         : 0                : sv, rep, managed                 : 	
 gameui_activate                                                                  : cmd              :                                  : Shows the game UI	
 gameui_hide                                                                      : cmd              :                                  : Hides the game UI	
 gfx_calculate_skin_diffusion_profile_dipole                                      : cmd              :                                  : Calculate a skin diffusion profile using scattering constants.	
@@ -1174,4 +1171,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-1175 total convars/concommands
+1172 total convars/concommands
