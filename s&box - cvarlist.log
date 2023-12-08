@@ -27,7 +27,6 @@ binddefaults                                                                    
 bindtoggle                                                                       : cmd              :                                  : Performs a bind <key> 'increment var <cvar> 0 1 1'.	
 blink                                                                            : cmd              :                                  : Blink specified convar value between two values at the specified duration.	
 bone_decode_cache_enabled                                                        : 0                :                                  : 	
-changelevel                                                                      : cmd              :                                  : changelevel <mapname> :Multiplayer change level.	
 cl_aggregate_particles                                                           : 0                :                                  : 	
 cl_auto_cursor_scale                                                             : true             : machine                          : 	
 cl_cache_sendtable                                                               : 1                :                                  : Cache sendtables	
@@ -44,9 +43,7 @@ cl_connectionretrytime_p2p                                                      
 cl_cursor_scale                                                                  : 1.000000         : machine                          : 	
 cl_disconnect_soundevent                                                         : 0                :                                  : This soundevent is called to stop the desired soundevents when the game is disconnected.	
 cl_flushentitypacket                                                             : 0                : cheat                            : For debugging. Force the engine to flush an entity packet.	
-cl_fullupdate                                                                    : cmd              :                                  : Force uncompressed update	
 cl_ignorepackets                                                                 : 0                : cheat                            : Force client to ignore packets (for debugging).	
-cl_list_projects                                                                 : cmd              :                                  : 	
 cl_log_tick                                                                      : 0                :                                  : Log when a tick is recieved 	
 cl_log_tick_skips                                                                : 0                :                                  : Log when the tick delta >= this	
 cl_parallel_readpacketentities                                                   : 1                :                                  : Set to 1 to use threading snapshot reading (if game supports and server is sending bitcounts).	
@@ -77,11 +74,8 @@ cmd                                                                             
 con_enable                                                                       : false            : launch                           : 	
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
 con_toggle                                                                       : cmd              :                                  : 	
-connect                                                                          : cmd              :                                  : Connect to a remote server.	
-connect2                                                                         : cmd              :                                  : 	
+connect                                                                          : cmd              :                                  : 	
 consoleoverlay                                                                   : 0                : cl, managed                      : Enable the console to draw at the top of the screen all the time	
-controller_look_speed_pitch                                                      : 160              : cl, managed                      : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
-controller_look_speed_yaw                                                        : 270              : cl, managed                      : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
 convars_echo_toggle_changes                                                      : 1                :                                  : Echo to the console changes caused by toggling.	
 crash                                                                            : cmd              :                                  : Crash the client. Optional parameter -- type of crash:  0: read from NULL  1: write to NULL  2: force an Assert	
 crash_error                                                                      : cmd              :                                  : Cause the engine to crash by spewing an error (Debug!!)	
@@ -134,8 +128,7 @@ developer                                                                       
 DevUI_Scale                                                                      : 1                : cl, managed                      : 	
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
-disconnect                                                                       : cmd              :                                  : Disconnect from server	
-disconnect2                                                                      : cmd              :                                  : 	
+disconnect                                                                       : cmd              :                                  : 	
 dsp_db_min                                                                       : 80               : demo                             : 	
 dsp_db_mixdrop                                                                   : 0                : demo                             : 	
 dsp_dist_max                                                                     : 1440             : cheat, demo                      : 	
@@ -325,7 +318,6 @@ labelled_debug_helper_scale                                                     
 labelled_debug_helper_show_position                                              : 0                :                                  : 	
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
-Language                                                                         : 0                : cl, managed                      : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
 listdemo                                                                         : cmd              :                                  : List demo file contents.	
 lobbies                                                                          : cmd              :                                  : 	
@@ -340,8 +332,6 @@ lrucache_flush                                                                  
 lrucache_reset_stats                                                             : cmd              :                                  : Resets stats for the specified CUtlLRUCaches (or all if none specified)	
 lrucache_set_size                                                                : cmd              :                                  : Sets the specified cache to the specified size	
 lrucache_stats                                                                   : cmd              :                                  : Spews information about all CUtlLRUCaches	
-map                                                                              : cmd              :                                  : map <mapname> :Load a new map.	
-maps                                                                             : cmd              :                                  : Displays list of maps.	
 mat_disable_normal_mapping                                                       : 0                : cheat                            : 	
 mat_free_shaders                                                                 : cmd              :                                  : Free all unreferenced shaders	
 mat_fullbright                                                                   : 0                : cheat                            : 	
@@ -402,9 +392,7 @@ mindxlevel                                                                      
 mix_input                                                                        : cmd              :                                  : Set an input mix value	
 model_default_preview_sequence_name                                              : 0                : a                                : 	
 model_dump_convert_info                                                          : cmd              :                                  : Print model load-time conversion info	
-mouse_pitch_inverted                                                             : 0                : cl, managed                      : Whether the mouse's pitch should be inverted or not	
 mouse_pitchyaw_sensitivity                                                       : 50.000000        : machine                          : 	
-mouse_yaw_inverted                                                               : 0                : cl, managed                      : Whether the mouse's yaw should be inverted or not	
 movie_fixwave                                                                    : cmd              :                                  : Fixup corrupted .wav file if engine crashed during startmovie/endmovie, etc.	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
@@ -483,7 +471,6 @@ particle_profile_spike                                                          
 particles_multiplier                                                             : 1                : cheat                            : Multiply # of rendered particles by this for perf testing	
 password                                                                         : 0                : a, norecord, server_cant_query   : Current server access password	
 path                                                                             : cmd              :                                  : Show the filesystem path.	
-pause                                                                            : cmd              :                                  : Toggle the server pause state.	
 perf_time                                                                        : 500              : cl, managed                      : 	
 physics_debug_draw                                                               : 0                :                                  : 	
 pitchyaw_customaccel                                                             : false            : per-user                         : 	
@@ -636,7 +623,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 3971             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 3829             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -666,7 +653,6 @@ r_viewmodel_ambient_occlusion                                                   
 r_viewmodel_shadows                                                              : 1                :                                  : 	
 r_viewport                                                                       : cmd              :                                  : Slams viewport size to a specified value.	
 r_wait_on_present                                                                : 0                :                                  : 	
-r_water_ripples                                                                  : 0                : cl, managed                      : Sets whether water ripples should be used for water	
 r_world_frame_load_threshold_ms                                                  : 10               :                                  : 	
 r_world_wind_dir                                                                 : 0                :                                  : 	
 r_world_wind_frequency_grass                                                     : 0                :                                  : 	
@@ -687,7 +673,6 @@ resource_leaks                                                                  
 resource_list                                                                    : cmd              :                                  : List loaded resources matching a substring	
 resource_log_allocate_timing                                                     : cmd              :                                  : Log time spent in Allocate for all resource types	
 resource_reset_allocate_timing                                                   : cmd              :                                  : Reset tracked time spent in Allocate (see resource_log_allocate_timing)	
-restart                                                                          : cmd              :                                  : Poor man's restart: reload the current map from disk.	
 rpestats                                                                         : cmd              :                                  : dump rpe	
 rs_submit_twice                                                                  : 0                :                                  : 	
 rtx_force_default_hitgroup                                                       : 0                :                                  : Forces all ray traced geometry to use default hit shaders instead of specialized ones.	
@@ -770,7 +755,6 @@ screenshot_prefix                                                               
 screenshot_tga                                                                   : cmd              :                                  : Take a screenshot: screenshot [filename]	
 sdr                                                                              : cmd              :                                  : SteamDatagram Network Configuration	
 setinfo                                                                          : cmd              :                                  : Adds a new user info value	
-setpause                                                                         : cmd              :                                  : Set the pause state of the server.	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
 snd_arrangement_start                                                            : cmd              :                                  : Starts the specified arrangement.	
 snd_async_flush                                                                  : cmd              :                                  : Flush all unlocked async audio data	
@@ -928,11 +912,8 @@ startdemos                                                                      
 stats                                                                            : cmd              :                                  : Prints server performance variables	
 stats_display                                                                    : 0                :                                  : Displays perf statistics information	
 stats_print                                                                      : cmd              :                                  : Prints out perf statistics to the console, clears perf history	
-status                                                                           : cmd              :                                  : Print connection status	
-status2                                                                          : cmd              :                                  : 	
+status                                                                           : cmd              :                                  : 	
 status_json                                                                      : cmd              :                                  : Print status in JSON format	
-steaminput_glyph_forceresize                                                     : 0                : cl, managed                      : If Steam has the wrong size glyphs, resize them	
-steaminput_glyph_forcetype                                                       : 0                : cl, managed                      : Forces controller glyphs to render as a different controller type	
 stop                                                                             : cmd              :                                  : Finish recording demo.	
 stopdemos                                                                        : cmd              :                                  : Stop looping demos (current demo will complete).	
 stopsound                                                                        : cmd              :                                  : 	
@@ -1017,12 +998,8 @@ tr_epsilon_t_junction                                                           
 tr_max_acceptable_edge_length                                                    : 10000            : rep, cheat                       : 	
 tr_openedge_penalty                                                              : 10               : rep, cheat                       : 	
 ui_cull                                                                          : 0                : cl, managed                      : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
-ui_drawtext                                                                      : 0                : cl, managed                      : Enable drawing text	
-ui_drawtextshadow                                                                : 0                : cl, managed                      : Enable drawing text shadows	
-ui_rendertext                                                                    : 0                : cl, managed                      : Enable rendering text to textures	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
-unpause                                                                          : cmd              :                                  : Clear the pause state of the server.	
 users                                                                            : cmd              :                                  : Show user info for players on server.	
 video                                                                            : cmd              :                                  : Make a video, save it in screenshots folder	
 video_bitrate                                                                    : 8                : a                                : Bit rate for video recorder (in Mbps)	
@@ -1078,4 +1055,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-1079 total convars/concommands
+1056 total convars/concommands
