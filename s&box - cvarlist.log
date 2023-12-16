@@ -1,6 +1,5 @@
 <deferred>                                                                       : 0                :                                  : 	
 <unconnected>                                                                    : 0                :                                  : 	
-_record                                                                          : cmd              :                                  : Record a demo incrementally.	
 alias                                                                            : cmd              :                                  : Alias a command.	
 anim_resource_validate_on_load                                                   : 1                : release                          : Validates the animation group channel list against the animations on load for every animation	
 animgraph_footlock_calculate_tilt                                                : 1                : rep                              : 	
@@ -20,8 +19,7 @@ animgraph_ik_locks_enabled                                                      
 animgraph_slowdownonslopes_enabled                                               : 1                : rep                              : 	
 async_serialize                                                                  : 0                :                                  : Force async reads to serialize for profiling	
 async_track_all                                                                  : cmd              :                                  : Enable all registered asynchronous tracking convars at once	
-avatar                                                                           : 0                : cl, user, managed                : 	
-benchframe                                                                       : cmd              :                                  : Takes a snapshot of a particular frame in a time demo.	
+avatar                                                                           : 0                : cl, managed                      : 	
 bind                                                                             : cmd              :                                  : Bind a key.	
 binddefaults                                                                     : cmd              :                                  : Bind all keys to their default values.	
 bindtoggle                                                                       : cmd              :                                  : Performs a bind <key> 'increment var <cvar> 0 1 1'.	
@@ -29,26 +27,7 @@ blink                                                                           
 bone_decode_cache_enabled                                                        : 0                :                                  : 	
 cl_aggregate_particles                                                           : 0                :                                  : 	
 cl_auto_cursor_scale                                                             : true             : machine                          : 	
-cl_cache_sendtable                                                               : 1                :                                  : Cache sendtables	
-cl_clock_correction                                                              : 1                : cheat                            : Enable/disable clock correction on the client.	
-cl_clock_correction_adjustment_max_amount                                        : 200              : cheat                            : Sets the maximum number of milliseconds per second it is allowed to correct the client clock. It will only correct this amount if the difference between the client and server clock is equal to or larger than cl_clock_correction_adjustment_max_offset.	
-cl_clock_correction_adjustment_max_offset                                        : 90               : cheat                            : As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds), it moves towards applying cl_clock_correction_adjustment_max_amount of adjustment. That way, the response is small when the offset is small.	
-cl_clock_correction_adjustment_min_offset                                        : 10               : cheat                            : If the clock offset is less than this amount (in milliseconds), then no clock correction is applied.	
-cl_clock_correction_force_server_tick                                            : 999              : cheat                            : Force clock correction to match the server tick + this offset (-999 disables it).	
-cl_clock_showdebuginfo                                                           : 0                :                                  : Show debugging info about the clock drift, 1= resets, 2=adjustments, 3=verbose	
-cl_clock_unhook                                                                  : 0                :                                  : 	
-cl_clockdbg                                                                      : 0                :                                  : 	
-cl_clockdrift_max_ticks                                                          : 3                : cheat                            : Maximum number of ticks the clock is allowed to drift before the client snaps its clock to the server's.	
-cl_connectionretrytime_p2p                                                       : 20               : release                          : Number of seconds over which to spread retry attempts for P2P.	
 cl_cursor_scale                                                                  : 1.000000         : machine                          : 	
-cl_disconnect_soundevent                                                         : 0                :                                  : This soundevent is called to stop the desired soundevents when the game is disconnected.	
-cl_flushentitypacket                                                             : 0                : cheat                            : For debugging. Force the engine to flush an entity packet.	
-cl_ignorepackets                                                                 : 0                : cheat                            : Force client to ignore packets (for debugging).	
-cl_log_tick                                                                      : 0                :                                  : Log when a tick is recieved 	
-cl_log_tick_skips                                                                : 0                :                                  : Log when the tick delta >= this	
-cl_parallel_readpacketentities                                                   : 1                :                                  : Set to 1 to use threading snapshot reading (if game supports and server is sending bitcounts).	
-cl_parallel_readpacketentities_threshold                                         : 8                :                                  : Use parallel processing of snapshot reading if above this many entries.	
-cl_parallel_readpacketentities_type                                              : -1               :                                  :   -1 = use default (parallel controller split)  0 = single threaded combined (i.e., ReadFieldList and Decode combined into one call)  1 = single threaded split (first pass ReadFieldList, second pass Decode)  2 = worker thread for decode (main thread does ReadFieldList, worker thread does Decode)  3 = parallel combined (threadpool does read/decode on work items in parallel)  4 = parallel split  5 = parallel controller combined (like parallel, but uses a parallelcontroller so each thread in pool can share a single SerializedEntity  6 = parallel controller split 	
 cl_particle_batch_mode                                                           : 1                :                                  : 	
 cl_particle_fallback_base                                                        : 0                :                                  : Base for falling back to cheaper effects under load.	
 cl_particle_fallback_multiplier                                                  : 0                :                                  : Multiplier for falling back to cheaper effects under load.	
@@ -61,16 +40,7 @@ cl_particle_simulate                                                            
 cl_particles_debug_showparticles                                                 : 0                : cheat                            : 	
 cl_particles_dumplist                                                            : cmd              :                                  : Dump all new particles, optional name substring.	
 cl_playback_screenshots                                                          : 0                :                                  : Allows the client to playback screenshot and jpeg commands in demos.	
-cl_resend                                                                        : 0                : release                          : Delay in seconds before the client will resend the 'connect' attempt	
-cl_sendtable_cache_filename                                                      : 0                :                                  : Send tables cache file	
-cl_showdemooverlay                                                               : 0                :                                  : How often to flash demo recording/playback overlay (0 - disable overlay, -1 - show always)	
 cl_skel_constraints_enable                                                       : 1                : rep, cheat                       : 	
-cl_spewserializers                                                               : cmd              :                                  : Spew serializers	
-cl_timeout                                                                       : 30               : a                                : After this many seconds without receiving a packet from the server, the client will disconnect itself	
-cl_updaterate                                                                    : 20               : a, user                          : Number of packets per second of updates you are requesting from the server	
-cl_voice_filter                                                                  : 0                :                                  : Filter voice by name substring	
-clientport                                                                       : 0                : release                          : If non-empty, client binds port to specific address.  Usually you should leave this blank to use a different random system-assigned port for each connection.	
-cmd                                                                              : cmd              :                                  : Forward command to server.	
 con_enable                                                                       : false            : launch                           : 	
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
 con_toggle                                                                       : cmd              :                                  : 	
@@ -81,50 +51,12 @@ crash                                                                           
 crash_error                                                                      : cmd              :                                  : Cause the engine to crash by spewing an error (Debug!!)	
 crash_job                                                                        : cmd              :                                  : Cause the engine to crash in a job thread (Debug!!)	
 crash_thread                                                                     : cmd              :                                  : Cause the engine to crash in a brand new non-main thread (Debug!!)	
-csm_bias_override_0                                                              : 1                : cheat                            : 	
-csm_bias_override_1                                                              : 1                : cheat                            : 	
-csm_bias_override_2                                                              : 1                : cheat                            : 	
-csm_bias_override_3                                                              : 1                : cheat                            : 	
-csm_cascade0_override_dist                                                       : -1               : cheat                            : 	
-csm_cascade1_override_dist                                                       : -1               : cheat                            : 	
-csm_cascade2_override_dist                                                       : -1               : cheat                            : 	
-csm_cascade3_override_dist                                                       : -1               : cheat                            : 	
-csm_cascade_viewdir_shadow_bias_scale                                            : 2                : cheat                            : 	
-csm_max_num_cascades_override                                                    : -1               : cheat                            : 	
-csm_max_shadow_dist_override                                                     : -1               : cheat                            : 	
-csm_res_override_0                                                               : 0                : cheat                            : 	
-csm_res_override_1                                                               : 0                : cheat                            : 	
-csm_res_override_2                                                               : 0                : cheat                            : 	
-csm_res_override_3                                                               : 0                : cheat                            : 	
-csm_slope_scale_db_override                                                      : -1               : cheat                            : 	
-csm_split_log_scalar                                                             : 0                : cheat                            : 	
-csm_viewdir_shadow_bias                                                          : 0                : cheat                            : 	
 cvarlist                                                                         : cmd              :                                  : Show the list of convars/concommands.	
 d3d_max_feature_level                                                            : 11               :                                  : Report the maximum D3D feature level available.	
 debug                                                                            : 0                : release                          : 	
 debugoverlay_draw_current                                                        : 0                : cheat                            : Tell debugoverlay to not draw any entries that have aged out by the time of rendering. Useful if sim runs more often than rendering.	
 debugoverlay_ignore_source                                                       : 0                : cheat                            : Draw everything normal and ignore the source for rendering	
 debugoverlay_show_text_outline                                                   : 0                : cheat                            : Toggle display of box around text	
-demo_fastforwardfinalspeed                                                       : 20               :                                  : Go this fast when starting to hold FF button.	
-demo_fastforwardramptime                                                         : 5                :                                  : How many seconds it takes to get to full FF speed.	
-demo_fastforwardstartspeed                                                       : 2                :                                  : Go this fast when starting to hold FF button.	
-demo_flush                                                                       : 0                : a                                : Flush writing the demo file every network update	
-demo_goto                                                                        : cmd              :                                  : Skips to location in demo.	
-demo_gotomark                                                                    : cmd              :                                  : Skips the current demo playback to the marked tick	
-demo_gototick                                                                    : cmd              :                                  : Skips to a tick in demo.	
-demo_info                                                                        : cmd              :                                  : Print information about currently playing demo.	
-demo_interpolateview                                                             : 1                :                                  : Do view interpolation during dem playback.	
-demo_marktick                                                                    : cmd              :                                  : Marks the current demo playback tick for later use	
-demo_pause                                                                       : cmd              :                                  : Pauses demo playback.	
-demo_pauseatservertick                                                           : 0                :                                  : Pauses demo playback at server tick	
-demo_quitafterplayback                                                           : 0                :                                  : Quits game after demo playback.	
-demo_recordcommands                                                              : 1                : cheat                            : Record commands typed at console into .dem files.	
-demo_resume                                                                      : cmd              :                                  : Resumes demo playback.	
-demo_timescale                                                                   : cmd              :                                  : Sets demo replay speed.	
-demo_togglepause                                                                 : cmd              :                                  : Toggles demo playback.	
-demo_usefastgoto                                                                 : 1                :                                  : Use fast frame skipping when available for demo_goto commands.	
-demolist                                                                         : cmd              :                                  : Print demo sequence list.	
-developer                                                                        : 0                :                                  : Set developer message level.	
 DevUI_Scale                                                                      : 1                : cl, managed                      : 	
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
@@ -142,20 +74,14 @@ dsp_vol_5ch                                                                     
 dsp_volume                                                                       : 0                : a, demo                          : 	
 dump_localization_files                                                          : cmd              :                                  : List all loaded localization files	
 dumpparticlelist                                                                 : cmd              :                                  : Print out information on existing particle systems	
-dumpstringtable                                                                  : cmd              :                                  : Usage:  dumpstringtable tablename <sv | cl> <verbose>      Print string tables to console, verbose to dump data.	
 dxlevel                                                                          : 90               : machine                          : 	
 echo                                                                             : cmd              :                                  : Echo text to console.	
 echoln                                                                           : cmd              :                                  : Echo the command arguments on the console	
 enable_priority_boost                                                            : cmd              :                                  : Disable focus based priority boost	
-engine_max_resource_system_update_time                                           : 5                :                                  : 	
 engine_ostype                                                                    : 0                :                                  : OS type the engine is running on.	
 engine_platform_name_extended                                                    : 0                :                                  : Platform the engine is running on.	
-engine_render_only                                                               : 0                :                                  : 	
 engine_show_frame_multiple_ticks                                                 : 0                :                                  : 	
 engine_show_frame_pacing                                                         : 0                :                                  : 	
-engine_show_frame_ticks                                                          : 0                :                                  : 	
-engine_vr_max_ticks_to_simulate                                                  : 3                :                                  : Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time.	
-entity_log_load_unserialize                                                      : 0                :                                  : Output unserialization of entities on map load. 0 - off, 1 - client/server, 2 - server, 3 - client	
 entity_lump_list                                                                 : cmd              :                                  : List all known entity lumps	
 entity_lump_spew                                                                 : cmd              :                                  : Dump the contents of an entity lump	
 exec                                                                             : cmd              :                                  : Execute a cfg file	
@@ -170,7 +96,6 @@ filesystem_report_buffered_io                                                   
 filesystem_unbuffered_io                                                         : 1                :                                  : 	
 find                                                                             : cmd              :                                  : Find concommands with the specified string in their name/help text.	
 findflags                                                                        : cmd              :                                  : Find concommands by flags.	
-fp_trace                                                                         : cmd              :                                  : Toggle field path tracing to file 	
 fps_max                                                                          : 0                : a                                : Frame rate limiter.  0=no limit.  Does not apply to dedicated server.	
 fps_max_inactive                                                                 : 90               : a                                : Frame rate limit when window has no focus	
 fs_async_threads                                                                 : -1               :                                  : Number of IO threads in async filesystem (-1 == auto)	
@@ -182,24 +107,12 @@ fs_report_async_io                                                              
 fs_report_long_reads                                                             : 0                :                                  : 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold	
 fs_report_sync_opens                                                             : 0                :                                  : 0:Off, 1:Always, 2:Not during load	
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
-gameevents_showeventlisteners                                                    : 0                :                                  : Show listening addition/removals	
-gameevents_showevents                                                            : 0                :                                  : Dump game events to console. (1 = Show Signaling, 2 = Show Posting also).	
 gameui_activate                                                                  : cmd              :                                  : Shows the game UI	
 gameui_hide                                                                      : cmd              :                                  : Hides the game UI	
 groundik_enabled                                                                 : 1                :                                  : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
 host                                                                             : cmd              :                                  : 	
-host_force_frametime_to_equal_tick_interval                                      : 0                :                                  : 	
-host_framerate                                                                   : 0                : release                          : Set to lock per-frame time elapse.	
-host_limitlocal                                                                  : 0                :                                  : Apply cl_updaterate to loopback connection	
-host_showcachemiss                                                               : 0                :                                  : Print a debug message when the client or server cache is missed.	
-host_timescale                                                                   : 1                : rep, cheat                       : Prescale the clock by this amount.	
-host_timescale_dec                                                               : cmd              :                                  : Decrement the timescale by one step	
-host_timescale_inc                                                               : cmd              :                                  : Increment the timescale by one step	
 host_writeconfig                                                                 : cmd              :                                  : Saves out the user config values.	
-hostip                                                                           : 0                : release                          : Host game server ip	
-hostname                                                                         : 0                : release                          : Hostname for server.	
-hostport                                                                         : 27015            : release                          : Host game server port	
 hotload_fast                                                                     : 0                : cl, managed                      : Experimental fast hotloads if only method bodies change	
 hotload_log                                                                      : 0                : cl, managed                      : Hotload log level (0: none, 1: simple, 2: full)	
 ik_constraints_enabled                                                           : 1                :                                  : 	
@@ -272,7 +185,6 @@ input_filter_relative_analog_inputs                                             
 input_upimpulsevalue                                                             : 0.300000         : application                      : 	
 interopsystem.dump                                                               : cmd              :                                  : 	
 interopsystem.status                                                             : cmd              :                                  : 	
-ip                                                                               : 0                : release                          : Overrides IP for multihomed hosts	
 iv_debugbone                                                                     : 0                : release                          : Debug bone name for interpolation spew of CAnimationState.	
 joinlobby                                                                        : cmd              :                                  : 	
 joy_accel_filter                                                                 : 0.200000         : application                      : 	
@@ -310,8 +222,6 @@ jpeg_quality                                                                    
 key_findbinding                                                                  : cmd              :                                  : Find key bound to specified command string.	
 key_listboundkeys                                                                : cmd              :                                  : List bound keys with bindings.	
 key_updatelayout                                                                 : cmd              :                                  : Updates game keyboard layout to current windows keyboard setting.	
-kick                                                                             : cmd              :                                  : Kick a player by name.	
-kickid                                                                           : cmd              :                                  : Kick a player by userid or uniqueid, with a message.	
 labelled_debug_helper_arc_segments                                               : 20               :                                  : 	
 labelled_debug_helper_enabled                                                    : 1                :                                  : 	
 labelled_debug_helper_scale                                                      : 1                :                                  : 	
@@ -319,9 +229,7 @@ labelled_debug_helper_show_position                                             
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
-listdemo                                                                         : cmd              :                                  : List demo file contents.	
 lobbies                                                                          : cmd              :                                  : 	
-log                                                                              : cmd              :                                  : Enables logging to file, console, and udp < on | off >.	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
 log_dumpchannels                                                                 : cmd              :                                  : Dumps information about all logging channels.	
 log_flags                                                                        : cmd              :                                  : Set the flags on a logging channel.	
@@ -393,7 +301,6 @@ mix_input                                                                       
 model_default_preview_sequence_name                                              : 0                : a                                : 	
 model_dump_convert_info                                                          : cmd              :                                  : Print model load-time conversion info	
 mouse_pitchyaw_sensitivity                                                       : 50.000000        : machine                          : 	
-movie_fixwave                                                                    : cmd              :                                  : Fixup corrupted .wav file if engine crashed during startmovie/endmovie, etc.	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
 nav_gen_add_jumps                                                                : 1                : rep, cheat                       : 	
@@ -431,37 +338,6 @@ nav_gen_tr_max_acceptable_cost_2                                                
 nav_gen_tri_reduce_all                                                           : 0                : rep, cheat                       : 	
 nav_gen_true                                                                     : 1                : rep, cheat                       : Always true	
 nav_gen_vertical_limit                                                           : 88               : rep, cheat                       : 	
-net_channels                                                                     : cmd              :                                  : Shows net channel info	
-net_compressvoice                                                                : 0                :                                  : Attempt to compress out of band voice payloads (360 only).	
-net_connections_stats                                                            : cmd              :                                  : Print detailed network statistics for each network connection	
-net_detailed_canpacket_log                                                       : 0                :                                  : 	
-net_fakelag                                                                      : 0                : cheat, release                   : 	
-net_listallmessages                                                              : cmd              :                                  : List all registered net messages	
-net_log_processing                                                               : 0                :                                  : Log network processing	
-net_max_foreign_packets                                                          : 1000             :                                  : Maximum amount of foreign packets (no established connection) allowed per frame before we discard	
-net_maxcleartime                                                                 : 4                :                                  : Max # of seconds we can wait for next packets to be sent based on rate setting (0 == no limit).	
-net_messageinfo                                                                  : cmd              :                                  : Display info about a message (by classname or id)	
-net_p2pconnection_linger_time                                                    : 120              :                                  : How long p2p connection requests should linger before we completely ignore them	
-net_port_try                                                                     : 150              :                                  : If unable to bind to initial port, how many more to try binding.	
-net_public_adr                                                                   : 0                : release                          : For servers behind NAT/DHCP meant to be exposed to the public internet, this is the public facing ip address string: ('x.x.x.x' )	
-net_qospacketloss_percentage_threshold                                           : 5                :                                  : Spew a warning if packet loss percentage is above this threshold	
-net_restrict_showmsg_socket                                                      : 0                :                                  : If set, only net_showmsg spew for data inbound on this socket name e.g. client, server, etc.	
-net_serializedentitymemory                                                       : cmd              :                                  : Spew CSerializedEntity memory	
-net_serializedentitymetadatainfo                                                 : cmd              :                                  : Spew CSerializedEntity metadata information	
-net_showdrop                                                                     : 0                :                                  : Show dropped packets in console	
-net_showfragments                                                                : 0                :                                  : Show netchannel fragments	
-net_showmsg                                                                      : 0                :                                  : Show incoming message: <0|1|2|name> where 1 == all and 2 == all except net_NOP	
-net_showoob                                                                      : 0                :                                  : Show connectionless UDP traffic.	
-net_showpeaks                                                                    : 0                :                                  : Show messages for large packets only: <size>	
-net_showreliable                                                                 : 0                :                                  : Like net_showmsg, but only spew reliable messages	
-net_showudp                                                                      : 0                : release                          : Dump UDP packets summary to console	
-net_showudp_remoteonly                                                           : 1                : release                          : Dump non-loopback udp only	
-net_spewcounts                                                                   : cmd              :                                  : Spew serializer counts 	
-net_stats_json                                                                   : cmd              :                                  : Output server networking statistics in json format	
-net_status                                                                       : cmd              :                                  : Shows current network status	
-net_usesocketsforloopback                                                        : 0                : a, release                       : Use network sockets layer even for listen server local player's packets (multiplayer only).	
-net_validatemessages                                                             : cmd              :                                  : Activates/deactivates net message validation	
-nextdemo                                                                         : cmd              :                                  : Play next demo in sequence.	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
 package_install                                                                  : cmd              :                                  : 	
 package_list                                                                     : cmd              :                                  : 	
@@ -469,7 +345,6 @@ package_unmount_tag                                                             
 particle_profile                                                                 : cmd              :                                  : Profile particle	
 particle_profile_spike                                                           : cmd              :                                  : Profile particle spike	
 particles_multiplier                                                             : 1                : cheat                            : Multiply # of rendered particles by this for perf testing	
-password                                                                         : 0                : a, norecord, server_cant_query   : Current server access password	
 path                                                                             : cmd              :                                  : Show the filesystem path.	
 perf_time                                                                        : 500              : cl, managed                      : 	
 physics_debug_draw                                                               : 0                :                                  : 	
@@ -479,7 +354,6 @@ pitchyaw_customaccel_max                                                        
 pitchyaw_customaccel_scale                                                       : 0.040000         : per-user                         : 	
 pixelvis_debug                                                                   : cmd              :                                  : Dump debug info	
 play                                                                             : cmd              :                                  : Play a sound.	
-playdemo                                                                         : cmd              :                                  : Play a recorded demo file (.dem ).	
 player0_using_joystick                                                           : 0                : machine                          : 	
 player_input_motor_jerk                                                          : 6                : rep                              : 	
 playsound                                                                        : cmd              :                                  : playsound <soundname>	
@@ -502,8 +376,6 @@ r_async_compute_fog                                                             
 r_bloom_compute                                                                  : 1                :                                  : Use compute shaders for bloom on Vulkan	
 r_cubemap_debug_colors                                                           : 0                : cheat                            : 	
 r_cubemap_normalization                                                          : 1                :                                  : 	
-r_cubemap_normalization_max                                                      : 32               :                                  : 	
-r_cubemap_normalization_roughness_begin                                          : 0                :                                  : 	
 r_custom_msaa_resolve                                                            : 1                :                                  : 	
 r_depth_debug                                                                    : 0                :                                  : Debug view of the depth buffer	
 r_depth_prepass_cull_threshold                                                   : 60               :                                  : 	
@@ -532,7 +404,6 @@ r_enable_lights                                                                 
 r_enable_tonemapping                                                             : 1                :                                  : 	
 r_enable_translucent_screen_space                                                : 1                :                                  : 	
 r_enable_volume_fog                                                              : 1                :                                  : 	
-r_experimental_lag_limiter                                                       : 0                :                                  : 	
 r_fallback_texture_lod_scale                                                     : 2                : cheat                            : Scale factor for requested texture size (texture streaming) - used for geo that doesn't have a precomputed UV density measure	
 r_force_no_present                                                               : 0                : cheat                            : Force the render device to not present frames.	
 r_frame_sync_enable                                                              : 1                :                                  : 	
@@ -557,7 +428,6 @@ r_light_probe_volume_debug_grid_prim                                            
 r_light_probe_volume_debug_grid_roughness                                        : 0                : cheat                            : 	
 r_light_probe_volume_debug_grid_samplesize                                       : 4                : cheat                            : 	
 r_light_sensitivity_mode                                                         : 0                : a                                : 	
-r_lightBinnerFarPlane                                                            : 4096             : cheat                            : 	
 r_max_lights                                                                     : -1               :                                  : 	
 r_max_texture_pool_size                                                          : 0                :                                  : Upper limit on texture pool size.	
 r_monitor_bloom                                                                  : 0                :                                  : Allow bloom on scene monitors	
@@ -601,12 +471,6 @@ r_show_light_priority                                                           
 r_showdebugoverlays                                                              : 0                : cheat                            : Set to render debug overlays	
 r_showdebugrendertarget                                                          : 0                : cheat                            : Set the debug render target to show, 0 == disable	
 r_showsceneobjectbounds                                                          : 0                : cheat                            : Show scenesystem object bounding boxes	
-r_showsunshadowdebugrendertargets                                                : 0                : cheat                            : Set to render sun shadow render targets	
-r_showsunshadowdebugsplitvis                                                     : 0                : cheat                            : Set to render sun shadow split visibility debugger	
-r_single_light_fast_path_sun_cascade_0_texels_per_world                          : 8                :                                  : 	
-r_single_light_fast_path_sun_cascade_1_texels_per_world                          : 1                :                                  : 	
-r_single_light_fast_path_sun_cascade_vignette                                    : 0                : cheat                            : 	
-r_single_light_fast_path_sun_size_cull_threshold                                 : 0                : cheat                            : 	
 r_size_cull_threshold                                                            : 0.250000         : application                      : 	
 r_size_cull_threshold_shadow                                                     : 0                : cheat                            : Threshold of sun shadow map size percentage below which objects get culled	
 r_skinning_enabled                                                               : 1                : cheat                            : 	
@@ -623,7 +487,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 3829             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4069             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -646,11 +510,9 @@ r_timestamp_query_multiplier                                                    
 r_toggleviewportsize                                                             : cmd              :                                  : Toggles viewport size between small + full window.	
 r_translucent                                                                    : 1                : cheat                            : Enable rendering of translucent geometry	
 r_ui                                                                             : 1                :                                  : True if we should draw UI	
-r_unlit_shadow_color                                                             : -7896451         :                                  : 	
 r_use_memory_budget_model                                                        : 0                :                                  : Use a model of GPU memory use to determine budget rather than querying the OS.	
 r_validate_texture_streaming                                                     : 0                :                                  : Dumps state of texture streaming at the next frame boundary.	
 r_viewmodel_ambient_occlusion                                                    : 1                : a                                : Enable viewmodel ambient occlusion	
-r_viewmodel_shadows                                                              : 1                :                                  : 	
 r_viewport                                                                       : cmd              :                                  : Slams viewport size to a specified value.	
 r_wait_on_present                                                                : 0                :                                  : 	
 r_world_frame_load_threshold_ms                                                  : 10               :                                  : 	
@@ -661,19 +523,13 @@ r_world_wind_offset_speed                                                       
 r_world_wind_smooth_time                                                         : 2                :                                  : 	
 r_world_wind_strength                                                            : 40               :                                  : 	
 r_worldlod                                                                       : 1                : cheat                            : Set to enable world LOD	
-rate                                                                             : 320000           : a, user                          : Min bytes/sec the host can receive data	
-rcon_address                                                                     : 0                : norecord, server_cant_query      : Address of remote server if sending unconnected rcon commands (format x.x.x.x:p) 	
-rcon_password                                                                    : 0                : norecord, release, server_cant_query : remote console password.	
 recast_mark_overhang                                                             : 1                : rep, cheat                       : Enable/disable overhang detection	
 recast_partitioning                                                              : 0                : rep, cheat                       : 0 = watershed, 1 = monotone, 2 = layers	
 reconnect                                                                        : cmd              :                                  : 	
-record                                                                           : cmd              :                                  : Record a demo.	
-reset_gameconvars                                                                : cmd              :                                  : Reset game convars to default values	
 resource_leaks                                                                   : cmd              :                                  : resource_leaks <resource_name>: Show resource leaks for the named resource	
 resource_list                                                                    : cmd              :                                  : List loaded resources matching a substring	
 resource_log_allocate_timing                                                     : cmd              :                                  : Log time spent in Allocate for all resource types	
 resource_reset_allocate_timing                                                   : cmd              :                                  : Reset tracked time spent in Allocate (see resource_log_allocate_timing)	
-rpestats                                                                         : cmd              :                                  : dump rpe	
 rs_submit_twice                                                                  : 0                :                                  : 	
 rtx_force_default_hitgroup                                                       : 0                :                                  : Forces all ray traced geometry to use default hit shaders instead of specialized ones.	
 run_perftest                                                                     : cmd              :                                  : Execute perftest.cfg	
@@ -753,8 +609,6 @@ screenshot                                                                      
 screenshot_png                                                                   : cmd              :                                  : Take a .png screenshot: png_screenshot [filename]	
 screenshot_prefix                                                                : 0                :                                  : Set the screenshot auto naming prefix.	
 screenshot_tga                                                                   : cmd              :                                  : Take a screenshot: screenshot [filename]	
-sdr                                                                              : cmd              :                                  : SteamDatagram Network Configuration	
-setinfo                                                                          : cmd              :                                  : Adds a new user info value	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
 snd_arrangement_start                                                            : cmd              :                                  : Starts the specified arrangement.	
 snd_async_flush                                                                  : cmd              :                                  : Flush all unlocked async audio data	
@@ -904,79 +758,15 @@ sound_device_override                                                           
 soundinfo                                                                        : cmd              :                                  : Describe the current sound device.	
 soundlist                                                                        : cmd              :                                  : List all known sounds.	
 soundsystem_update_async                                                         : 1                :                                  : 	
-spawngroup_ignore_timeouts                                                       : 0                :                                  : 	
 speaker_config                                                                   : -1               : machine                          : 	
 spew_fonts                                                                       : cmd              :                                  : Spew information about font manager fonts	
 splitscreen_mode                                                                 : 0                : machine                          : 	
-startdemos                                                                       : cmd              :                                  : Play demos in demo sequence.	
-stats                                                                            : cmd              :                                  : Prints server performance variables	
 stats_display                                                                    : 0                :                                  : Displays perf statistics information	
 stats_print                                                                      : cmd              :                                  : Prints out perf statistics to the console, clears perf history	
 status                                                                           : cmd              :                                  : 	
-status_json                                                                      : cmd              :                                  : Print status in JSON format	
-stop                                                                             : cmd              :                                  : Finish recording demo.	
-stopdemos                                                                        : cmd              :                                  : Stop looping demos (current demo will complete).	
 stopsound                                                                        : cmd              :                                  : 	
-sv_allow_wait_command                                                            : 1                : rep, release                     : Allow or disallow the wait command on clients connected to this server.	
-sv_alternateticks                                                                : 0                : sp, release                      : If set, server only simulates entities on even numbered ticks. 	
-sv_always_full_flush                                                             : 0                : cheat                            : 	
-sv_cheats                                                                        : 0                : nf, rep, release                 : Allow cheats on server	
-sv_client_predict                                                                : -1               : rep                              : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients set cl_predict to anything     0 = force cl_predict to 0     1 = force cl_predict to 1	
-sv_cluster                                                                       : 0                : release                          : Data center cluster this server lives in.	
-sv_disable_reliable_delta_retransmit                                             : 1                :                                  : Assume that a reliable entity delta will be ack'ed and send future deltas relative to the last reliable delta.	
-sv_enable_delta_packing                                                          : 1                :                                  : When enabled, this allows for entity packing to use the property changes for building up the data. This is many times faster, but can be disabled for error checking.	
-sv_extra_client_connect_time                                                     : 15               :                                  : Seconds after client connect during which extra frames are buffered to prevent non-delta'd update	
-sv_forcepreload                                                                  : 0                : a                                : Force server side preloading.	
-sv_fullupdate                                                                    : cmd              :                                  : Force a full update for all clients.	
-sv_hibernate_postgame_delay                                                      : 5                :                                  : # of seconds to wait after final client leaves before hibernating.	
-sv_hibernate_when_empty                                                          : 1                :                                  : Puts the server into extremely low CPU usage mode when no clients connected	
-sv_lan                                                                           : 0                : release                          : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )	
-sv_log_onefile                                                                   : 0                : a                                : Log server information to only one file.	
-sv_logblocks                                                                     : 0                :                                  : If true when log when a query is blocked (can cause very large log files)	
-sv_logecho                                                                       : 1                : a                                : Echo log information to the console.	
-sv_logfile                                                                       : 0                : a                                : Log server information in the log file.	
-sv_logflush                                                                      : 0                : a                                : Flush the log file to disk on each write (slow).	
-sv_logsdir                                                                       : 0                : a                                : Folder in the game directory where server logs will be stored.	
-sv_max_queries_sec                                                               : 3                :                                  : Maximum queries per second to respond to from a single IP address.	
-sv_max_queries_sec_global                                                        : 60               :                                  : Maximum queries per second to respond to from anywhere.	
-sv_max_queries_window                                                            : 30               :                                  : Window over which to average queries per second averages.	
-sv_max_unreliable_delta_size                                                     : 4096             :                                  : Maximum allowable entity delta size over unreliable delivery.	
-sv_maxclientframes                                                               : 128              :                                  : 	
-sv_maxrate                                                                       : 0                : rep, release                     : Max bandwidth rate allowed on server, 0 == unlimited	
-sv_maxreplay                                                                     : 0                :                                  : Maximum replay time in seconds	
-sv_maxupdaterate                                                                 : 60               : rep                              : Maximum updates per second that the server will allow	
-sv_memlimit                                                                      : 0                : cheat                            : If set, whenever a game ends, if the total memory used by the server is greater than this # of megabytes, the server will exit.	
-sv_minrate                                                                       : 5000             : rep, release                     : Min bandwidth rate allowed on server, 0 == unlimited	
-sv_minupdaterate                                                                 : 10               : rep                              : Minimum updates per second that the server will allow	
-sv_networkvar_perfieldtracking                                                   : 1                : release                          : Track individual field offset changes, rather than a single dirty flag for the whole entity.	
-sv_networkvar_validate                                                           : 0                : release                          : Validate each StateChanged against known offsets.	
-sv_packstats                                                                     : cmd              :                                  : Show entity packing stats, pass 'clear' as argument to reset counts.	
-sv_parallel_packentities                                                         : 2                :                                  : Set to 1 to use threading snapshot sending on listen servers, 2 for dedicated servers.	
-sv_password                                                                      : 0                : prot, nf, norecord, release      : Server password for entry into multiplayer games	
-sv_pausable                                                                      : 0                : release                          : Is the server pausable.	
 sv_pause_on_console_open                                                         : 0                : a                                : 1 = Pause the game when pressing ~ to open the console. CTRL+~ opens the console without pause.	
-sv_pvs_max_distance                                                              : 0                : rep, release                     : if set, adds a maximum range to PVS/PAS checks	
-sv_rcon_banpenalty                                                               : 0                :                                  : Number of minutes to ban users who fail rcon authentication	
-sv_rcon_log                                                                      : 1                :                                  : Enable/disable rcon logging.	
-sv_rcon_maxfailures                                                              : 10               :                                  : Max number of times a user can fail rcon authentication before being banned	
-sv_rcon_minfailures                                                              : 5                :                                  : Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned	
-sv_rcon_minfailuretime                                                           : 30               :                                  : Number of seconds to track failed rcon authentications	
-sv_reservation_grace                                                             : 5                :                                  : Time in seconds given for a lobby reservation.	
-sv_reservation_timeout                                                           : 120              : release                          : Time in seconds before lobby reservation expires.	
-sv_reserve_slots_for_reconnecting_players                                        : 0                :                                  : Reserve slots for reconnecting human players.	
-sv_reserve_slots_for_reconnecting_players_kick_prior                             : 1                :                                  : Kick a previously connected player with the same steamID if a replacement comes along	
-sv_showtags                                                                      : cmd              :                                  : Describe current gametags.	
-sv_shutdown                                                                      : cmd              :                                  : Sets the server to shutdown when all games have completed	
-sv_shutdown_immediately_on_request                                               : 0                :                                  : The server will always shutdown on receiving the shutdown request, even if not hibernating	
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
-sv_snapshot_unlimited                                                            : 0                : rep, release                     : For debugging, don't throw away old snapshots so that if you break in debugger (on remote client or server) it won't require an uncompressed update to resume.  You may run out of memory of course...	
-sv_stats                                                                         : 1                :                                  : Collect CPU usage stats	
-sv_tags                                                                          : 0                : nf, release                      : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.	
-sv_timeout                                                                       : 20               :                                  : After this many seconds without a message from fully connected client, the client is dropped	
-sv_unlockedchapters                                                              : 1                : a                                : Highest unlocked game chapter.	
-sv_usenetworkvars                                                                : 1                :                                  : Use networkvar system.	
-sv_visiblemaxplayers                                                             : -1               : release                          : Overrides the max players reported to prospective clients	
-sv_voicecodec                                                                    : 0                :                                  : Specifies which voice codec DLL to use in a game. Set to the name of the DLL without the extension.	
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
 Test_Checkpoint                                                                  : cmd              :                                  : Indicate to a test script that a checkpoint has been reached	
 Test_ExitProcess                                                                 : cmd              :                                  : Test_ExitProcess <exit code> - immediately kill the process.	
@@ -988,10 +778,6 @@ Test_StartLoop                                                                  
 Test_StartScript                                                                 : cmd              :                                  : Start a test script running..	
 testscript_debug                                                                 : 0                :                                  : Debug test scripts.	
 texturefilteringquality                                                          : 4                : machine                          : 	
-timedemo                                                                         : cmd              :                                  : Play a demo and report performance info.	
-timedemo_end                                                                     : -1               :                                  : Ends timedemo on given tick.	
-timedemo_start                                                                   : -1               :                                  : Starts timedemo on given tick.	
-timedemoquit                                                                     : cmd              :                                  : Play a demo, report performance info, and then exit	
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 tr_do_reduce                                                                     : 1                : rep, cheat                       : 	
 tr_epsilon_t_junction                                                            : 0.010            : rep, cheat                       : 	
@@ -1000,26 +786,19 @@ tr_openedge_penalty                                                             
 ui_cull                                                                          : 0                : cl, managed                      : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
-users                                                                            : cmd              :                                  : Show user info for players on server.	
 video                                                                            : cmd              :                                  : Make a video, save it in screenshots folder	
 video_bitrate                                                                    : 8                : a                                : Bit rate for video recorder (in Mbps)	
 video_framerate                                                                  : 60               : a                                : Frame rate for video recorder	
 video_scale                                                                      : 100              : a                                : Scale percentage for video recorder	
-violence_ablood                                                                  : 1                : a                                : Draw alien blood	
-violence_agibs                                                                   : 1                : a                                : Show alien gib entities	
-violence_hblood                                                                  : 1                : a                                : Draw human blood	
-violence_hgibs                                                                   : 1                : a                                : Show human gib entities	
 vis_enable                                                                       : 1                :                                  : Toggle static visibility	
 vis_update                                                                       : 1                : cheat                            : 	
 vmem_dump                                                                        : cmd              :                                  : Dump memory stats to log.	
-voice_debugfeedbackfrom                                                          : 0                :                                  : 	
 voice_enable                                                                     : 1                : a                                : 	
 voice_fadeouttime                                                                : 0                :                                  : 	
 voice_initial_buffer_ms                                                          : 200              :                                  : 	
 voice_loopback                                                                   : 0                : a                                : 	
 voice_min_buffer_ms                                                              : 100              :                                  : 	
 voice_stall_ms                                                                   : 250              :                                  : 	
-voice_xsend_debug                                                                : 0                :                                  : 	
 voip_volume                                                                      : 1                : a                                : Voip volume	
 volume                                                                           : 1                : a                                : Sound volume	
 volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
@@ -1036,8 +815,6 @@ volume_fog_jitter_offset_random                                                 
 volume_fog_show_volumes                                                          : 0                : cheat                            : 	
 volume_fog_vr_single_dispatch                                                    : 1                :                                  : 	
 volume_fog_width                                                                 : 240              :                                  : 	
-vprof_remote_start                                                               : cmd              :                                  : Request a VProf data stream from the remote server (requires authentication)	
-vprof_remote_stop                                                                : cmd              :                                  : Stop an existing remote VProf data request	
 vr_depth_submit                                                                  : 0                : cl, managed                      : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
 vr_force_interleaved_projection                                                  : 0                : cl, managed                      : 	
@@ -1049,10 +826,9 @@ vr_spectator_show_left_eye                                                      
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
 vr_use_fullsort_for_opaque                                                       : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
 vr_use_predicted_hmd_tracking                                                    : 0                : cl, managed                      : 	
-vtune                                                                            : cmd              :                                  : Controls VTune's sampling.	
 world_dump_loaded_worlds                                                         : cmd              :                                  : Dump all of the worlds that we know about	
 world_layer_list                                                                 : cmd              :                                  : List all world layers	
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-1056 total convars/concommands
+832 total convars/concommands
