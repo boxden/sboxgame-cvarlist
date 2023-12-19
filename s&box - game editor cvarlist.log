@@ -564,7 +564,6 @@ r_showsceneobjectbounds                                                         
 r_size_cull_threshold                                                            : 0.250000         : application                      : 	
 r_size_cull_threshold_shadow                                                     : 0                : cheat                            : Threshold of sun shadow map size percentage below which objects get culled	
 r_skinning_enabled                                                               : 1                : cheat                            : 	
-r_skip_precache_validation_check                                                 : 1                :                                  : 	
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
@@ -931,4 +930,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-932 total convars/concommands
+931 total convars/concommands
