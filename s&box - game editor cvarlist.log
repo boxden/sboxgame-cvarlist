@@ -369,10 +369,6 @@ mem_compact                                                                     
 mem_dump                                                                         : cmd              :                                  : Dump memory stats to text file.	
 mem_incremental_compact                                                          : cmd              :                                  : Incrementally compacts the heap	
 mem_incremental_compact_rate                                                     : 0                : cheat                            : Rate at which to attempt internal heap compaction	
-mem_test                                                                         : cmd              :                                  : 	
-mem_test_each_frame                                                              : 0                :                                  : Run heap check at end of every frame 	
-mem_test_every_n_seconds                                                         : 0                :                                  : Run heap check at a specified interval 	
-mem_test_quiet                                                                   : 0                :                                  : Don't print stats when memtesting	
 memory                                                                           : cmd              :                                  : Print memory stats.	
 menu_reload                                                                      : cmd              :                                  : 	
 mesh_calculate_curvature_smooth_invert                                           : 1                : cheat                            : 	
@@ -930,4 +926,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-931 total convars/concommands
+927 total convars/concommands
