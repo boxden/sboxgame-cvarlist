@@ -19,7 +19,7 @@ animgraph_ik_locks_enabled                                                      
 animgraph_slowdownonslopes_enabled                                               : 1                : rep                              : 	
 async_serialize                                                                  : 0                :                                  : Force async reads to serialize for profiling	
 async_track_all                                                                  : cmd              :                                  : Enable all registered asynchronous tracking convars at once	
-avatar                                                                           : 0                : cl, managed                      : 	
+avatar                                                                           : 0                : managed                          : 	
 bind                                                                             : cmd              :                                  : Bind a key.	
 binddefaults                                                                     : cmd              :                                  : Bind all keys to their default values.	
 bindtoggle                                                                       : cmd              :                                  : Performs a bind <key> 'increment var <cvar> 0 1 1'.	
@@ -45,7 +45,9 @@ con_enable                                                                      
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
 con_toggle                                                                       : cmd              :                                  : 	
 connect                                                                          : cmd              :                                  : 	
-consoleoverlay                                                                   : 0                : cl, managed                      : Enable the console to draw at the top of the screen all the time	
+consoleoverlay                                                                   : 0                : managed                          : Enable the console to draw at the top of the screen all the time	
+controller_look_speed_pitch                                                      : 160              : managed                          : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
+controller_look_speed_yaw                                                        : 270              : managed                          : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
 convars_echo_toggle_changes                                                      : 1                :                                  : Echo to the console changes caused by toggling.	
 crash                                                                            : cmd              :                                  : Crash the client. Optional parameter -- type of crash:  0: read from NULL  1: write to NULL  2: force an Assert	
 crash_error                                                                      : cmd              :                                  : Cause the engine to crash by spewing an error (Debug!!)	
@@ -57,7 +59,7 @@ debug                                                                           
 debugoverlay_draw_current                                                        : 0                : cheat                            : Tell debugoverlay to not draw any entries that have aged out by the time of rendering. Useful if sim runs more often than rendering.	
 debugoverlay_ignore_source                                                       : 0                : cheat                            : Draw everything normal and ignore the source for rendering	
 debugoverlay_show_text_outline                                                   : 0                : cheat                            : Toggle display of box around text	
-DevUI_Scale                                                                      : 1                : cl, managed                      : 	
+DevUI_Scale                                                                      : 1                : managed                          : 	
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
 disconnect                                                                       : cmd              :                                  : 	
@@ -82,8 +84,6 @@ engine_ostype                                                                   
 engine_platform_name_extended                                                    : 0                :                                  : Platform the engine is running on.	
 engine_show_frame_multiple_ticks                                                 : 0                :                                  : 	
 engine_show_frame_pacing                                                         : 0                :                                  : 	
-entity_lump_list                                                                 : cmd              :                                  : List all known entity lumps	
-entity_lump_spew                                                                 : cmd              :                                  : Dump the contents of an entity lump	
 exec                                                                             : cmd              :                                  : Execute a cfg file	
 exec_async                                                                       : cmd              :                                  : Execute a cfg file over time	
 execifexists                                                                     : cmd              :                                  : Execute a cfg file if file exists	
@@ -113,8 +113,8 @@ groundik_enabled                                                                
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
 host                                                                             : cmd              :                                  : 	
 host_writeconfig                                                                 : cmd              :                                  : Saves out the user config values.	
-hotload_fast                                                                     : 0                : cl, managed                      : Experimental fast hotloads if only method bodies change	
-hotload_log                                                                      : 0                : cl, managed                      : Hotload log level (0: none, 1: simple, 2: full)	
+hotload_fast                                                                     : 0                : managed                          : Experimental fast hotloads if only method bodies change	
+hotload_log                                                                      : 0                : managed                          : Hotload log level (0: none, 1: simple, 2: full)	
 ik_constraints_enabled                                                           : 1                :                                  : 	
 ik_debug                                                                         : 0                :                                  : 	
 ik_debug_all_chains_post_solve                                                   : 0                :                                  : 	
@@ -228,7 +228,9 @@ labelled_debug_helper_scale                                                     
 labelled_debug_helper_show_position                                              : 0                :                                  : 	
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
+Language                                                                         : 0                : managed                          : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
+list_projects                                                                    : cmd              :                                  : 	
 lobbies                                                                          : cmd              :                                  : 	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
 log_dumpchannels                                                                 : cmd              :                                  : Dumps information about all logging channels.	
@@ -287,10 +289,6 @@ mem_compact                                                                     
 mem_dump                                                                         : cmd              :                                  : Dump memory stats to text file.	
 mem_incremental_compact                                                          : cmd              :                                  : Incrementally compacts the heap	
 mem_incremental_compact_rate                                                     : 0                : cheat                            : Rate at which to attempt internal heap compaction	
-mem_test                                                                         : cmd              :                                  : 	
-mem_test_each_frame                                                              : 0                :                                  : Run heap check at end of every frame 	
-mem_test_every_n_seconds                                                         : 0                :                                  : Run heap check at a specified interval 	
-mem_test_quiet                                                                   : 0                :                                  : Don't print stats when memtesting	
 memory                                                                           : cmd              :                                  : Print memory stats.	
 menu_reload                                                                      : cmd              :                                  : 	
 mesh_calculate_curvature_smooth_invert                                           : 1                : cheat                            : 	
@@ -300,7 +298,9 @@ mindxlevel                                                                      
 mix_input                                                                        : cmd              :                                  : Set an input mix value	
 model_default_preview_sequence_name                                              : 0                : a                                : 	
 model_dump_convert_info                                                          : cmd              :                                  : Print model load-time conversion info	
+mouse_pitch_inverted                                                             : 0                : managed                          : Whether the mouse's pitch should be inverted or not	
 mouse_pitchyaw_sensitivity                                                       : 50.000000        : machine                          : 	
+mouse_yaw_inverted                                                               : 0                : managed                          : Whether the mouse's yaw should be inverted or not	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
 nav_gen_add_jumps                                                                : 1                : rep, cheat                       : 	
@@ -346,7 +346,7 @@ particle_profile                                                                
 particle_profile_spike                                                           : cmd              :                                  : Profile particle spike	
 particles_multiplier                                                             : 1                : cheat                            : Multiply # of rendered particles by this for perf testing	
 path                                                                             : cmd              :                                  : Show the filesystem path.	
-perf_time                                                                        : 500              : cl, managed                      : 	
+perf_time                                                                        : 500              : managed                          : 	
 physics_debug_draw                                                               : 0                :                                  : 	
 pitchyaw_customaccel                                                             : false            : per-user                         : 	
 pitchyaw_customaccel_exponent                                                    : 1.000000         : per-user                         : 	
@@ -361,9 +361,6 @@ playvol                                                                         
 pop_var_values                                                                   : cmd              :                                  : Restore previously pushed convars and config values	
 push_var_values                                                                  : cmd              :                                  : Save convars and config values	
 quit                                                                             : cmd              :                                  : Quit the game	
-r_3d_skybox                                                                      : 1                :                                  : 	
-r_3d_skybox_depth_prepass                                                        : 1                :                                  : 	
-r_3d_skybox_depth_prepass_cull_threshold                                         : 30               :                                  : 	
 r_albedo_chart                                                                   : 1                : a                                : Enable Albedo/Reflectivity chart	
 r_allow_morph_batching_on_base                                                   : 0                :                                  : 	
 r_allow_time_sliced_shadow_map_rendering                                         : 1                :                                  : Allow time-sliced shadow buffer rendering when enabled via gameinfo.gi	
@@ -474,7 +471,6 @@ r_showsceneobjectbounds                                                         
 r_size_cull_threshold                                                            : 0.250000         : application                      : 	
 r_size_cull_threshold_shadow                                                     : 0                : cheat                            : Threshold of sun shadow map size percentage below which objects get culled	
 r_skinning_enabled                                                               : 1                : cheat                            : 	
-r_skip_precache_validation_check                                                 : 1                :                                  : 	
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
@@ -487,7 +483,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4069             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 3811             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -510,9 +506,9 @@ r_timestamp_query_multiplier                                                    
 r_toggleviewportsize                                                             : cmd              :                                  : Toggles viewport size between small + full window.	
 r_translucent                                                                    : 1                : cheat                            : Enable rendering of translucent geometry	
 r_ui                                                                             : 1                :                                  : True if we should draw UI	
+r_use_fullsort_for_opaque                                                        : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
 r_use_memory_budget_model                                                        : 0                :                                  : Use a model of GPU memory use to determine budget rather than querying the OS.	
 r_validate_texture_streaming                                                     : 0                :                                  : Dumps state of texture streaming at the next frame boundary.	
-r_viewmodel_ambient_occlusion                                                    : 1                : a                                : Enable viewmodel ambient occlusion	
 r_viewport                                                                       : cmd              :                                  : Slams viewport size to a specified value.	
 r_wait_on_present                                                                : 0                :                                  : 	
 r_world_frame_load_threshold_ms                                                  : 10               :                                  : 	
@@ -610,7 +606,6 @@ screenshot_png                                                                  
 screenshot_prefix                                                                : 0                :                                  : Set the screenshot auto naming prefix.	
 screenshot_tga                                                                   : cmd              :                                  : Take a screenshot: screenshot [filename]	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
-snd_arrangement_start                                                            : cmd              :                                  : Starts the specified arrangement.	
 snd_async_flush                                                                  : cmd              :                                  : Flush all unlocked async audio data	
 snd_async_showmem                                                                : cmd              :                                  : Show async memory stats	
 snd_async_showmem_music                                                          : cmd              :                                  : Show async memory stats for just non-streamed music	
@@ -619,11 +614,9 @@ snd_async_spew_blocking                                                         
 snd_async_stream_fail                                                            : 0                :                                  : Spew stream pool failures.	
 snd_async_stream_spew                                                            : 0                :                                  : Spew streaming info ( 0=Off, 1=streams, 2=buffers	
 snd_autodetect_latency                                                           : 1                : a                                : 	
-snd_compare_soundevents                                                          : cmd              :                                  : Compare the compiled and loaded contents of 2 soundevents.	
 snd_delay_sound_shift                                                            : 0                :                                  : 	
 snd_disable_mixer_duck                                                           : 0                : cheat                            : 	
 snd_disable_mixer_solo                                                           : 0                : cheat                            : 	
-snd_doppler                                                                      : 1                :                                  : 	
 snd_duckerattacktime                                                             : 0                : a                                : 	
 snd_duckerreleasetime                                                            : 2                : a                                : 	
 snd_duckerthreshold                                                              : 0                : a                                : 	
@@ -639,9 +632,6 @@ snd_gain_min                                                                    
 snd_headphone_pan_exponent                                                       : cmd              :                                  : Specifies the exponent for the pan xfade from phone to phone if the 'exp' pan law is being used.	
 snd_headphone_pan_radial_weight                                                  : cmd              :                                  : Apply cos(angle) * weight before pan law	
 snd_list                                                                         : 0                : cheat                            : 	
-snd_list_deferred_soundevents                                                    : cmd              :                                  : List all current deferred load soundevents	
-snd_list_soundevents                                                             : cmd              :                                  : List all available soundevents	
-snd_list_soundevents_by_stack                                                    : cmd              :                                  : List all available soundevents using specified stack name	
 snd_mergemethod                                                                  : 1                :                                  : Sound merge method (0 == sum and clip, 1 == max, 2 == avg).	
 snd_mix_minframetime                                                             : 0                :                                  : 	
 snd_mixahead                                                                     : 0                : a                                : 	
@@ -649,95 +639,17 @@ snd_mixer_master_dsp                                                            
 snd_mixer_master_level                                                           : 1                : cheat                            : 	
 snd_mute                                                                         : 0                : a                                : 	
 snd_mute_losefocus                                                               : 1                : a                                : 	
-snd_occlusion_debug                                                              : 0                : cheat                            : 	
-snd_op_test_convar                                                               : 720              : cheat                            : 	
-snd_print_activetracks                                                           : cmd              :                                  : List all active tracks	
-snd_print_arrangements                                                           : cmd              :                                  : List all available sequence arrangments	
 snd_print_current_mixer_mixgroup                                                 : cmd              :                                  : Get data related to mix group matching string	
-snd_print_samplers                                                               : cmd              :                                  : List all available samplers	
-snd_print_sequences                                                              : cmd              :                                  : List all available midi sequences	
 snd_rear_headphone_position                                                      : cmd              :                                  : Specifies the position  (in degrees) of the virtual rear left/right headphones.	
 snd_rear_stereo_speaker_position                                                 : cmd              :                                  : Specifies the position (in degrees) of the virtual rear left/right speakers.	
 snd_rear_surround_speaker_position                                               : cmd              :                                  : Specifies the position (in degrees) of the virtual rear left/right speakers.	
 snd_refdb                                                                        : 60               : cheat                            : Reference dB at snd_refdist	
 snd_refdist                                                                      : 36               : cheat                            : Reference distance for snd_refdb	
-snd_remove_all_soundevents                                                       : cmd              :                                  : Remove all soundevents	
-snd_remove_soundevent                                                            : cmd              :                                  : Remove the specified soundevent	
 snd_report_verbose_error                                                         : 0                : cheat                            : If set to 1, report more error found when playing sounds. 	
-snd_samplers_play_note                                                           : cmd              :                                  : Play a note from a specified sampler	
-snd_samplers_stop_note                                                           : cmd              :                                  : Stop a note from a specified sampler	
-snd_sequence_set_track_bpm                                                       : cmd              :                                  : Sets the tempo of the specified track	
-snd_sequence_set_track_transpose                                                 : cmd              :                                  : Sets the transposition of the specified track	
-snd_sequence_stop_all_tracks                                                     : cmd              :                                  : Stops all currently playing sequences	
-snd_sequence_stop_track                                                          : cmd              :                                  : Stops the specified track	
-snd_sequencer_show_bpm                                                           : 0                : cheat                            : 	
-snd_sequencer_show_events                                                        : 0                : cheat                            : 	
-snd_sequencer_show_quantize_queue                                                : 0                : cheat                            : 	
 snd_setmixer                                                                     : cmd              :                                  : Set named Mixgroup of current mixer to mix vol, mute, solo.	
 snd_setmixlayer                                                                  : cmd              :                                  : Set named Mixgroup of named mix layer to mix vol, mute, solo.	
 snd_showclassname                                                                : 0                : cheat                            : 	
 snd_showstart                                                                    : 0                : cheat                            : 	
-snd_sos_block_global_stack                                                       : 0                : cheat                            : 	
-snd_sos_block_stop_global_stack                                                  : 1                : cheat                            : 	
-snd_sos_default_update_stack                                                     : 0                :                                  : 	
-snd_sos_flush_operators                                                          : cmd              :                                  : Flush and re-parse the sound operator system	
-snd_sos_get_operator_field_info                                                  : cmd              :                                  : Currently gets info for a single operator field	
-snd_sos_list_operator_updates                                                    : 0                : cheat                            : 	
-snd_sos_max_event_base_depth                                                     : 4                :                                  : 	
-snd_sos_opvar_debug                                                              : 0                : cheat                            : 	
-snd_sos_pause_system                                                             : 0                : cheat                            : 	
-snd_sos_print_class_sizes                                                        : cmd              :                                  : Prints the sizes of relevant sos classes.	
-snd_sos_print_field_references                                                   : 0                : cheat                            : 	
-snd_sos_print_full_field_info                                                    : 0                : cheat                            : 	
-snd_sos_print_groups                                                             : cmd              :                                  : Prints the current state of the groups system	
-snd_sos_print_operator_stack                                                     : cmd              :                                  : Prints a master list of currently exposed variables	
-snd_sos_print_operator_stack_opeator                                             : cmd              :                                  : Prints an operator from a stack	
-snd_sos_print_operator_stacks                                                    : cmd              :                                  : Prints a list of currently available stacks	
-snd_sos_print_operators                                                          : cmd              :                                  : Prints a list of currently available operators	
-snd_sos_print_stack_exec_list                                                    : cmd              :                                  : Prints the current stack execution list	
-snd_sos_print_strings                                                            : cmd              :                                  : Prints a list of currently cached strings	
-snd_sos_print_tool_properties                                                    : cmd              :                                  : Prints the current state of tool properties.	
-snd_sos_report_entity_deleted                                                    : 0                :                                  : 	
-snd_sos_resolve_execute_operator                                                 : cmd              :                                  : Resolve the inputs and execute one specified operator from a specified stack	
-snd_sos_set_operator_field                                                       : cmd              :                                  : Currently sets a single float operator field	
-snd_sos_set_operator_field_by_guid                                               : cmd              :                                  : Currently sets a single float operator field	
-snd_sos_show_block_debug                                                         : 0                : cheat                            : Spew data about the list of block entries.	
-snd_sos_show_entry_match_free                                                    : 0                :                                  : 	
-snd_sos_show_groups_debug                                                        : 0                : cheat                            : Spew data about the list of block entries.	
-snd_sos_show_groups_match_free                                                   : 0                :                                  : 	
-snd_sos_show_mixgroup_path_errors                                                : 0                :                                  : 	
-snd_sos_show_operator_event_and_stack                                            : 1                : cheat                            : 	
-snd_sos_show_operator_event_filter                                               : 0                : cheat                            : 	
-snd_sos_show_operator_field_filter                                               : 0                : cheat                            : 	
-snd_sos_show_operator_init                                                       : 0                : cheat                            : 	
-snd_sos_show_operator_not_executing                                              : 1                : cheat                            : 	
-snd_sos_show_operator_operator_filter                                            : 0                : cheat                            : 	
-snd_sos_show_operator_parse                                                      : 0                : cheat                            : 	
-snd_sos_show_operator_pause_entry                                                : 0                : cheat                            : 	
-snd_sos_show_operator_prestart                                                   : 0                : cheat                            : 	
-snd_sos_show_operator_shutdown                                                   : 0                : cheat                            : 	
-snd_sos_show_operator_start                                                      : 0                : cheat                            : 	
-snd_sos_show_operator_stop_entry                                                 : 0                : cheat                            : 	
-snd_sos_show_operator_updates                                                    : 0                : cheat                            : 	
-snd_sos_show_opvar_updates                                                       : 0                : cheat                            : 	
-snd_sos_show_opvar_updates_filter                                                : 0                : cheat                            : 	
-snd_sos_show_parameter_overwrite_warnings                                        : 0                :                                  : 	
-snd_sos_show_queuetotrack                                                        : 0                : cheat                            : 	
-snd_sos_show_soundevent_param_overwrite                                          : 0                : cheat                            : 	
-snd_sos_show_soundevent_start                                                    : 0                : cheat                            : 	
-snd_sos_show_voice_elapsed_time                                                  : 0                :                                  : 	
-snd_sos_soundevent_deferred_interval_time                                        : 0                :                                  : 	
-snd_sos_soundevent_filter                                                        : 0                : cheat                            : 	
-snd_sos_soundevent_max_deferred_time                                             : 5                :                                  : 	
-snd_sos_soundevent_profile                                                       : cmd              :                                  : Dump a record of current soundevents and profile data	
-snd_sos_start_soundevent                                                         : cmd              :                                  : Starts a specified soundevent	
-snd_sos_start_soundevent_at_pos                                                  : cmd              :                                  : Starts a specified soundevent at the given position	
-snd_sos_stop_all_soundevents                                                     : cmd              :                                  : Stops all soundevents currently on the execution list	
-snd_sos_stop_soundevent_guid                                                     : cmd              :                                  : Stops a specified soundevent	
-snd_sos_stop_soundevent_index                                                    : cmd              :                                  : Stops a specified soundevent	
-snd_sos_test_soundmessage                                                        : cmd              :                                  : test	
-snd_sos_use_case_sensitive_soundevents                                           : 0                :                                  : 	
-snd_soundevent_clear_deferred                                                    : cmd              :                                  : Clear the list of deferred soundevents for loading.	
 snd_soundmixer                                                                   : 0                :                                  : 	
 snd_soundmixer_flush                                                             : cmd              :                                  : Reload soundmixers.txt file.	
 snd_soundmixer_list_mix_groups                                                   : cmd              :                                  : List all mix groups to dev console.	
@@ -751,7 +663,6 @@ snd_stereo_speaker_pan_radial_weight                                            
 snd_surround_speaker_pan_exponent                                                : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
 snd_surround_speaker_pan_radial_weight                                           : cmd              :                                  : Apply cos(angle) * weight before pan law	
 snd_toolvolume                                                                   : 1                : a                                : Volume of sounds in tools (e.g. Hammer, SFM)	
-snd_vmidi_flush                                                                  : cmd              :                                  : Purge and reload all vmidi data and files.	
 snd_vmix_show_input_updates                                                      : 0                : cheat                            : If set to 1, show all incoming updates to vmix inputs. 	
 sndplaydelay                                                                     : cmd              :                                  : 	
 sound_device_override                                                            :                  : machine                          : 	
@@ -764,6 +675,8 @@ splitscreen_mode                                                                
 stats_display                                                                    : 0                :                                  : Displays perf statistics information	
 stats_print                                                                      : cmd              :                                  : Prints out perf statistics to the console, clears perf history	
 status                                                                           : cmd              :                                  : 	
+steaminput_glyph_forceresize                                                     : 0                : managed                          : If Steam has the wrong size glyphs, resize them	
+steaminput_glyph_forcetype                                                       : 0                : managed                          : Forces controller glyphs to render as a different controller type	
 stopsound                                                                        : cmd              :                                  : 	
 sv_pause_on_console_open                                                         : 0                : a                                : 1 = Pause the game when pressing ~ to open the console. CTRL+~ opens the console without pause.	
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
@@ -783,7 +696,10 @@ tr_do_reduce                                                                    
 tr_epsilon_t_junction                                                            : 0.010            : rep, cheat                       : 	
 tr_max_acceptable_edge_length                                                    : 10000            : rep, cheat                       : 	
 tr_openedge_penalty                                                              : 10               : rep, cheat                       : 	
-ui_cull                                                                          : 0                : cl, managed                      : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
+ui_cull                                                                          : 0                : managed                          : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
+ui_drawtext                                                                      : 0                : managed                          : Enable drawing text	
+ui_drawtextshadow                                                                : 0                : managed                          : Enable drawing text shadows	
+ui_rendertext                                                                    : 0                : managed                          : Enable rendering text to textures	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
 video                                                                            : cmd              :                                  : Make a video, save it in screenshots folder	
@@ -794,11 +710,7 @@ vis_enable                                                                      
 vis_update                                                                       : 1                : cheat                            : 	
 vmem_dump                                                                        : cmd              :                                  : Dump memory stats to log.	
 voice_enable                                                                     : 1                : a                                : 	
-voice_fadeouttime                                                                : 0                :                                  : 	
-voice_initial_buffer_ms                                                          : 200              :                                  : 	
 voice_loopback                                                                   : 0                : a                                : 	
-voice_min_buffer_ms                                                              : 100              :                                  : 	
-voice_stall_ms                                                                   : 250              :                                  : 	
 voip_volume                                                                      : 1                : a                                : Voip volume	
 volume                                                                           : 1                : a                                : Sound volume	
 volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
@@ -815,20 +727,19 @@ volume_fog_jitter_offset_random                                                 
 volume_fog_show_volumes                                                          : 0                : cheat                            : 	
 volume_fog_vr_single_dispatch                                                    : 1                :                                  : 	
 volume_fog_width                                                                 : 240              :                                  : 	
-vr_depth_submit                                                                  : 0                : cl, managed                      : 	
+vr_depth_submit                                                                  : 0                : managed                          : 	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
-vr_force_interleaved_projection                                                  : 0                : cl, managed                      : 	
-vr_gpu_flush_timer                                                               : 2                : cl, managed                      : 	
+vr_force_interleaved_projection                                                  : 0                : managed                          : 	
+vr_gpu_flush_timer                                                               : 2                : managed                          : 	
 vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
-vr_predict                                                                       : 0                : cl, managed                      : 	
+vr_predict                                                                       : 0                : managed                          : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
-vr_use_fullsort_for_opaque                                                       : 1                : cheat                            : fullsort the opaque pass when there wasn't a depth prepass	
-vr_use_predicted_hmd_tracking                                                    : 0                : cl, managed                      : 	
+vr_use_predicted_hmd_tracking                                                    : 0                : managed                          : 	
 world_dump_loaded_worlds                                                         : cmd              :                                  : Dump all of the worlds that we know about	
 world_layer_list                                                                 : cmd              :                                  : List all world layers	
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-832 total convars/concommands
+743 total convars/concommands
