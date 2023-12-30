@@ -41,7 +41,6 @@ cl_particles_debug_showparticles                                                
 cl_particles_dumplist                                                            : cmd              :                                  : Dump all new particles, optional name substring.	
 cl_playback_screenshots                                                          : 0                :                                  : Allows the client to playback screenshot and jpeg commands in demos.	
 cl_skel_constraints_enable                                                       : 1                : rep, cheat                       : 	
-con_enable                                                                       : false            : launch                           : 	
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
 con_toggle                                                                       : cmd              :                                  : 	
 connect                                                                          : cmd              :                                  : 	
@@ -107,8 +106,6 @@ fs_report_async_io                                                              
 fs_report_long_reads                                                             : 0                :                                  : 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold	
 fs_report_sync_opens                                                             : 0                :                                  : 0:Off, 1:Always, 2:Not during load	
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
-gameui_activate                                                                  : cmd              :                                  : Shows the game UI	
-gameui_hide                                                                      : cmd              :                                  : Hides the game UI	
 groundik_enabled                                                                 : 1                :                                  : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
 host                                                                             : cmd              :                                  : 	
@@ -483,7 +480,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 3530             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 3874             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -678,7 +675,6 @@ status                                                                          
 steaminput_glyph_forceresize                                                     : 0                : managed                          : If Steam has the wrong size glyphs, resize them	
 steaminput_glyph_forcetype                                                       : 0                : managed                          : Forces controller glyphs to render as a different controller type	
 stopsound                                                                        : cmd              :                                  : 	
-sv_pause_on_console_open                                                         : 0                : a                                : 1 = Pause the game when pressing ~ to open the console. CTRL+~ opens the console without pause.	
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
 Test_Checkpoint                                                                  : cmd              :                                  : Indicate to a test script that a checkpoint has been reached	
@@ -742,4 +738,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-743 total convars/concommands
+739 total convars/concommands
