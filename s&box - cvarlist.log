@@ -480,7 +480,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 3874             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 3770             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -677,15 +677,6 @@ steaminput_glyph_forcetype                                                      
 stopsound                                                                        : cmd              :                                  : 	
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
-Test_Checkpoint                                                                  : cmd              :                                  : Indicate to a test script that a checkpoint has been reached	
-Test_ExitProcess                                                                 : cmd              :                                  : Test_ExitProcess <exit code> - immediately kill the process.	
-Test_Loop                                                                        : cmd              :                                  : Test_Loop <loop name> - loop back to the specified loop start point unconditionally.	
-Test_LoopCount                                                                   : cmd              :                                  : Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.	
-Test_LoopForNumSeconds                                                           : cmd              :                                  : Test_LoopForNumSeconds <loop name> <time> - loop back to the specified start point for the specified # of seconds.	
-Test_RandomChance                                                                : cmd              :                                  : Test_RandomChance <percent chance, 0-100> <token1> <token2...> - Roll the dice and maybe run the command following the percentage chance.	
-Test_StartLoop                                                                   : cmd              :                                  : Test_StartLoop <loop name> - Denote the start of a loop. Really just defines a named point you can jump to.	
-Test_StartScript                                                                 : cmd              :                                  : Start a test script running..	
-testscript_debug                                                                 : 0                :                                  : Debug test scripts.	
 texturefilteringquality                                                          : 4                : machine                          : 	
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 tr_do_reduce                                                                     : 1                : rep, cheat                       : 	
@@ -738,4 +729,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-739 total convars/concommands
+730 total convars/concommands
