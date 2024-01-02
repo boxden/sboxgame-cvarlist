@@ -767,15 +767,6 @@ stopsound                                                                       
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
 tcmd                                                                             : cmd              :                                  : Send a command to tools system	
-Test_Checkpoint                                                                  : cmd              :                                  : Indicate to a test script that a checkpoint has been reached	
-Test_ExitProcess                                                                 : cmd              :                                  : Test_ExitProcess <exit code> - immediately kill the process.	
-Test_Loop                                                                        : cmd              :                                  : Test_Loop <loop name> - loop back to the specified loop start point unconditionally.	
-Test_LoopCount                                                                   : cmd              :                                  : Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.	
-Test_LoopForNumSeconds                                                           : cmd              :                                  : Test_LoopForNumSeconds <loop name> <time> - loop back to the specified start point for the specified # of seconds.	
-Test_RandomChance                                                                : cmd              :                                  : Test_RandomChance <percent chance, 0-100> <token1> <token2...> - Roll the dice and maybe run the command following the percentage chance.	
-Test_StartLoop                                                                   : cmd              :                                  : Test_StartLoop <loop name> - Denote the start of a loop. Really just defines a named point you can jump to.	
-Test_StartScript                                                                 : cmd              :                                  : Start a test script running..	
-testscript_debug                                                                 : 0                :                                  : Debug test scripts.	
 texturefilteringquality                                                          : 4                : machine                          : 	
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 toolhud_enable                                                                   : 1                :                                  : 	
@@ -831,4 +822,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-832 total convars/concommands
+823 total convars/concommands
