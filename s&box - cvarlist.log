@@ -58,6 +58,7 @@ debug                                                                           
 debugoverlay_draw_current                                                        : 0                : cheat                            : Tell debugoverlay to not draw any entries that have aged out by the time of rendering. Useful if sim runs more often than rendering.	
 debugoverlay_ignore_source                                                       : 0                : cheat                            : Draw everything normal and ignore the source for rendering	
 debugoverlay_show_text_outline                                                   : 0                : cheat                            : Toggle display of box around text	
+default_fov                                                                      : 78               : managed                          : Default field of view	
 DevUI_Scale                                                                      : 1                : managed                          : 	
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
@@ -480,7 +481,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4135             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4082             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -602,6 +603,7 @@ screenshot                                                                      
 screenshot_png                                                                   : cmd              :                                  : Take a .png screenshot: png_screenshot [filename]	
 screenshot_prefix                                                                : 0                :                                  : Set the screenshot auto naming prefix.	
 screenshot_tga                                                                   : cmd              :                                  : Take a screenshot: screenshot [filename]	
+sensitivity                                                                      : 8                : managed                          : Mouse sensitivity	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
 snd_async_flush                                                                  : cmd              :                                  : Flush all unlocked async audio data	
 snd_async_showmem                                                                : cmd              :                                  : Show async memory stats	
@@ -700,7 +702,7 @@ voice_enable                                                                    
 voice_loopback                                                                   : 0                : a                                : 	
 voip_volume                                                                      : 1                : a                                : Voip volume	
 volume                                                                           : 1                : a                                : Sound volume	
-volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
+volume_fog_clipmap_update                                                        : 0                : cheat                            : 	
 volume_fog_clipmaps_enabled                                                      : 1                : cheat                            : 	
 volume_fog_depth                                                                 : 64               :                                  : 	
 volume_fog_disable                                                               : 0                : cheat                            : 	
@@ -729,4 +731,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-730 total convars/concommands
+732 total convars/concommands
