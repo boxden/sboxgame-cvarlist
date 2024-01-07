@@ -259,8 +259,8 @@ input_downimpulsevalue                                                          
 input_filter_relative_analog_inputs                                              : false            : machine                          : 	
 input_upimpulsevalue                                                             : 0.300000         : application                      : 	
 install                                                                          : cmd              :                                  : 	
-interopsystem.dump                                                               : cmd              :                                  : 	
-interopsystem.status                                                             : cmd              :                                  : 	
+interopsystem_dump                                                               : cmd              :                                  : 	
+interopsystem_status                                                             : cmd              :                                  : 	
 iv_debugbone                                                                     : 0                : release                          : Debug bone name for interpolation spew of CAnimationState.	
 joinlobby                                                                        : cmd              :                                  : 	
 joy_accel_filter                                                                 : 0.200000         : application                      : 	
