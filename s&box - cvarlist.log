@@ -181,8 +181,8 @@ input_button_code_is_scan_code                                                  
 input_downimpulsevalue                                                           : 0.700000         : application                      : 	
 input_filter_relative_analog_inputs                                              : false            : machine                          : 	
 input_upimpulsevalue                                                             : 0.300000         : application                      : 	
-interopsystem.dump                                                               : cmd              :                                  : 	
-interopsystem.status                                                             : cmd              :                                  : 	
+interopsystem_dump                                                               : cmd              :                                  : 	
+interopsystem_status                                                             : cmd              :                                  : 	
 iv_debugbone                                                                     : 0                : release                          : Debug bone name for interpolation spew of CAnimationState.	
 joinlobby                                                                        : cmd              :                                  : 	
 joy_accel_filter                                                                 : 0.200000         : application                      : 	
@@ -481,7 +481,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4082             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 3460             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -702,7 +702,7 @@ voice_enable                                                                    
 voice_loopback                                                                   : 0                : a                                : 	
 voip_volume                                                                      : 1                : a                                : Voip volume	
 volume                                                                           : 1                : a                                : Sound volume	
-volume_fog_clipmap_update                                                        : 0                : cheat                            : 	
+volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
 volume_fog_clipmaps_enabled                                                      : 1                : cheat                            : 	
 volume_fog_depth                                                                 : 64               :                                  : 	
 volume_fog_disable                                                               : 0                : cheat                            : 	
