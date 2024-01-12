@@ -667,7 +667,6 @@ sc_override_shadow_fade_max_dist                                                
 sc_override_shadow_fade_min_dist                                                 : -1               : cheat                            : 	
 sc_partitions_per_job                                                            : 1                : cheat                            : 	
 sc_precise_projection_to_world                                                   : 1                :                                  : 	
-sc_queue_reflection_views_to_layers                                              : 1                :                                  : 	
 sc_reject_all_objects                                                            : 0                : cheat                            : 	
 sc_schedule_fullsort_early                                                       : 1                :                                  : 	
 sc_setclassflags                                                                 : cmd              :                                  : Low level command to set the flags byte associated with an object class. sc_SetClassFlags <classname> <value> 	
@@ -751,7 +750,7 @@ snd_stereo_speaker_pan_exponent                                                 
 snd_stereo_speaker_pan_radial_weight                                             : cmd              :                                  : Apply cos(angle) * weight before pan law	
 snd_surround_speaker_pan_exponent                                                : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
 snd_surround_speaker_pan_radial_weight                                           : cmd              :                                  : Apply cos(angle) * weight before pan law	
-snd_toolvolume                                                                   : 1                : a                                : Volume of sounds in tools (e.g. Hammer, SFM)	
+snd_toolvolume                                                                   : 1                : a                                : Volume of sounds in tools (e.g. Hammer)	
 snd_vmix_show_input_updates                                                      : 0                : cheat                            : If set to 1, show all incoming updates to vmix inputs. 	
 sndplaydelay                                                                     : cmd              :                                  : 	
 sound_device_override                                                            :                  : machine                          : 	
@@ -825,4 +824,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-826 total convars/concommands
+825 total convars/concommands
