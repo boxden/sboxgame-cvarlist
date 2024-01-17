@@ -15,7 +15,6 @@ animgraph_footlock_trace_ground_enabled                                         
 animgraph_footlock_use_hip_shift                                                 : 1                :                                  : 	
 animgraph_footlock_use_twobone_solve                                             : 1                :                                  : 	
 animgraph_ik_debug                                                               : 0                :                                  : 	
-animgraph_ik_locks_enabled                                                       : 1                :                                  : 	
 animgraph_slowdownonslopes_enabled                                               : 1                : rep                              : 	
 assetsystem_check_compile_state                                                  : cmd              :                                  : Perform a detailed check of an asset's compile state	
 assetsystem_count                                                                : cmd              :                                  : Find the number of assets registered with the asset system	
@@ -135,7 +134,6 @@ gfx_hemioct_flat_normal_test                                                    
 gfx_load_skin_diffusion_profile                                                  : cmd              :                                  : Load a measured diffusion profile.	
 gfx_load_skin_diffusion_profile_image                                            : cmd              :                                  : Load a custom skin diffusion profile.	
 gfx_load_skin_diffusion_profile_sum_of_gaussians                                 : cmd              :                                  : Load sum-of-gaussians skin diffusion profile.	
-groundik_enabled                                                                 : 1                :                                  : 	
 hammer_bevel_leave_edges                                                         : 0                :                                  : 	
 hammer_disable_render_as_simple_box                                              : 0                :                                  : 	
 hammer_dota_path_falloff                                                         : 1                :                                  : 	
@@ -304,7 +302,7 @@ labelled_debug_helper_scale                                                     
 labelled_debug_helper_show_position                                              : 0                :                                  : 	
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
-Language                                                                         : 0                : managed                          : 	
+Language                                                                         : 0                : managed                          : The abbreviation for the language the user wants. This is set by the user in the options menu.	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
 list_projects                                                                    : cmd              :                                  : 	
 lobbies                                                                          : cmd              :                                  : 	
@@ -422,6 +420,7 @@ nav_show_player_counts                                                          
 nav_show_potentially_visible                                                     : 0                : cheat                            : Show areas that are potentially visible from the current nav area	
 nav_split_place_on_ground                                                        : 0                : cheat                            : If true, nav areas will be placed flush with the ground when split.	
 nav_validate                                                                     : 0                : cheat                            : Level of validation for nav system.  Higher will be slower.	
+net_lerptime                                                                     : 0                : managed                          : Temporary - how many seconds of lerp to apply to GameObject transforms	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
 package_install                                                                  : cmd              :                                  : 	
 package_list                                                                     : cmd              :                                  : 	
@@ -824,4 +823,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-825 total convars/concommands
+824 total convars/concommands
