@@ -471,7 +471,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4320             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4322             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -593,6 +593,7 @@ screenshot_png                                                                  
 screenshot_prefix                                                                : 0                :                                  : Set the screenshot auto naming prefix.	
 screenshot_tga                                                                   : cmd              :                                  : Take a screenshot: screenshot [filename]	
 sensitivity                                                                      : 8                : managed                          : Mouse sensitivity	
+show_version_overlay                                                             : 0                : managed                          : 	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
 snd_async_flush                                                                  : cmd              :                                  : Flush all unlocked async audio data	
 snd_async_showmem                                                                : cmd              :                                  : Show async memory stats	
@@ -736,4 +737,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-737 total convars/concommands
+738 total convars/concommands
