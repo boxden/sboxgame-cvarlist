@@ -297,41 +297,6 @@ mouse_pitchyaw_sensitivity                                                      
 mouse_yaw_inverted                                                               : 0                : managed                          : Whether the mouse's yaw should be inverted or not	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
-nav_gen_add_jumps                                                                : 1                : rep, cheat                       : 	
-nav_gen_agent_radius_buffer                                                      : 0                : rep, cheat                       : Buffer to add to agent radius before passing to nav gen	
-nav_gen_clip_polys_to_clearance                                                  : 1                : rep, cheat                       : 	
-nav_gen_clip_polys_to_clearance_debug                                            : 0                : rep, cheat                       : 	
-nav_gen_connect_angle                                                            : 0                : rep, cheat                       : 	
-nav_gen_connect_angle_ignore_z                                                   : 1                : rep, cheat                       : 	
-nav_gen_connect_dist_a                                                           : 1                : rep, cheat                       : 	
-nav_gen_connect_dist_b                                                           : 1                : rep, cheat                       : 	
-nav_gen_connect_overlap                                                          : 0                : rep, cheat                       : 	
-nav_gen_degen_limit                                                              : 0                : rep, cheat                       : 	
-nav_gen_false                                                                    : 0                : rep, cheat                       : Always false	
-nav_gen_island_removal                                                           : 0                : rep, cheat                       : 	
-nav_gen_island_removal_all_hulls                                                 : 1                : rep, cheat                       : 	
-nav_gen_markup_split_expand                                                      : 2                : rep, cheat                       : 	
-nav_gen_markup_split_tol_base                                                    : 1                : rep, cheat                       : 	
-nav_gen_markup_split_tol_nonav                                                   : 1                : rep, cheat                       : 	
-nav_gen_markup_split_tol_nonentity                                               : 8                : rep, cheat                       : 	
-nav_gen_match_ground                                                             : 0                : rep, cheat                       : 	
-nav_gen_max_edge_len                                                             : 2048             : rep, cheat                       : 	
-nav_gen_max_edge_len_do_clip                                                     : 1                : rep, cheat                       : 	
-nav_gen_max_edge_len_split_tol                                                   : 24               : rep, cheat                       : 	
-nav_gen_opt_to_quads                                                             : 1                : rep, cheat                       : 	
-nav_gen_opt_to_quads_angle_limit                                                 : 10               : rep, cheat                       : 	
-nav_gen_opt_to_quads_num_steps                                                   : 6                : rep, cheat                       : 	
-nav_gen_opt_to_quads_se_limit_end                                                : 0                : rep, cheat                       : 	
-nav_gen_opt_to_quads_se_limit_start                                              : 0                : rep, cheat                       : 	
-nav_gen_opt_to_quads_weld_limit_end                                              : 0                : rep, cheat                       : 	
-nav_gen_opt_to_quads_weld_limit_start                                            : 0                : rep, cheat                       : 	
-nav_gen_remove_vertical_polys                                                    : 1                : rep, cheat                       : 	
-nav_gen_split_boundary_polys                                                     : 0                : rep, cheat                       : 	
-nav_gen_tr_max_acceptable_cost_1                                                 : 900              : rep, cheat                       : 	
-nav_gen_tr_max_acceptable_cost_2                                                 : 900              : rep, cheat                       : 	
-nav_gen_tri_reduce_all                                                           : 0                : rep, cheat                       : 	
-nav_gen_true                                                                     : 1                : rep, cheat                       : Always true	
-nav_gen_vertical_limit                                                           : 88               : rep, cheat                       : 	
 net_lerptime                                                                     : 0                : managed                          : Temporary - how many seconds of lerp to apply to GameObject transforms	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
 package_install                                                                  : cmd              :                                  : 	
@@ -471,7 +436,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4322             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4319             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -506,8 +471,6 @@ r_world_wind_offset_speed                                                       
 r_world_wind_smooth_time                                                         : 2                :                                  : 	
 r_world_wind_strength                                                            : 40               :                                  : 	
 r_worldlod                                                                       : 1                : cheat                            : Set to enable world LOD	
-recast_mark_overhang                                                             : 1                : rep, cheat                       : Enable/disable overhang detection	
-recast_partitioning                                                              : 0                : rep, cheat                       : 0 = watershed, 1 = monotone, 2 = layers	
 reconnect                                                                        : cmd              :                                  : 	
 resource_leaks                                                                   : cmd              :                                  : resource_leaks <resource_name>: Show resource leaks for the named resource	
 resource_list                                                                    : cmd              :                                  : List loaded resources matching a substring	
@@ -671,10 +634,6 @@ sv_skel_constraints_enable                                                      
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
 texturefilteringquality                                                          : 4                : machine                          : 	
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
-tr_do_reduce                                                                     : 1                : rep, cheat                       : 	
-tr_epsilon_t_junction                                                            : 0.010            : rep, cheat                       : 	
-tr_max_acceptable_edge_length                                                    : 10000            : rep, cheat                       : 	
-tr_openedge_penalty                                                              : 10               : rep, cheat                       : 	
 ui_cull                                                                          : 0                : managed                          : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
 ui_drawtext                                                                      : 0                : managed                          : Enable drawing text	
 ui_drawtextshadow                                                                : 0                : managed                          : Enable drawing text shadows	
@@ -737,4 +696,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-738 total convars/concommands
+697 total convars/concommands
