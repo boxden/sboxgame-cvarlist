@@ -52,9 +52,7 @@ cl_particles_dumplist                                                           
 cl_playback_screenshots                                                          : 0                :                                  : Allows the client to playback screenshot and jpeg commands in demos.	
 cl_skel_constraints_enable                                                       : 1                : rep, cheat                       : 	
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
-con_toggle                                                                       : cmd              :                                  : 	
 connect                                                                          : cmd              :                                  : 	
-consoleoverlay                                                                   : 0                : managed                          : Enable the console to draw at the top of the screen all the time	
 controller_look_speed_pitch                                                      : 160              : managed                          : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
 controller_look_speed_yaw                                                        : 270              : managed                          : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
 convars_echo_toggle_changes                                                      : 1                :                                  : Echo to the console changes caused by toggling.	
@@ -69,7 +67,6 @@ debugoverlay_draw_current                                                       
 debugoverlay_ignore_source                                                       : 0                : cheat                            : Draw everything normal and ignore the source for rendering	
 debugoverlay_show_text_outline                                                   : 0                : cheat                            : Toggle display of box around text	
 default_fov                                                                      : 78               : managed                          : Default field of view	
-DevUI_Scale                                                                      : 1                : managed                          : 	
 differences                                                                      : cmd              :                                  : Show all convars which are not at their default values (optional restricted to specific flags).	
 disable_priority_boost                                                           : cmd              :                                  : Disable focus based priority boost	
 disconnect                                                                       : cmd              :                                  : 	
@@ -299,10 +296,8 @@ labelled_debug_helper_scale                                                     
 labelled_debug_helper_show_position                                              : 0                :                                  : 	
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
-Language                                                                         : 0                : managed                          : The abbreviation for the language the user wants. This is set by the user in the options menu.	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
 list_projects                                                                    : cmd              :                                  : 	
-lobbies                                                                          : cmd              :                                  : 	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
 log_dumpchannels                                                                 : cmd              :                                  : Dumps information about all logging channels.	
 log_flags                                                                        : cmd              :                                  : Set the flags on a logging channel.	
@@ -361,7 +356,6 @@ mem_dump                                                                        
 mem_incremental_compact                                                          : cmd              :                                  : Incrementally compacts the heap	
 mem_incremental_compact_rate                                                     : 0                : cheat                            : Rate at which to attempt internal heap compaction	
 memory                                                                           : cmd              :                                  : Print memory stats.	
-menu_reload                                                                      : cmd              :                                  : 	
 mesh_calculate_curvature_smooth_invert                                           : 1                : cheat                            : 	
 mesh_calculate_curvature_smooth_pass_count                                       : 3                : cheat                            : 	
 mesh_calculate_curvature_smooth_weight                                           : 1                : cheat                            : 	
@@ -637,7 +631,6 @@ screenshot_prefix                                                               
 screenshot_tga                                                                   : cmd              :                                  : Take a screenshot: screenshot [filename]	
 sensitivity                                                                      : 8                : managed                          : Mouse sensitivity	
 show_tool                                                                        : cmd              :                                  : Show or launch the specified engine tool	
-show_version_overlay                                                             : 0                : managed                          : 	
 skel_constraints_enable                                                          : 1                : rep, cheat                       : 	
 snd_async_flush                                                                  : cmd              :                                  : Flush all unlocked async audio data	
 snd_async_showmem                                                                : cmd              :                                  : Show async memory stats	
@@ -718,10 +711,6 @@ texturefilteringquality                                                         
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 toolhud_enable                                                                   : 1                :                                  : 	
 tools_renderscenes                                                               : 1                :                                  : 	
-ui_cull                                                                          : 0                : managed                          : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
-ui_drawtext                                                                      : 0                : managed                          : Enable drawing text	
-ui_drawtextshadow                                                                : 0                : managed                          : Enable drawing text shadows	
-ui_rendertext                                                                    : 0                : managed                          : Enable rendering text to textures	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
 unloadTool                                                                       : cmd              :                                  : unload the specified tool	
@@ -781,4 +770,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-782 total convars/concommands
+771 total convars/concommands
