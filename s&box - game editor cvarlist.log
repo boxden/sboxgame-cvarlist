@@ -113,6 +113,7 @@ fs_report_async_io                                                              
 fs_report_long_reads                                                             : 0                :                                  : 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold	
 fs_report_sync_opens                                                             : 0                :                                  : 0:Off, 1:Always, 2:Not during load	
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
+gamma_to_linear                                                                  : cmd              :                                  : 	
 gfx_calculate_skin_diffusion_profile_dipole                                      : cmd              :                                  : Calculate a skin diffusion profile using scattering constants.	
 gfx_generate_ao_cone_response                                                    : cmd              :                                  : Generates a LUT for AO cone vs. sphere	
 gfx_generate_ao_sphere_response                                                  : cmd              :                                  : Generates a LUT for AO proxy calculations	
@@ -130,21 +131,57 @@ gfx_hemioct_flat_normal_test                                                    
 gfx_load_skin_diffusion_profile                                                  : cmd              :                                  : Load a measured diffusion profile.	
 gfx_load_skin_diffusion_profile_image                                            : cmd              :                                  : Load a custom skin diffusion profile.	
 gfx_load_skin_diffusion_profile_sum_of_gaussians                                 : cmd              :                                  : Load sum-of-gaussians skin diffusion profile.	
+gizmo_rot_max_dist                                                               : 8                :                                  : 	
+hammer_bake_cubemap_debug_colors                                                 : cmd              :                                  : Bakes all cubemaps with distinct solid colors, for debugging purposes	
+hammer_bake_light_bake_cubemaps                                                  : 1                :                                  : Should we bake cubemaps?	
+hammer_bake_light_bake_light_probe_volumes                                       : 1                :                                  : Should we bake light probe volumes?	
+hammer_bake_light_bake_vertex_lighting                                           : 1                :                                  : Should we bake vertex lighting?	
+hammer_bake_light_calculate_irradiance_flags                                     : -1               :                                  : Irradiance calculation flags (-1 = default ).	
+hammer_bake_light_debug_path_trace_scene_info_from_build                         : 0                :                                  : Load debug_path_trace_scene_info.dat for RT baked lighting visualization instead of using the current map.	
+hammer_bake_light_direct_light_area_sample_subdivs                               : 8                :                                  : Square root of the number of shadow samples to use for soft shadow calculations on area light sources.	
+hammer_bake_light_final_gather_min_distance_to_backface                          : 2                :                                  : Backfaces within this many units of the target sample will not obstruct final gather ray.	
+hammer_bake_light_final_gather_subdivs                                           : 16               :                                  : Number of subdivisions of the sphere to use for final gather, i.e. the square-root of the sample count.	
+hammer_bake_light_irradiance_cache_max_error                                     : 0                :                                  : Interpolation error for irradiance caching. Smaller number means fewer artifacts	
+hammer_bake_light_max_bounces                                                    : 5                :                                  : Maximum number of light bounces to simulate	
+hammer_bake_light_photon_hash_bucket_size                                        : 16               :                                  : Size of hash buckets for storing photons	
+hammer_bake_light_photon_max_density                                             : 2                :                                  : Distance at which new photons will merge with existing photons to save memory and search time	
+hammer_bake_light_photon_search_distance                                         : 8                :                                  : Radius of the disk used to search for photon radiance samples	
+hammer_bake_light_photon_trace_rate                                              : 8                :                                  : Number of photons to trace for each game unit of the bounding box of the scene	
+hammer_bake_light_sample_at_vertices                                             : 0                :                                  : Sample at vertex positions/normals for per vertex lighting	
+hammer_bake_light_show_irradiance_cache_sample_positions                         : 0                :                                  : Show irradiance cache positions in red	
+hammer_bake_light_vrad2_debug                                                    : 0                :                                  : Debug why vrad2 isn't working	
 hammer_bevel_leave_edges                                                         : 0                :                                  : 	
+hammer_block_enable_temporary_work_plane                                         : 1                :                                  : 	
+hammer_bridge_drag_pixels_per_step                                               : 16               :                                  : 	
+hammer_diff_gridnav                                                              : cmd              :                                  : 	
 hammer_disable_render_as_simple_box                                              : 0                :                                  : 	
+hammer_dota_paint_flat_radius                                                    : 10               :                                  : 	
 hammer_dota_path_falloff                                                         : 1                :                                  : 	
 hammer_dota_path_fixup                                                           : 1                :                                  : 	
 hammer_dota_path_opacity                                                         : 0                :                                  : 	
 hammer_dota_path_overwrite                                                       : 0                :                                  : 	
+hammer_dota_path_preview                                                         : 16               :                                  : 	
 hammer_dota_path_sharpness                                                       : 0                :                                  : 	
 hammer_dota_path_use_material_settings                                           : 1                :                                  : 	
 hammer_dota_path_width                                                           : 150              :                                  : 	
+hammer_dota_proxy_handle_spacing                                                 : 10               :                                  : 	
+hammer_dota_rebuild_paths                                                        : cmd              :                                  : 	
 hammer_draw_bounds                                                               : 0                :                                  : 	
 hammer_draw_dirty_bounds                                                         : 0                :                                  : 	
 hammer_draw_model_raytrace_data                                                  : 0                :                                  : 	
 hammer_draw_model_skeleton                                                       : 0                :                                  : 	
 hammer_draw_overlay_triangles_in_box                                             : 0                :                                  : 	
+hammer_edge_debug_info                                                           : 0                :                                  : 	
+hammer_enable_debug_overlays                                                     : 0                :                                  : 	
+hammer_entity_report_refresh                                                     : 300              :                                  : 	
 hammer_face_debug_info                                                           : 0                :                                  : 	
+hammer_force_autosave                                                            : cmd              :                                  : 	
+hammer_gizmo_2dscale                                                             : 3                :                                  : 	
+hammer_gizmo_axis_length                                                         : 80               :                                  : 	
+hammer_gizmo_axis_scale                                                          : 1                :                                  : 	
+hammer_gizmo_compute_matrix                                                      : 1                :                                  : 	
+hammer_gizmo_line_thickness                                                      : 3                :                                  : 	
+hammer_gizmo_rot_inflate                                                         : 6                :                                  : 	
 hammer_gridnav_always_update                                                     : 0                :                                  : 	
 hammer_gridnav_preview_radius                                                    : 15               :                                  : 	
 hammer_gridnav_show_creature_blocking                                            : 1                :                                  : 	
@@ -152,6 +189,7 @@ hammer_gridnav_show_hero_blocking                                               
 hammer_gridnav_show_impassable                                                   : 1                :                                  : 	
 hammer_gridnav_show_obstructions                                                 : 1                :                                  : 	
 hammer_gridnav_show_ward_blocking                                                : 1                :                                  : 	
+hammer_hud_enable                                                                : 1                :                                  : 	
 hammer_isosurface_draw_cells                                                     : 0                :                                  : 	
 hammer_isosurface_draw_grid_points                                               : 0                :                                  : 	
 hammer_isosurface_draw_grid_x                                                    : 0                :                                  : 	
@@ -163,15 +201,35 @@ hammer_isosurface_merge_tolerance                                               
 hammer_isosurface_remove_interior                                                : 1                :                                  : 	
 hammer_isosurface_sample_offset                                                  : 0                :                                  : 	
 hammer_isosurface_subtract                                                       : 0                :                                  : 	
+hammer_map_files                                                                 : cmd              :                                  : 	
+hammer_open_edge_hash_length                                                     : 6                :                                  : 	
+hammer_open_edge_hash_spacing                                                    : 6                :                                  : 	
 hammer_overlay_draw_projection_triangles                                         : 0                :                                  : 	
 hammer_parallel_procedural_update                                                : 1                :                                  : 	
+hammer_prefab_tree                                                               : cmd              :                                  : 	
 hammer_raytrace_debug_draw                                                       : 0                :                                  : Draw ray tracing environment debug visualization in Hammer	
 hammer_render_model_bounding_spheres                                             : 0                :                                  : 	
+hammer_rotate_up_dot                                                             : 0                :                                  : 	
+hammer_save_gridnav                                                              : cmd              :                                  : 	
+hammer_show_face_uvs                                                             : 0                :                                  : 	
+hammer_show_input_debugger                                                       : cmd              :                                  : 	
 hammer_show_light_truncation_error                                               : 0                :                                  : 	
 hammer_spawn_area_base_alpha                                                     : 0                :                                  : 	
 hammer_spawn_area_editor_outline_size                                            : 17               :                                  : 	
 hammer_spawn_area_outline_alpha                                                  : 255              :                                  : 	
+hammer_stroke_steps                                                              : 10               :                                  : 	
 hammer_tile_border_size                                                          : 16               :                                  : 	
+hammer_tileset_maps                                                              : cmd              :                                  : 	
+hammer_translucent_enable                                                        : 1                :                                  : 	
+hammer_vertex_normal_paint_brush_screensize                                      : 0                :                                  : 	
+hammer_vertex_normal_paint_brush_size_max                                        : 100              :                                  : 	
+hammer_vertex_normal_paint_cached_mesh_evict_distance                            : 128              :                                  : 	
+hammer_vertex_normal_paint_debug_triangulation                                   : 0                :                                  : 	
+hammer_vertex_normal_paint_initial_brush_radius                                  : 32               :                                  : 	
+hammer_vertex_normal_paint_initial_strength                                      : 0                :                                  : 	
+hammer_vis_opacity                                                               : 32               :                                  : 	
+hammer_worklight_brightness                                                      : 1000             :                                  : 	
+hammer_worklight_range                                                           : 32000            :                                  : 	
 hammer_world_trace_multisample                                                   : 1                :                                  : 	
 hammer_world_trace_pack_rays                                                     : 0                :                                  : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
@@ -297,6 +355,7 @@ labelled_debug_helper_show_position                                             
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
+linear_to_gamma                                                                  : cmd              :                                  : 	
 list_projects                                                                    : cmd              :                                  : 	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
 log_dumpchannels                                                                 : cmd              :                                  : Dumps information about all logging channels.	
@@ -360,7 +419,6 @@ mesh_calculate_curvature_smooth_invert                                          
 mesh_calculate_curvature_smooth_pass_count                                       : 3                : cheat                            : 	
 mesh_calculate_curvature_smooth_weight                                           : 1                : cheat                            : 	
 mindxlevel                                                                       : [1.000000 0.000000 0.000000] : application                      : 	
-mix_input                                                                        : cmd              :                                  : Set an input mix value	
 model_default_preview_sequence_name                                              : 0                : a                                : 	
 model_dump_convert_info                                                          : cmd              :                                  : Print model load-time conversion info	
 mouse_pitch_inverted                                                             : 0                : managed                          : Whether the mouse's pitch should be inverted or not	
@@ -384,12 +442,10 @@ pitchyaw_customaccel_exponent                                                   
 pitchyaw_customaccel_max                                                         : 0.000000         : per-user                         : 	
 pitchyaw_customaccel_scale                                                       : 0.040000         : per-user                         : 	
 pixelvis_debug                                                                   : cmd              :                                  : Dump debug info	
-play                                                                             : cmd              :                                  : Play a sound.	
 play_toggle                                                                      : cmd              :                                  : 	
 player0_using_joystick                                                           : 0                : machine                          : 	
 player_input_motor_jerk                                                          : 6                : rep                              : 	
 playsound                                                                        : cmd              :                                  : playsound <soundname>	
-playvol                                                                          : cmd              :                                  : Play a sound at a specified volume.	
 pop_var_values                                                                   : cmd              :                                  : Restore previously pushed convars and config values	
 property_editor_use_overlay                                                      : 1                :                                  : 	
 push_var_values                                                                  : cmd              :                                  : Save convars and config values	
@@ -509,7 +565,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -554,6 +610,14 @@ rtx_allow_blas_compact                                                          
 rtx_allow_blas_create                                                            : 1                :                                  : 	
 rtx_force_default_hitgroup                                                       : 0                :                                  : Forces all ray traced geometry to use default hit shaders instead of specialized ones.	
 run_perftest                                                                     : cmd              :                                  : Execute perftest.cfg	
+sa_airabsorbtion                                                                 : 1                :                                  : 	
+sa_attenuation                                                                   : 1                :                                  : 	
+sa_debug_direct                                                                  : 0                : managed                          : Draw direct rays	
+sa_debug_reflection                                                              : 0                : managed                          : Draw reflection rays	
+sa_direct                                                                        : 1                :                                  : 	
+sa_directivity                                                                   : 1                :                                  : 	
+sa_occlusion                                                                     : 1                :                                  : 	
+sa_transmission                                                                  : 1                :                                  : 	
 sbox_feature_inheritlods                                                         : 1                : rep                              : Child models inherit parent LOD number	
 sc_allow_dynamic_constant_batching                                               : 1                :                                  : 	
 sc_allow_precomputed_vismembers                                                  : 1                :                                  : 	
@@ -639,15 +703,9 @@ snd_async_showmem_summary                                                       
 snd_async_spew_blocking                                                          : 0                :                                  : Spew message to console any time async sound loading blocks on file i/o.	
 snd_async_stream_fail                                                            : 0                :                                  : Spew stream pool failures.	
 snd_async_stream_spew                                                            : 0                :                                  : Spew streaming info ( 0=Off, 1=streams, 2=buffers	
-snd_autodetect_latency                                                           : 1                : a                                : 	
 snd_delay_sound_shift                                                            : 0                :                                  : 	
 snd_disable_mixer_duck                                                           : 0                : cheat                            : 	
 snd_disable_mixer_solo                                                           : 0                : cheat                            : 	
-snd_duckerattacktime                                                             : 0                : a                                : 	
-snd_duckerreleasetime                                                            : 2                : a                                : 	
-snd_duckerthreshold                                                              : 0                : a                                : 	
-snd_ducktovolume                                                                 : 0                : a                                : 	
-snd_envelope_rate                                                                : 0                : cheat                            : 	
 snd_filter                                                                       : 0                : cheat                            : 	
 snd_front_headphone_position                                                     : cmd              :                                  : Specifies the position (in degrees) of the virtual front left/right headphones.	
 snd_front_stereo_speaker_position                                                : cmd              :                                  : Specifies the position (in degrees) of the virtual front left/right speakers.	
@@ -660,7 +718,6 @@ snd_headphone_pan_radial_weight                                                 
 snd_list                                                                         : 0                : cheat                            : 	
 snd_mergemethod                                                                  : 1                :                                  : Sound merge method (0 == sum and clip, 1 == max, 2 == avg).	
 snd_mix_minframetime                                                             : 0                :                                  : 	
-snd_mixahead                                                                     : 0                : a                                : 	
 snd_mixer_master_dsp                                                             : 1                : cheat                            : 	
 snd_mixer_master_level                                                           : 1                : cheat                            : 	
 snd_mute                                                                         : 0                : a                                : 	
@@ -684,15 +741,12 @@ snd_soundmixer_list_mixers                                                      
 snd_soundmixer_set_trigger_factor                                                : cmd              :                                  : Set named mix layer / mix group, trigger amount.	
 snd_soundmixer_setmixlayer_amount                                                : cmd              :                                  : Set named mix layer mix amount.	
 snd_soundmixer_version                                                           : 2                :                                  : 	
+snd_steamaudio_num_bounces                                                       : 0                :                                  : 	
 snd_stereo_speaker_pan_exponent                                                  : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
 snd_stereo_speaker_pan_radial_weight                                             : cmd              :                                  : Apply cos(angle) * weight before pan law	
 snd_surround_speaker_pan_exponent                                                : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
 snd_surround_speaker_pan_radial_weight                                           : cmd              :                                  : Apply cos(angle) * weight before pan law	
-snd_toolvolume                                                                   : 1                : a                                : Volume of sounds in tools (e.g. Hammer)	
-snd_vmix_show_input_updates                                                      : 0                : cheat                            : If set to 1, show all incoming updates to vmix inputs. 	
-sndplaydelay                                                                     : cmd              :                                  : 	
 sound_device_override                                                            :                  : machine                          : 	
-soundinfo                                                                        : cmd              :                                  : Describe the current sound device.	
 soundlist                                                                        : cmd              :                                  : List all known sounds.	
 soundsystem_update_async                                                         : 1                :                                  : 	
 speaker_config                                                                   : -1               : machine                          : 	
@@ -703,7 +757,6 @@ stats_print                                                                     
 status                                                                           : cmd              :                                  : 	
 steaminput_glyph_forceresize                                                     : 0                : managed                          : If Steam has the wrong size glyphs, resize them	
 steaminput_glyph_forcetype                                                       : 0                : managed                          : Forces controller glyphs to render as a different controller type	
-stopsound                                                                        : cmd              :                                  : 	
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
 tcmd                                                                             : cmd              :                                  : Send a command to tools system	
@@ -711,6 +764,7 @@ texturefilteringquality                                                         
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 toolhud_enable                                                                   : 1                :                                  : 	
 tools_renderscenes                                                               : 1                :                                  : 	
+toolscene_gizmo_algorithm                                                        : 1                :                                  : 	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
 unloadTool                                                                       : cmd              :                                  : unload the specified tool	
@@ -723,8 +777,7 @@ vis_update                                                                      
 vmem_dump                                                                        : cmd              :                                  : Dump memory stats to log.	
 voice_enable                                                                     : 1                : a                                : 	
 voice_loopback                                                                   : 0                : a                                : 	
-voip_volume                                                                      : 1                : a                                : Voip volume	
-volume                                                                           : 1                : a                                : Sound volume	
+volume                                                                           : 1                : managed                          : Global volume output	
 volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
 volume_fog_clipmaps_enabled                                                      : 1                : cheat                            : 	
 volume_fog_depth                                                                 : 64               :                                  : 	
@@ -770,4 +823,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-771 total convars/concommands
+824 total convars/concommands
