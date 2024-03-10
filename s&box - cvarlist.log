@@ -433,7 +433,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -479,8 +479,6 @@ rtx_force_default_hitgroup                                                      
 run_perftest                                                                     : cmd              :                                  : Execute perftest.cfg	
 sa_airabsorbtion                                                                 : 1                :                                  : 	
 sa_attenuation                                                                   : 1                :                                  : 	
-sa_debug_direct                                                                  : 0                : managed                          : Draw direct rays	
-sa_debug_reflection                                                              : 0                : managed                          : Draw reflection rays	
 sa_direct                                                                        : 1                :                                  : 	
 sa_directivity                                                                   : 1                :                                  : 	
 sa_occlusion                                                                     : 1                :                                  : 	
@@ -595,6 +593,10 @@ snd_rear_stereo_speaker_position                                                
 snd_rear_surround_speaker_position                                               : cmd              :                                  : Specifies the position (in degrees) of the virtual rear left/right speakers.	
 snd_refdb                                                                        : 60               : cheat                            : Reference dB at snd_refdist	
 snd_refdist                                                                      : 36               : cheat                            : Reference distance for snd_refdb	
+snd_reflect_bounces                                                              : 128              : managed                          : 	
+snd_reflect_length                                                               : 0                : managed                          : Between 0 and 2, the higher sounds better but takes more processing power.	
+snd_reflect_max                                                                  : 16               : managed                          : Maximum number of sounds with reverb to be playing	
+snd_reflect_rays                                                                 : 1024             : managed                          : 	
 snd_report_verbose_error                                                         : 0                : cheat                            : If set to 1, report more error found when playing sounds. 	
 snd_setmixer                                                                     : cmd              :                                  : Set named Mixgroup of current mixer to mix vol, mute, solo.	
 snd_setmixlayer                                                                  : cmd              :                                  : Set named Mixgroup of named mix layer to mix vol, mute, solo.	
@@ -608,7 +610,6 @@ snd_soundmixer_list_mixers                                                      
 snd_soundmixer_set_trigger_factor                                                : cmd              :                                  : Set named mix layer / mix group, trigger amount.	
 snd_soundmixer_setmixlayer_amount                                                : cmd              :                                  : Set named mix layer mix amount.	
 snd_soundmixer_version                                                           : 2                :                                  : 	
-snd_steamaudio_num_bounces                                                       : 0                :                                  : 	
 snd_stereo_speaker_pan_exponent                                                  : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
 snd_stereo_speaker_pan_radial_weight                                             : cmd              :                                  : Apply cos(angle) * weight before pan law	
 snd_surround_speaker_pan_exponent                                                : cmd              :                                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.	
@@ -689,4 +690,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-690 total convars/concommands
+691 total convars/concommands
