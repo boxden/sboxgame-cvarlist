@@ -446,7 +446,7 @@ r_texture_stream_throttle_count                                                 
 r_texture_stream_throttle_count_over_budget                                      : 1                :                                  : 	
 r_texture_streaming_timesliced                                                   : 1                :                                  : 	
 r_texture_streamout_unthrottle_ms                                                : 0                :                                  : After hitting throttling limits for streamout, allow it to continue up to this number of milliseconds.	
-r_texturefilteringquality                                                        : 5                : a                                : 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x	
+r_texturefilteringquality                                                        : 1                : a                                : 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x	
 r_textures_evict_all                                                             : cmd              :                                  : Evict all resident texture.	
 r_textures_list_all                                                              : cmd              :                                  : List all resident texture.	
 r_threaded_particles                                                             : 1                :                                  : 	
