@@ -113,7 +113,6 @@ fs_report_async_io                                                              
 fs_report_long_reads                                                             : 0                :                                  : 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold	
 fs_report_sync_opens                                                             : 0                :                                  : 0:Off, 1:Always, 2:Not during load	
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
-gamma_to_linear                                                                  : cmd              :                                  : 	
 gfx_calculate_skin_diffusion_profile_dipole                                      : cmd              :                                  : Calculate a skin diffusion profile using scattering constants.	
 gfx_generate_ao_cone_response                                                    : cmd              :                                  : Generates a LUT for AO cone vs. sphere	
 gfx_generate_ao_sphere_response                                                  : cmd              :                                  : Generates a LUT for AO proxy calculations	
@@ -131,57 +130,21 @@ gfx_hemioct_flat_normal_test                                                    
 gfx_load_skin_diffusion_profile                                                  : cmd              :                                  : Load a measured diffusion profile.	
 gfx_load_skin_diffusion_profile_image                                            : cmd              :                                  : Load a custom skin diffusion profile.	
 gfx_load_skin_diffusion_profile_sum_of_gaussians                                 : cmd              :                                  : Load sum-of-gaussians skin diffusion profile.	
-gizmo_rot_max_dist                                                               : 8                :                                  : 	
-hammer_bake_cubemap_debug_colors                                                 : cmd              :                                  : Bakes all cubemaps with distinct solid colors, for debugging purposes	
-hammer_bake_light_bake_cubemaps                                                  : 1                :                                  : Should we bake cubemaps?	
-hammer_bake_light_bake_light_probe_volumes                                       : 1                :                                  : Should we bake light probe volumes?	
-hammer_bake_light_bake_vertex_lighting                                           : 1                :                                  : Should we bake vertex lighting?	
-hammer_bake_light_calculate_irradiance_flags                                     : -1               :                                  : Irradiance calculation flags (-1 = default ).	
-hammer_bake_light_debug_path_trace_scene_info_from_build                         : 0                :                                  : Load debug_path_trace_scene_info.dat for RT baked lighting visualization instead of using the current map.	
-hammer_bake_light_direct_light_area_sample_subdivs                               : 8                :                                  : Square root of the number of shadow samples to use for soft shadow calculations on area light sources.	
-hammer_bake_light_final_gather_min_distance_to_backface                          : 2                :                                  : Backfaces within this many units of the target sample will not obstruct final gather ray.	
-hammer_bake_light_final_gather_subdivs                                           : 16               :                                  : Number of subdivisions of the sphere to use for final gather, i.e. the square-root of the sample count.	
-hammer_bake_light_irradiance_cache_max_error                                     : 0                :                                  : Interpolation error for irradiance caching. Smaller number means fewer artifacts	
-hammer_bake_light_max_bounces                                                    : 5                :                                  : Maximum number of light bounces to simulate	
-hammer_bake_light_photon_hash_bucket_size                                        : 16               :                                  : Size of hash buckets for storing photons	
-hammer_bake_light_photon_max_density                                             : 2                :                                  : Distance at which new photons will merge with existing photons to save memory and search time	
-hammer_bake_light_photon_search_distance                                         : 8                :                                  : Radius of the disk used to search for photon radiance samples	
-hammer_bake_light_photon_trace_rate                                              : 8                :                                  : Number of photons to trace for each game unit of the bounding box of the scene	
-hammer_bake_light_sample_at_vertices                                             : 0                :                                  : Sample at vertex positions/normals for per vertex lighting	
-hammer_bake_light_show_irradiance_cache_sample_positions                         : 0                :                                  : Show irradiance cache positions in red	
-hammer_bake_light_vrad2_debug                                                    : 0                :                                  : Debug why vrad2 isn't working	
 hammer_bevel_leave_edges                                                         : 0                :                                  : 	
-hammer_block_enable_temporary_work_plane                                         : 1                :                                  : 	
-hammer_bridge_drag_pixels_per_step                                               : 16               :                                  : 	
-hammer_diff_gridnav                                                              : cmd              :                                  : 	
 hammer_disable_render_as_simple_box                                              : 0                :                                  : 	
-hammer_dota_paint_flat_radius                                                    : 10               :                                  : 	
 hammer_dota_path_falloff                                                         : 1                :                                  : 	
 hammer_dota_path_fixup                                                           : 1                :                                  : 	
 hammer_dota_path_opacity                                                         : 0                :                                  : 	
 hammer_dota_path_overwrite                                                       : 0                :                                  : 	
-hammer_dota_path_preview                                                         : 16               :                                  : 	
 hammer_dota_path_sharpness                                                       : 0                :                                  : 	
 hammer_dota_path_use_material_settings                                           : 1                :                                  : 	
 hammer_dota_path_width                                                           : 150              :                                  : 	
-hammer_dota_proxy_handle_spacing                                                 : 10               :                                  : 	
-hammer_dota_rebuild_paths                                                        : cmd              :                                  : 	
 hammer_draw_bounds                                                               : 0                :                                  : 	
 hammer_draw_dirty_bounds                                                         : 0                :                                  : 	
 hammer_draw_model_raytrace_data                                                  : 0                :                                  : 	
 hammer_draw_model_skeleton                                                       : 0                :                                  : 	
 hammer_draw_overlay_triangles_in_box                                             : 0                :                                  : 	
-hammer_edge_debug_info                                                           : 0                :                                  : 	
-hammer_enable_debug_overlays                                                     : 0                :                                  : 	
-hammer_entity_report_refresh                                                     : 300              :                                  : 	
 hammer_face_debug_info                                                           : 0                :                                  : 	
-hammer_force_autosave                                                            : cmd              :                                  : 	
-hammer_gizmo_2dscale                                                             : 3                :                                  : 	
-hammer_gizmo_axis_length                                                         : 80               :                                  : 	
-hammer_gizmo_axis_scale                                                          : 1                :                                  : 	
-hammer_gizmo_compute_matrix                                                      : 1                :                                  : 	
-hammer_gizmo_line_thickness                                                      : 3                :                                  : 	
-hammer_gizmo_rot_inflate                                                         : 6                :                                  : 	
 hammer_gridnav_always_update                                                     : 0                :                                  : 	
 hammer_gridnav_preview_radius                                                    : 15               :                                  : 	
 hammer_gridnav_show_creature_blocking                                            : 1                :                                  : 	
@@ -189,7 +152,6 @@ hammer_gridnav_show_hero_blocking                                               
 hammer_gridnav_show_impassable                                                   : 1                :                                  : 	
 hammer_gridnav_show_obstructions                                                 : 1                :                                  : 	
 hammer_gridnav_show_ward_blocking                                                : 1                :                                  : 	
-hammer_hud_enable                                                                : 1                :                                  : 	
 hammer_isosurface_draw_cells                                                     : 0                :                                  : 	
 hammer_isosurface_draw_grid_points                                               : 0                :                                  : 	
 hammer_isosurface_draw_grid_x                                                    : 0                :                                  : 	
@@ -201,35 +163,15 @@ hammer_isosurface_merge_tolerance                                               
 hammer_isosurface_remove_interior                                                : 1                :                                  : 	
 hammer_isosurface_sample_offset                                                  : 0                :                                  : 	
 hammer_isosurface_subtract                                                       : 0                :                                  : 	
-hammer_map_files                                                                 : cmd              :                                  : 	
-hammer_open_edge_hash_length                                                     : 6                :                                  : 	
-hammer_open_edge_hash_spacing                                                    : 6                :                                  : 	
 hammer_overlay_draw_projection_triangles                                         : 0                :                                  : 	
 hammer_parallel_procedural_update                                                : 1                :                                  : 	
-hammer_prefab_tree                                                               : cmd              :                                  : 	
 hammer_raytrace_debug_draw                                                       : 0                :                                  : Draw ray tracing environment debug visualization in Hammer	
 hammer_render_model_bounding_spheres                                             : 0                :                                  : 	
-hammer_rotate_up_dot                                                             : 0                :                                  : 	
-hammer_save_gridnav                                                              : cmd              :                                  : 	
-hammer_show_face_uvs                                                             : 0                :                                  : 	
-hammer_show_input_debugger                                                       : cmd              :                                  : 	
 hammer_show_light_truncation_error                                               : 0                :                                  : 	
 hammer_spawn_area_base_alpha                                                     : 0                :                                  : 	
 hammer_spawn_area_editor_outline_size                                            : 17               :                                  : 	
 hammer_spawn_area_outline_alpha                                                  : 255              :                                  : 	
-hammer_stroke_steps                                                              : 10               :                                  : 	
 hammer_tile_border_size                                                          : 16               :                                  : 	
-hammer_tileset_maps                                                              : cmd              :                                  : 	
-hammer_translucent_enable                                                        : 1                :                                  : 	
-hammer_vertex_normal_paint_brush_screensize                                      : 0                :                                  : 	
-hammer_vertex_normal_paint_brush_size_max                                        : 100              :                                  : 	
-hammer_vertex_normal_paint_cached_mesh_evict_distance                            : 128              :                                  : 	
-hammer_vertex_normal_paint_debug_triangulation                                   : 0                :                                  : 	
-hammer_vertex_normal_paint_initial_brush_radius                                  : 32               :                                  : 	
-hammer_vertex_normal_paint_initial_strength                                      : 0                :                                  : 	
-hammer_vis_opacity                                                               : 32               :                                  : 	
-hammer_worklight_brightness                                                      : 1000             :                                  : 	
-hammer_worklight_range                                                           : 32000            :                                  : 	
 hammer_world_trace_multisample                                                   : 1                :                                  : 	
 hammer_world_trace_pack_rays                                                     : 0                :                                  : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
@@ -355,7 +297,6 @@ labelled_debug_helper_show_position                                             
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
-linear_to_gamma                                                                  : cmd              :                                  : 	
 list_projects                                                                    : cmd              :                                  : 	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
 log_dumpchannels                                                                 : cmd              :                                  : Dumps information about all logging channels.	
@@ -578,7 +519,7 @@ r_texture_stream_throttle_count                                                 
 r_texture_stream_throttle_count_over_budget                                      : 1                :                                  : 	
 r_texture_streaming_timesliced                                                   : 1                :                                  : 	
 r_texture_streamout_unthrottle_ms                                                : 0                :                                  : After hitting throttling limits for streamout, allow it to continue up to this number of milliseconds.	
-r_texturefilteringquality                                                        : 1                : a                                : 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x	
+r_texturefilteringquality                                                        : 5                : a                                : 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x	
 r_textures_evict_all                                                             : cmd              :                                  : Evict all resident texture.	
 r_textures_list_all                                                              : cmd              :                                  : List all resident texture.	
 r_threaded_particles                                                             : 1                :                                  : 	
@@ -765,7 +706,6 @@ texturefilteringquality                                                         
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 toolhud_enable                                                                   : 1                :                                  : 	
 tools_renderscenes                                                               : 1                :                                  : 	
-toolscene_gizmo_algorithm                                                        : 1                :                                  : 	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
 unloadTool                                                                       : cmd              :                                  : unload the specified tool	
@@ -824,4 +764,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-825 total convars/concommands
+765 total convars/concommands
