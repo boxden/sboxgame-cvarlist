@@ -433,7 +433,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -446,7 +446,7 @@ r_texture_stream_throttle_count                                                 
 r_texture_stream_throttle_count_over_budget                                      : 1                :                                  : 	
 r_texture_streaming_timesliced                                                   : 1                :                                  : 	
 r_texture_streamout_unthrottle_ms                                                : 0                :                                  : After hitting throttling limits for streamout, allow it to continue up to this number of milliseconds.	
-r_texturefilteringquality                                                        : 1                : a                                : 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x	
+r_texturefilteringquality                                                        : 5                : a                                : 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x	
 r_textures_evict_all                                                             : cmd              :                                  : Evict all resident texture.	
 r_textures_list_all                                                              : cmd              :                                  : List all resident texture.	
 r_threaded_particles                                                             : 1                :                                  : 	
