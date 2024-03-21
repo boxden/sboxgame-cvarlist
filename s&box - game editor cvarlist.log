@@ -102,7 +102,7 @@ filesystem_report_buffered_io                                                   
 filesystem_unbuffered_io                                                         : 1                :                                  : 	
 find                                                                             : cmd              :                                  : Find concommands with the specified string in their name/help text.	
 findflags                                                                        : cmd              :                                  : Find concommands by flags.	
-fps_max                                                                          : 200              : a                                : Frame rate limiter.  0=no limit.  Does not apply to dedicated server.	
+fps_max                                                                          : 120              : a                                : Frame rate limiter.  0=no limit.  Does not apply to dedicated server.	
 fps_max_inactive                                                                 : 90               : a                                : Frame rate limit when window has no focus	
 fs_async_threads                                                                 : -1               :                                  : Number of IO threads in async filesystem (-1 == auto)	
 fs_clear_open_duplicate_times                                                    : cmd              :                                  : Clear the list of files that have been opened.	
@@ -472,7 +472,6 @@ r_post_bloom_kawase_steps                                                       
 r_post_bloom_strength                                                            : -1               :                                  : 	
 r_post_colorcorrection                                                           : 0                :                                  : 	
 r_postprocess_enable                                                             : 1                :                                  : 	
-r_prefer_loop_unrolling                                                          : 1                :                                  : Prefer shader loop unrolling.	
 r_render_coordination_state                                                      : cmd              :                                  : Prints out the current render coordination state.	
 r_render_decals                                                                  : 1                :                                  : 	
 r_render_dynamic_objects                                                         : 1                :                                  : 	
@@ -506,7 +505,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -671,7 +670,6 @@ snd_reflect_bounces                                                             
 snd_reflect_length                                                               : 0                : managed                          : Between 0 and 2, the higher sounds better but takes more processing power.	
 snd_reflect_max                                                                  : 16               : managed                          : Maximum number of sounds with reverb to be playing	
 snd_reflect_rays                                                                 : 1024             : managed                          : 	
-snd_report_verbose_error                                                         : 0                : cheat                            : If set to 1, report more error found when playing sounds. 	
 snd_setmixer                                                                     : cmd              :                                  : Set named Mixgroup of current mixer to mix vol, mute, solo.	
 snd_setmixlayer                                                                  : cmd              :                                  : Set named Mixgroup of named mix layer to mix vol, mute, solo.	
 snd_showclassname                                                                : 0                : cheat                            : 	
@@ -719,7 +717,7 @@ vmem_dump                                                                       
 voice_enable                                                                     : 1                : a                                : 	
 voice_loopback                                                                   : 0                : a                                : 	
 volume                                                                           : 1                : managed                          : Global volume output	
-volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
+volume_fog_clipmap_update                                                        : 0                : cheat                            : 	
 volume_fog_clipmaps_enabled                                                      : 1                : cheat                            : 	
 volume_fog_depth                                                                 : 64               :                                  : 	
 volume_fog_disable                                                               : 0                : cheat                            : 	
@@ -764,4 +762,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-765 total convars/concommands
+763 total convars/concommands
