@@ -433,7 +433,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4383             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -622,8 +622,6 @@ splitscreen_mode                                                                
 stats_display                                                                    : 0                :                                  : Displays perf statistics information	
 stats_print                                                                      : cmd              :                                  : Prints out perf statistics to the console, clears perf history	
 status                                                                           : cmd              :                                  : 	
-steaminput_glyph_forceresize                                                     : 0                : managed                          : If Steam has the wrong size glyphs, resize them	
-steaminput_glyph_forcetype                                                       : 0                : managed                          : Forces controller glyphs to render as a different controller type	
 sv_skel_constraints_enable                                                       : 0                : rep, cheat                       : 	
 sys_minidumpspewlines                                                            : 2000             : release                          : Lines of crash dump console spew to keep.	
 texturefilteringquality                                                          : 4                : machine                          : 	
@@ -631,6 +629,7 @@ toggle                                                                          
 ui_cull                                                                          : 0                : managed                          : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
 ui_drawtext                                                                      : 0                : managed                          : Enable drawing text	
 ui_drawtextshadow                                                                : 0                : managed                          : Enable drawing text shadows	
+ui_input_force_vendor                                                            : 0                : managed                          : 	
 ui_rendertext                                                                    : 0                : managed                          : Enable rendering text to textures	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
@@ -689,4 +688,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-690 total convars/concommands
+689 total convars/concommands
