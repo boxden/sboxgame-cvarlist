@@ -296,6 +296,7 @@ labelled_debug_helper_scale                                                     
 labelled_debug_helper_show_position                                              : 0                :                                  : 	
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
+lb_show_rejected_shadowlights                                                    : 0                :                                  : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
 list_projects                                                                    : cmd              :                                  : 	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
@@ -435,6 +436,7 @@ r_frame_sync_enable                                                             
 r_freezeparticles                                                                : 0                : cheat                            : Pause particle simulation	
 r_fullscreen_gamma                                                               : 2                : a                                : Screen Gamma (only in fullscreen modes)	
 r_gpu_mem_stats                                                                  : cmd              :                                  : Display GPU memory usage.	
+r_gpu_shadow_culling                                                             : 1                :                                  : Enable GPU Shadow Culling	
 r_grass_allow_flattening                                                         : 0                :                                  : 	
 r_grass_alpha_test                                                               : 0                :                                  : 	
 r_grass_density_mode                                                             : 0                :                                  : 0 = Density corresponds to blade existance, 1 = Density corresponds to blade height, 2 = Both 0 and 1	
@@ -505,7 +507,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -761,4 +763,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-762 total convars/concommands
+764 total convars/concommands
