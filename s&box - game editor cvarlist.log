@@ -296,7 +296,12 @@ labelled_debug_helper_scale                                                     
 labelled_debug_helper_show_position                                              : 0                :                                  : 	
 labelled_debug_helper_show_text                                                  : 1                :                                  : 	
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
+Language                                                                         : 0                : managed                          : The abbreviation for the language the user wants. This is set by the user in the options menu.	
+lb_indexed_pointlight_shadows                                                    : 0                :                                  : 	
+lb_shadow_map_culling                                                            : 0                : cheat                            : 	
 lb_show_rejected_shadowlights                                                    : 0                :                                  : 	
+lb_time_sliced_shadows                                                           : 1                :                                  : 	
+library_install                                                                  : cmd              :                                  : 	
 lightcookie_list                                                                 : cmd              :                                  : List light cookies.	
 list_projects                                                                    : cmd              :                                  : 	
 log_color                                                                        : cmd              :                                  : Set the color of a logging channel.	
@@ -485,7 +490,6 @@ r_render_world_node_bounds                                                      
 r_renderdoc_capture_frame                                                        : cmd              :                                  : Triggers a RenderDoc capture	
 r_renderdoc_open_captures                                                        : 1                :                                  : 	
 r_rendersun                                                                      : 1                : cheat                            : Render sun lighting	
-r_shadow_map_culling                                                             : 1                : cheat                            : 	
 r_shadows                                                                        : 1                : cheat                            : 	
 r_shadows_debug                                                                  : 0                :                                  : 	
 r_show_hipoly_draw_calls                                                         : 0                : cheat                            : Transparent wireframe overlay for draw calls with triangle count higher than specified number	
@@ -495,6 +499,8 @@ r_showdebugoverlays                                                             
 r_showdebugrendertarget                                                          : 0                : cheat                            : Set the debug render target to show, 0 == disable	
 r_showsceneobjectbounds                                                          : 0                : cheat                            : Show scenesystem object bounding boxes	
 r_size_cull_threshold                                                            : 0.250000         : application                      : 	
+r_size_cull_threshold_fade                                                       : 0                : cheat                            : Threshold of shadow map size percentage below which objects start fading	
+r_size_cull_threshold_shadow                                                     : 0                : cheat                            : Threshold of shadow map size percentage below which objects get culled	
 r_skinning_enabled                                                               : 1                : cheat                            : 	
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
@@ -507,7 +513,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -628,6 +634,7 @@ sc_throw_away_all_layers                                                        
 sc_use_clear_subrect                                                             : 0                :                                  : 	
 sc_visualize_batches                                                             : 0                :                                  : color per batch	
 sc_visualize_sceneobjects                                                        : 0                :                                  : 1 = visualize bounds, 2 = visualize sceneobject mesh materials, 3 = required texture size, 4 = bounds group, 5 = LOD	
+scene_legacy_update                                                              : 0                : managed                          : 	
 screenmessage_show                                                               : -1               : cheat                            : Enable display of console messages on screen. 1 = Enabled, 0 = Disabled, -1 = Enabled if vgui is not present	
 screenshot                                                                       : cmd              :                                  : Take a jpeg screenshot: jpeg_screenshot [filename] [quality 1-100].	
 screenshot_png                                                                   : cmd              :                                  : Take a .png screenshot: png_screenshot [filename]	
@@ -704,7 +711,11 @@ texturefilteringquality                                                         
 toggle                                                                           : cmd              :                                  : Toggles specified convar value on and off.	
 toolhud_enable                                                                   : 1                :                                  : 	
 tools_renderscenes                                                               : 1                :                                  : 	
+ui_cull                                                                          : 0                : managed                          : Enable/disabling culling panel rendering based on overflow != visible. Turning this on or off should never affect visibility because the actual rendering should be culled using stencils. If it does, then the culling logic is wrong.	
+ui_drawtext                                                                      : 0                : managed                          : Enable drawing text	
+ui_drawtextshadow                                                                : 0                : managed                          : Enable drawing text shadows	
 ui_input_force_vendor                                                            : 0                : managed                          : 	
+ui_rendertext                                                                    : 0                : managed                          : Enable rendering text to textures	
 unbind                                                                           : cmd              :                                  : Unbind a key.	
 unbindall                                                                        : cmd              :                                  : Unbind all keys.	
 unloadTool                                                                       : cmd              :                                  : unload the specified tool	
@@ -763,4 +774,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-764 total convars/concommands
+775 total convars/concommands
