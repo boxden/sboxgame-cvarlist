@@ -645,7 +645,7 @@ vmem_dump                                                                       
 voice_enable                                                                     : 1                : a                                : 	
 voice_loopback                                                                   : 0                : a                                : 	
 volume                                                                           : 1                : managed                          : Global volume output	
-volume_fog_clipmap_update                                                        : 0                : cheat                            : 	
+volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
 volume_fog_clipmaps_enabled                                                      : 1                : cheat                            : 	
 volume_fog_depth                                                                 : 64               :                                  : 	
 volume_fog_disable                                                               : 0                : cheat                            : 	
