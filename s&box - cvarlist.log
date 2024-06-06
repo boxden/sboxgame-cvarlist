@@ -94,7 +94,7 @@ filesystem_report_buffered_io                                                   
 filesystem_unbuffered_io                                                         : 1                :                                  : 	
 find                                                                             : cmd              :                                  : Find concommands with the specified string in their name/help text.	
 findflags                                                                        : cmd              :                                  : Find concommands by flags.	
-fps_max                                                                          : 200              : a                                : Frame rate limiter.  0=no limit.  Does not apply to dedicated server.	
+fps_max                                                                          : 60               : a                                : Frame rate limiter.  0=no limit.  Does not apply to dedicated server.	
 fps_max_inactive                                                                 : 90               : a                                : Frame rate limit when window has no focus	
 fs_async_threads                                                                 : -1               :                                  : Number of IO threads in async filesystem (-1 == auto)	
 fs_clear_open_duplicate_times                                                    : cmd              :                                  : Clear the list of files that have been opened.	
@@ -438,7 +438,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4380             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -642,8 +642,8 @@ video_scale                                                                     
 vis_enable                                                                       : 1                :                                  : Toggle static visibility	
 vis_update                                                                       : 1                : cheat                            : 	
 vmem_dump                                                                        : cmd              :                                  : Dump memory stats to log.	
-voice_enable                                                                     : 1                : a                                : 	
-voice_loopback                                                                   : 0                : a                                : 	
+voice_loopback                                                                   : 0                : managed                          : 	
+voip_volume                                                                      : 1                : managed                          : Voice chat volume	
 volume                                                                           : 1                : managed                          : Global volume output	
 volume_fog_clipmap_update                                                        : 1                : cheat                            : 	
 volume_fog_clipmaps_enabled                                                      : 1                : cheat                            : 	
