@@ -501,6 +501,7 @@ r_size_cull_threshold                                                           
 r_size_cull_threshold_fade                                                       : 0                : cheat                            : Threshold of shadow map size percentage below which objects start fading	
 r_size_cull_threshold_shadow                                                     : 0                : cheat                            : Threshold of shadow map size percentage below which objects get culled	
 r_skinning_enabled                                                               : 1                : cheat                            : 	
+r_ssao_debug                                                                     : 0                : managed                          : 	
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
@@ -512,7 +513,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -738,17 +739,12 @@ volume_fog_jitter_offset_random                                                 
 volume_fog_show_volumes                                                          : 0                : cheat                            : 	
 volume_fog_vr_single_dispatch                                                    : 1                :                                  : 	
 volume_fog_width                                                                 : 240              :                                  : 	
-vr_depth_submit                                                                  : 0                : managed                          : 	
 vr_enable_depth_submit                                                           : 0                : managed                          : Enable submitting depth texture to compositor	
 vr_expand_cull_frustum                                                           : 2                :                                  : degrees to add to fov to compensate for just-in-time HMD	
-vr_force_interleaved_projection                                                  : 0                : managed                          : 	
-vr_gpu_flush_timer                                                               : 2                : managed                          : 	
 vr_info                                                                          : cmd              :                                  : 	
 vr_msaa_submit                                                                   : 0                :                                  : Submit unresolved MSAA textures to OpenVR	
-vr_predict                                                                       : 0                : managed                          : 	
 vr_spectator_show_left_eye                                                       : 0                : a                                : 	
 vr_spectator_zoom_level                                                          : 1                :                                  : 	
-vr_use_predicted_hmd_tracking                                                    : 0                : managed                          : 	
 vr_vulkan_wait_fence_between_eyes                                                : 0                :                                  : 	
 vulkan_additional_semaphores                                                     : 0                :                                  : 	
 vulkan_batch_size                                                                : 500              :                                  : 	
@@ -769,4 +765,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-770 total convars/concommands
+766 total convars/concommands
