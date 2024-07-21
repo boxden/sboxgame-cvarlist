@@ -105,6 +105,7 @@ fs_report_async_io                                                              
 fs_report_long_reads                                                             : 0                :                                  : 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold	
 fs_report_sync_opens                                                             : 0                :                                  : 0:Off, 1:Always, 2:Not during load	
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
+game                                                                             : cmd              :                                  : play a game	
 gameinfo                                                                         : cmd              :                                  : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
 host                                                                             : cmd              :                                  : 	
@@ -300,7 +301,6 @@ mouse_pitchyaw_sensitivity                                                      
 mouse_yaw_inverted                                                               : 0                : managed                          : Whether the mouse's yaw should be inverted or not	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
-net_lerptime                                                                     : 0                : managed                          : Temporary - how many seconds of lerp to apply to GameObject transforms	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
 package_install                                                                  : cmd              :                                  : 	
 package_list                                                                     : cmd              :                                  : 	
@@ -439,7 +439,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -575,7 +575,6 @@ snd_async_showmem_summary                                                       
 snd_async_spew_blocking                                                          : 0                :                                  : Spew message to console any time async sound loading blocks on file i/o.	
 snd_async_stream_fail                                                            : 0                :                                  : Spew stream pool failures.	
 snd_async_stream_spew                                                            : 0                :                                  : Spew streaming info ( 0=Off, 1=streams, 2=buffers	
-snd_delay_sound_shift                                                            : 0                :                                  : 	
 snd_disable_mixer_duck                                                           : 0                : cheat                            : 	
 snd_disable_mixer_solo                                                           : 0                : cheat                            : 	
 snd_filter                                                                       : 0                : cheat                            : 	
@@ -686,4 +685,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-687 total convars/concommands
+686 total convars/concommands
