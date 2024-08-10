@@ -374,6 +374,7 @@ mouse_pitchyaw_sensitivity                                                      
 mouse_yaw_inverted                                                               : 0                : managed                          : Whether the mouse's yaw should be inverted or not	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 name                                                                             : unnamed          : per-user                         : 	
+net_debug                                                                        : 0                : managed                          : 	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
 package_install                                                                  : cmd              :                                  : 	
 package_list                                                                     : cmd              :                                  : 	
@@ -389,7 +390,6 @@ pitchyaw_customaccel_exponent                                                   
 pitchyaw_customaccel_max                                                         : 0.000000         : per-user                         : 	
 pitchyaw_customaccel_scale                                                       : 0.040000         : per-user                         : 	
 pixelvis_debug                                                                   : cmd              :                                  : Dump debug info	
-play_toggle                                                                      : cmd              :                                  : 	
 player0_using_joystick                                                           : 0                : machine                          : 	
 player_input_motor_jerk                                                          : 6                : rep                              : 	
 playsound                                                                        : cmd              :                                  : playsound <soundname>	
@@ -514,7 +514,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4382             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
