@@ -373,6 +373,7 @@ mouse_pitch_inverted                                                            
 mouse_pitchyaw_sensitivity                                                       : 50.000000        : machine                          : 	
 mouse_yaw_inverted                                                               : 0                : managed                          : Whether the mouse's yaw should be inverted or not	
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
+music_volume                                                                     : 1                : managed                          : Music volume	
 name                                                                             : unnamed          : per-user                         : 	
 net_debug                                                                        : 0                : managed                          : 	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
@@ -514,7 +515,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4383             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -767,4 +768,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-768 total convars/concommands
+769 total convars/concommands
