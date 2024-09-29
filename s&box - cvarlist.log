@@ -19,6 +19,7 @@ animgraph_slowdownonslopes_enabled                                              
 async_serialize                                                                  : 0                :                                  : Force async reads to serialize for profiling	
 async_track_all                                                                  : cmd              :                                  : Enable all registered asynchronous tracking convars at once	
 avatar                                                                           : 0                : managed                          : 	
+backend_debug                                                                    : 0                : managed                          : Print backend queries	
 bind                                                                             : cmd              :                                  : Bind a key.	
 binddefaults                                                                     : cmd              :                                  : Bind all keys to their default values.	
 bindtoggle                                                                       : cmd              :                                  : Performs a bind <key> 'increment var <cvar> 0 1 1'.	
@@ -44,6 +45,7 @@ con_logfile_suffix                                                              
 con_toggle                                                                       : cmd              :                                  : 	
 connect                                                                          : cmd              :                                  : 	
 consoleoverlay                                                                   : 0                : managed                          : Enable the console to draw at the top of the screen all the time	
+controller_debug                                                                 : cmd              :                                  : 	
 controller_look_speed_pitch                                                      : 160              : managed                          : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
 controller_look_speed_yaw                                                        : 270              : managed                          : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
 convars_echo_toggle_changes                                                      : 1                :                                  : Echo to the console changes caused by toggling.	
@@ -227,7 +229,7 @@ labelled_debug_helper_show_text                                                 
 labelled_debug_helper_skeleton_show_bone_names                                   : 1                :                                  : 	
 Language                                                                         : 0                : managed                          : The abbreviation for the language the user wants. This is set by the user in the options menu.	
 lb_indexed_pointlight_shadows                                                    : 0                :                                  : 	
-lb_shadow_map_culling                                                            : 0                : cheat                            : 	
+lb_shadow_map_culling                                                            : 1                : cheat                            : 	
 lb_show_rejected_shadowlights                                                    : 0                :                                  : 	
 lb_time_sliced_shadows                                                           : 1                :                                  : 	
 list_projects                                                                    : cmd              :                                  : 	
@@ -330,7 +332,6 @@ r_3d_skybox_depth_prepass                                                       
 r_3d_skybox_depth_prepass_cull_threshold                                         : 30               :                                  : 	
 r_albedo_chart                                                                   : 1                : a                                : Enable Albedo/Reflectivity chart	
 r_allow_morph_batching_on_base                                                   : 0                :                                  : 	
-r_allow_time_sliced_shadow_map_rendering                                         : 1                :                                  : Allow time-sliced shadow buffer rendering when enabled via gameinfo.gi	
 r_aoproxy_cull_dist                                                              : 12               :                                  : Distance to cull the AO proxy as a factor of size	
 r_aoproxy_debug                                                                  : 0                :                                  : 	
 r_aoproxy_enable                                                                 : 1                :                                  : 	
@@ -343,7 +344,6 @@ r_cubemap_normalization                                                         
 r_custom_msaa_resolve                                                            : 1                :                                  : 	
 r_depth_debug                                                                    : 0                :                                  : Debug view of the depth buffer	
 r_depth_prepass_cull_threshold                                                   : 60               :                                  : 	
-r_directional_lightmaps                                                          : 1                :                                  : 	
 r_dither_scale                                                                   : 1                :                                  : 	
 r_dopixelvisibility                                                              : 1                : cheat                            : 	
 r_draw_animatables                                                               : 1                : cheat                            : 	
@@ -388,7 +388,6 @@ r_light_probe_volume_debug_grid_prim                                            
 r_light_probe_volume_debug_grid_roughness                                        : 0                : cheat                            : 	
 r_light_probe_volume_debug_grid_samplesize                                       : 4                : cheat                            : 	
 r_light_sensitivity_mode                                                         : 0                : a                                : 	
-r_max_lights                                                                     : -1               :                                  : 	
 r_max_texture_pool_size                                                          : 0                :                                  : Upper limit on texture pool size.	
 r_mipgen_compute_shader                                                          : 0                :                                  : Use compute shader for mipgen.	
 r_monitor_bloom                                                                  : 0                :                                  : Allow bloom on scene monitors	
@@ -418,11 +417,9 @@ r_render_world_node_bounds                                                      
 r_renderdoc_capture_frame                                                        : cmd              :                                  : Triggers a RenderDoc capture	
 r_renderdoc_open_captures                                                        : 1                :                                  : 	
 r_rendersun                                                                      : 1                : cheat                            : Render sun lighting	
-r_shadows                                                                        : 1                : cheat                            : 	
+r_shadows                                                                        : 1                :                                  : 	
 r_shadows_debug                                                                  : 0                :                                  : 	
 r_show_hipoly_draw_calls                                                         : 0                : cheat                            : Transparent wireframe overlay for draw calls with triangle count higher than specified number	
-r_show_light_fog_clipmap_cb_cost                                                 : 0                : cheat                            : Show cost of lights in fog clipmap constant buffer. yellow = 1 cost, red = 6 cost	
-r_show_light_priority                                                            : 0                : cheat                            : Show light priority values. 1 = normal lights	
 r_showdebugoverlays                                                              : 0                : cheat                            : Set to render debug overlays	
 r_showdebugrendertarget                                                          : 0                : cheat                            : Set the debug render target to show, 0 == disable	
 r_showsceneobjectbounds                                                          : 0                : cheat                            : Show scenesystem object bounding boxes	
@@ -690,4 +687,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-691 total convars/concommands
+688 total convars/concommands
