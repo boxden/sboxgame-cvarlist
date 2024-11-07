@@ -114,6 +114,7 @@ gameinfo                                                                        
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
 host                                                                             : cmd              :                                  : 	
 host_writeconfig                                                                 : cmd              :                                  : Saves out the user config values.	
+hostname                                                                         : 0                : managed                          : 	
 hotload_fast                                                                     : 0                : managed                          : Experimental fast hotloads if only method bodies change	
 hotload_log                                                                      : 0                : managed                          : Hotload log level (0: none, 1: simple, 2: full)	
 ik_constraints_enabled                                                           : 1                :                                  : 	
@@ -309,7 +310,11 @@ mouse_yaw_inverted                                                              
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 music_volume                                                                     : 1                : managed                          : Music volume	
 name                                                                             : unnamed          : per-user                         : 	
+net_authentication                                                               : 0                : managed                          : 	
 net_debug                                                                        : 0                : managed                          : 	
+net_game_server_token                                                            : 0                : managed                          : 	
+net_shared_query_port                                                            : 0                : managed                          : 	
+net_use_fake_ip                                                                  : 0                : managed                          : 	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
 package_install                                                                  : cmd              :                                  : 	
 package_list                                                                     : cmd              :                                  : 	
@@ -687,4 +692,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-688 total convars/concommands
+693 total convars/concommands
