@@ -54,6 +54,7 @@ cl_playback_screenshots                                                         
 cl_skel_constraints_enable                                                       : 1                : rep, cheat                       : 	
 con_logfile_suffix                                                               : 0                :                                  : Suffix to append to the console log, may be changed to reopen the log	
 connect                                                                          : cmd              :                                  : 	
+controller_analog_speed                                                          : 2                : managed                          : How fast the left joystick moves, for stuff like the virtual cursor in menus	
 controller_debug                                                                 : cmd              :                                  : 	
 controller_look_speed_pitch                                                      : 160              : managed                          : How fast the camera turns vertically when the stick is pushed all the way up/down (deg/s)	
 controller_look_speed_yaw                                                        : 270              : managed                          : How fast the camera turns horizontally when the stick is pushed all the way left/right (deg/s)	
@@ -117,7 +118,7 @@ fs_report_async_io                                                              
 fs_report_long_reads                                                             : 0                :                                  : 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold	
 fs_report_sync_opens                                                             : 0                :                                  : 0:Off, 1:Always, 2:Not during load	
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
-game                                                                             : cmd              :                                  : play a game	
+game                                                                             : cmd              :                                  : Play a game	
 gfx_calculate_skin_diffusion_profile_dipole                                      : cmd              :                                  : Calculate a skin diffusion profile using scattering constants.	
 gfx_generate_ao_cone_response                                                    : cmd              :                                  : Generates a LUT for AO cone vs. sphere	
 gfx_generate_ao_sphere_response                                                  : cmd              :                                  : Generates a LUT for AO proxy calculations	
@@ -259,8 +260,6 @@ input_upimpulsevalue                                                            
 install                                                                          : cmd              :                                  : 	
 interopsystem_dump                                                               : cmd              :                                  : 	
 interopsystem_status                                                             : cmd              :                                  : 	
-inv_list                                                                         : cmd              :                                  : 	
-inv_pricelist                                                                    : cmd              :                                  : 	
 inv_refresh                                                                      : cmd              :                                  : 	
 iv_debugbone                                                                     : 0                : release                          : Debug bone name for interpolation spew of CAnimationState.	
 joinlobby                                                                        : cmd              :                                  : 	
@@ -299,6 +298,7 @@ jpeg_quality                                                                    
 key_findbinding                                                                  : cmd              :                                  : Find key bound to specified command string.	
 key_listboundkeys                                                                : cmd              :                                  : List bound keys with bindings.	
 key_updatelayout                                                                 : cmd              :                                  : Updates game keyboard layout to current windows keyboard setting.	
+kick                                                                             : cmd              :                                  : 	
 kill                                                                             : cmd              :                                  : 	
 labelled_debug_helper_arc_segments                                               : 20               :                                  : 	
 labelled_debug_helper_enabled                                                    : 1                :                                  : 	
@@ -385,6 +385,7 @@ music_volume                                                                    
 name                                                                             : unnamed          : per-user                         : 	
 net_authentication                                                               : 0                : managed                          : 	
 net_debug                                                                        : 0                : managed                          : 	
+net_fakelag                                                                      : 0                : managed                          : 	
 net_game_server_token                                                            : 0                : managed                          : 	
 net_shared_query_port                                                            : 0                : managed                          : 	
 net_use_fake_ip                                                                  : 0                : managed                          : 	
@@ -519,7 +520,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4387             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -771,4 +772,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-772 total convars/concommands
+773 total convars/concommands
