@@ -314,6 +314,7 @@ net_authentication                                                              
 net_debug                                                                        : 0                : managed                          : 	
 net_fakelag                                                                      : 0                : managed                          : 	
 net_game_server_token                                                            : 0                : managed                          : 	
+net_ping                                                                         : 0                : managed                          : 	
 net_shared_query_port                                                            : 0                : managed                          : 	
 net_use_fake_ip                                                                  : 0                : managed                          : 	
 open_asset                                                                       : cmd              :                                  : Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory.	
@@ -434,7 +435,6 @@ r_showdebugrendertarget                                                         
 r_showsceneobjectbounds                                                          : 0                : cheat                            : Show scenesystem object bounding boxes	
 r_size_cull_threshold                                                            : 0.250000         : application                      : 	
 r_skinning_enabled                                                               : 1                : cheat                            : 	
-r_ssao_debug                                                                     : 0                : managed                          : 	
 r_stencil_postprocessing                                                         : 1                :                                  : 	
 r_stereo_convergence                                                             : 0                :                                  : Sets the focal plane that is aligned with the monitor's surface	
 r_stereo_eye_separation                                                          : 5                :                                  : Wider eye separation results in greater depth perception	
@@ -446,7 +446,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4387             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
