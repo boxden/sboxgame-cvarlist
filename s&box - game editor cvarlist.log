@@ -513,7 +513,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4386             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -632,7 +632,6 @@ sc_throw_away_all_layers                                                        
 sc_use_clear_subrect                                                             : 0                :                                  : 	
 sc_visualize_batches                                                             : 0                :                                  : color per batch	
 sc_visualize_sceneobjects                                                        : 0                :                                  : 1 = visualize bounds, 2 = visualize sceneobject mesh materials, 3 = required texture size, 4 = bounds group, 5 = LOD	
-scene_legacy_update                                                              : 0                : managed                          : 	
 screenmessage_show                                                               : -1               : cheat                            : Enable display of console messages on screen. 1 = Enabled, 0 = Disabled, -1 = Enabled if vgui is not present	
 screenshot                                                                       : cmd              :                                  : Take a jpeg screenshot: jpeg_screenshot [filename] [quality 1-100].	
 screenshot_png                                                                   : cmd              :                                  : Take a .png screenshot: png_screenshot [filename]	
@@ -763,4 +762,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-764 total convars/concommands
+763 total convars/concommands
