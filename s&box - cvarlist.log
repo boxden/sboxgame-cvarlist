@@ -112,12 +112,60 @@ fs_report_sync_opens                                                            
 fs_warning_mode                                                                  : 0                :                                  : 0:Off, 1:Warn main thread, 2:Warn other threads	
 game                                                                             : cmd              :                                  : Play a game	
 gameinfo                                                                         : cmd              :                                  : 	
+hammer_bevel_leave_edges                                                         : 0                :                                  : 	
+hammer_disable_render_as_simple_box                                              : 0                :                                  : 	
+hammer_dota_path_falloff                                                         : 1                :                                  : 	
+hammer_dota_path_fixup                                                           : 1                :                                  : 	
+hammer_dota_path_opacity                                                         : 0                :                                  : 	
+hammer_dota_path_overwrite                                                       : 0                :                                  : 	
+hammer_dota_path_sharpness                                                       : 0                :                                  : 	
+hammer_dota_path_use_material_settings                                           : 1                :                                  : 	
+hammer_dota_path_width                                                           : 150              :                                  : 	
+hammer_draw_bounds                                                               : 0                :                                  : 	
+hammer_draw_dirty_bounds                                                         : 0                :                                  : 	
+hammer_draw_model_raytrace_data                                                  : 0                :                                  : 	
+hammer_draw_model_skeleton                                                       : 0                :                                  : 	
+hammer_draw_overlay_triangles_in_box                                             : 0                :                                  : 	
+hammer_face_debug_info                                                           : 0                :                                  : 	
+hammer_gridnav_always_update                                                     : 0                :                                  : 	
+hammer_gridnav_preview_radius                                                    : 15               :                                  : 	
+hammer_gridnav_show_creature_blocking                                            : 1                :                                  : 	
+hammer_gridnav_show_hero_blocking                                                : 1                :                                  : 	
+hammer_gridnav_show_impassable                                                   : 1                :                                  : 	
+hammer_gridnav_show_obstructions                                                 : 1                :                                  : 	
+hammer_gridnav_show_ward_blocking                                                : 1                :                                  : 	
+hammer_isosurface_draw_cells                                                     : 0                :                                  : 	
+hammer_isosurface_draw_grid_points                                               : 0                :                                  : 	
+hammer_isosurface_draw_grid_x                                                    : 0                :                                  : 	
+hammer_isosurface_draw_grid_y                                                    : 0                :                                  : 	
+hammer_isosurface_draw_grid_z                                                    : 0                :                                  : 	
+hammer_isosurface_draw_surface                                                   : 1                :                                  : 	
+hammer_isosurface_draw_wireframe                                                 : 1                :                                  : 	
+hammer_isosurface_merge_tolerance                                                : 0                :                                  : 	
+hammer_isosurface_remove_interior                                                : 1                :                                  : 	
+hammer_isosurface_sample_offset                                                  : 0                :                                  : 	
+hammer_isosurface_subtract                                                       : 0                :                                  : 	
+hammer_overlay_draw_projection_triangles                                         : 0                :                                  : 	
+hammer_parallel_procedural_update                                                : 1                :                                  : 	
+hammer_raytrace_debug_draw                                                       : 0                :                                  : Draw ray tracing environment debug visualization in Hammer	
+hammer_render_model_bounding_spheres                                             : 0                :                                  : 	
+hammer_show_light_truncation_error                                               : 0                :                                  : 	
+hammer_spawn_area_base_alpha                                                     : 0                :                                  : 	
+hammer_spawn_area_editor_outline_size                                            : 17               :                                  : 	
+hammer_spawn_area_outline_alpha                                                  : 255              :                                  : 	
+hammer_tile_border_size                                                          : 16               :                                  : 	
+hammer_world_trace_multisample                                                   : 1                :                                  : 	
+hammer_world_trace_pack_rays                                                     : 0                :                                  : 	
 help                                                                             : cmd              :                                  : Find help about a convar/concommand.	
 host                                                                             : cmd              :                                  : 	
 host_writeconfig                                                                 : cmd              :                                  : Saves out the user config values.	
 hostname                                                                         : 0                : managed                          : 	
 hotload_fast                                                                     : 0                : managed                          : Experimental fast hotloads if only method bodies change	
 hotload_log                                                                      : 0                : managed                          : Hotload log level (0: none, 1: simple, 2: full)	
+hullivr_edge_merge_tan                                                           : 0                :                                  : Should we try to straighten two faces connected to this edge? (tangent)	
+hullivr_faceisland_merge_disp                                                    : 0                :                                  : Should we straighten face island if the displacement is this much? (inches)	
+hullivr_faceisland_merge_tan                                                     : 0                :                                  : Should we try to straighten an island of faces deviating from their average normal (tangent)?	
+hullivr_version                                                                  : 3                :                                  : 	
 ik_constraints_enabled                                                           : 1                :                                  : 	
 ik_debug                                                                         : 0                :                                  : 	
 ik_debug_all_chains_post_solve                                                   : 0                :                                  : 	
@@ -310,7 +358,6 @@ mouse_yaw_inverted                                                              
 multvar                                                                          : cmd              :                                  : Multiply specified convar value.	
 music_volume                                                                     : 1                : managed                          : Music volume	
 name                                                                             : unnamed          : per-user                         : 	
-net_authentication                                                               : 0                : managed                          : 	
 net_debug                                                                        : 0                : managed                          : 	
 net_fakelag                                                                      : 0                : managed                          : 	
 net_game_server_token                                                            : 0                : managed                          : 	
@@ -439,7 +486,7 @@ r_texture_lod_scale                                                             
 r_texture_nonstreaming_load                                                      : 1                :                                  : Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.	
 r_texture_pool_increase_rate                                                     : 64               :                                  : Increase texture memory pool size by this many MB / s when under budget.	
 r_texture_pool_reduce_rate                                                       : 256              :                                  : Reduce texture memory pool size by this many MB / s when over budget.	
-r_texture_pool_size                                                              : 4385             :                                  : Total size of the texture pool in MB	
+r_texture_pool_size                                                              : 4384             :                                  : Total size of the texture pool in MB	
 r_texture_stream_max_resolution                                                  : -1               :                                  : Maximum resolution for top mip level in streaming textures. -1 = ignored.	
 r_texture_stream_mip_bias                                                        : 0                :                                  : Biases the mip level the texture streaming system choses to stream for each texture.	
 r_texture_stream_resolution_bias                                                 : 1                :                                  : 	
@@ -456,7 +503,6 @@ r_texturefilteringquality                                                       
 r_textures_evict_all                                                             : cmd              :                                  : Evict all resident texture.	
 r_textures_list_all                                                              : cmd              :                                  : List all resident texture.	
 r_threaded_particles                                                             : 1                :                                  : 	
-r_tiled_rendering                                                                : 1                :                                  : Enable tiled rendering	
 r_tiled_rendering_conservative_culling                                           : 0                :                                  : Experimental: Use conservative near-z culling for Tiled Rendering, doesn't play well with translucents, will be deprecated when we have two sets.	
 r_toggleviewportsize                                                             : cmd              :                                  : Toggles viewport size between small + full window.	
 r_translucent                                                                    : 1                : cheat                            : Enable rendering of translucent geometry	
@@ -478,6 +524,7 @@ resource_leaks                                                                  
 resource_list                                                                    : cmd              :                                  : List loaded resources matching a substring	
 resource_log_allocate_timing                                                     : cmd              :                                  : Log time spent in Allocate for all resource types	
 resource_reset_allocate_timing                                                   : cmd              :                                  : Reset tracked time spent in Allocate (see resource_log_allocate_timing)	
+resourcecompiler_log_compile_stats                                               : 0                :                                  : 	
 rtx_allow_blas_compact                                                           : 1                :                                  : 	
 rtx_allow_blas_create                                                            : 1                :                                  : 	
 rtx_force_default_hitgroup                                                       : 0                :                                  : Forces all ray traced geometry to use default hit shaders instead of specialized ones.	
@@ -683,4 +730,4 @@ world_layer_list                                                                
 world_layer_set_visible                                                          : cmd              :                                  : Show or hide the specified world layer	
 writekeybindings                                                                 : cmd              :                                  : Saves current key bindings to disk.	
 --------------
-684 total convars/concommands
+731 total convars/concommands
